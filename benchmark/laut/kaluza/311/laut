@@ -1,0 +1,14 @@
+PCTEMP_LHS_4 ".*"
+;
+T_8 Bool
+T_7 Int
+;
+T_8
+(= T_8 (< 0 T_7))
+(trklen T_7 0)
+;
+trklen PCTEMP_LHS_4 0
+write PCTEMP_LHS_4_l
+addpred
+write sink
+isempty sink

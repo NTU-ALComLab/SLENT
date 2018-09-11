@@ -1,0 +1,50 @@
+Not_tree ""
+sigmaStar_safe_50 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+sigmaStar_safe_51 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+regex_4 \("\@"\)
+regex_5 \("\&\#\6\4\;"\)
+regex_6 \(~\(\(.*\)\("\@"\)\(.*\)\)\)
+literal_7 "\[\ \<\a\ \h\r\e\f\=\'\m\a\i\l\t\o\:"
+regex_8 \("\@"\)
+regex_9 \("\&\#\6\4\;"\)
+regex_10 \(~\(\(.*\)\("\@"\)\(.*\)\)\)
+literal_11 "\'\ \t\i\t\l\e\=\'"
+literal_16 "\'\>"
+sigmaStar_061 \(.*\)
+literal_19 "\<\/\a\>\ \]\\\\\n"
+atkPtn \(\(.*\)\("PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4K"\)\(.*\)\)
+sigmaStar_n0 \(\(.\)*\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(= 50 (+ i1 i2))
+;
+union sigmaStar_safe_50 sigmaStar_safe_51
+write x_2
+trklen x_2 0
+write x_2_len
+replace x_2_len regex_4 regex_5 regex_6
+write x_6
+concate literal_7 x_6
+write x_8
+replace sigmaStar_n0 regex_8 regex_9 regex_10
+write x_13
+concate x_8 literal_11
+write x_14
+concate x_14 x_13
+write x_15
+concate x_15 literal_16
+write x_17
+concate x_17 sigmaStar_061
+write x_18
+concate x_18 literal_19
+write x_20
+intersect x_20 atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

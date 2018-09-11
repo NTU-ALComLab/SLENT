@@ -1,0 +1,55 @@
+///////////////////////////////////////////////////////////////////////////////
+////install UCSB-ABC
+///////////////////////////////////////////////////////////////////////////////
+//recommand following the step by step setup procedure described on its website.
+https://github.com/vlab-cs-ucsb/ABC
+
+///////////////////////////////////////////////////////////////////////////////
+////Install Trau
+///////////////////////////////////////////////////////////////////////////////
+//install openfst
+//need g++-4.7 up
+
+//install antlr
+cd /usr/local/lib
+sudo apt-get install curl
+sudo curl -0 http://www.antlr.org/download/antlr-4.7.1-complete.jar
+
+export CLASSPATH=".
+//... following the instruction
+
+//install antlr cpp runtime
+wget http://www.antlr.org/download/antlr4-cpp-runtime-4.7.1-source.zip
+unzip ...
+mkdir build
+mkdir run
+cd build
+sudo apt-get install cmake
+sudo apt-get install default-jdk default-jre
+sudo apt-get install uuid uuid-dev
+cmake .. -DANTLR_JAR_LOCATION=/usr/local/lib/antlr-4.7.1-complete.jar -DWITH_DEMO=True
+//need g++-5 up for compile
+echo "/usr/local/lib" >> /etc/ld.so.conf
+//or use "sudo sh -c "echo '/usr/local/lib' >> /etc/ld.so.conf""
+sudo ldconfig
+//after apply the above command, the library can be linked
+
+//install customed z3-4.4.1.0 included in TRAU
+
+//install latest z3
+
+//compile Trau
+//update build/makefile, src/subdir.mk, src/antlrParser/subdir.mk with customed Z3 path
+make
+//////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+////set ubuntu 16 shared folder
+/////////////////////////////////////////////////////////////////////////////
+//install virtualbox-guestadditions
+//add permission to specific "user"
+sudo usermod -a -G vboxsf "user"
+//or this one may also work as an alternative to add permission?   >sudo adduser USERNAME vboxsf
+
+
+//ic3ia need install of 

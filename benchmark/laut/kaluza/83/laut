@@ -1,0 +1,21 @@
+T0_54 ".*"
+T1_54 ~\("\="\)
+;
+T_25 Bool
+T_SELECT_5 Bool
+PCTEMP_LHS_15 Int
+;
+T_25
+(= T_25 (= PCTEMP_LHS_15 (- 1)))
+(= PCTEMP_LHS_15 (- 1))
+(= T_SELECT_5 (not (= PCTEMP_LHS_15 (- 1))))
+(trklen 0 0)
+(not T_SELECT_5)
+;
+trklen T0_54 0
+write T0_54_l
+concate T0_54_l T1_54
+write T_23
+addpred
+write sink
+isempty sink

@@ -1,0 +1,56 @@
+NEW_DGNode_1509 ~\("\+"\)
+NEW_DGNode_1508 ~\("\%"\)
+NEW_DGNode_1655 ~\("\%"\)
+NEW_DGNode_1718 ~\("\%"\)
+NEW_DGNode_1781 ~\("\%"\)
+NEW_DGNode_1844 ~\("\%"\)
+NEW_DGNode_1907 ~\("\%"\)
+NEW_DGNode_1970 ~\("\%"\)
+;
+T_18 Bool
+T_19 Bool
+T_SELECT_4 Bool
+I0_40 Int
+I0_44 Int
+I1_40 Int
+I1_44 Int
+I2_40 Int
+I2_44 Int
+PCTEMP_LHS_10 Int
+T_1d Int
+;
+(= T_SELECT_4 (not (= PCTEMP_LHS_10 (- 1))))
+T_19
+(= T_19 (not T_18))
+(= T_18 (= PCTEMP_LHS_10 (- 1)))
+(= I0_40 (- PCTEMP_LHS_10 0))
+(>= PCTEMP_LHS_10 0)
+(= I2_40 I1_40)
+(<= PCTEMP_LHS_10 I1_40)
+(= T_1d (+ PCTEMP_LHS_10 1))
+(>= T_1d 0)
+(>= I2_44 T_1d)
+(= I2_44 I1_44)
+(<= I2_44 I1_44)
+(= I0_44 (- I2_44 T_1d))
+(trklen I0_44 0)
+;
+intersect NEW_DGNode_1509 NEW_DGNode_1508
+write NEW_DGNode_1656
+intersect NEW_DGNode_1656 NEW_DGNode_1655
+write NEW_DGNode_1719
+intersect NEW_DGNode_1719 NEW_DGNode_1718
+write NEW_DGNode_1782
+intersect NEW_DGNode_1782 NEW_DGNode_1781
+write NEW_DGNode_1845
+intersect NEW_DGNode_1845 NEW_DGNode_1844
+write NEW_DGNode_1908
+intersect NEW_DGNode_1908 NEW_DGNode_1907
+write NEW_DGNode_1971
+intersect NEW_DGNode_1971 NEW_DGNode_1970
+write PCTEMP_LHS_177
+trklen PCTEMP_LHS_177 0
+write PCTEMP_LHS_177_l
+addpred
+write sink
+isempty sink

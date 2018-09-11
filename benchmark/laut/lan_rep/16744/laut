@@ -1,0 +1,383 @@
+Not_tree ""
+sigmaStar_safe_48 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+sigmaStar_safe_49 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+regex_2 \("\'"\)
+regex_3 \("\\\\\'"\)
+regex_4 \(~\(\(.*\)\("\'"\)\(.*\)\)\)
+regex_5 \("\'"\)
+regex_6 \("\\\\\'"\)
+regex_7 \(~\(\(.*\)\("\'"\)\(.*\)\)\)
+literal_28 "\|"
+sigmaStar_857 \(.*\)
+regex_10 \(\("\<\S\C\R\I\P\T"\)\(\(\(".*"\)\|\(""\)\)\(\("\>"\)\(\(\(".*"\)\|\(""\)\)\(\("\<\/\S\C\R\I\P\T"\)\(\(\(".*"\)\|\(""\)\)\("\>"\)\)\)\)\)\)\)
+regex_11 \("SCRIPT BLOCKED"\)
+regex_12 \(~\(\(.*\)\(\("\<\S\C\R\I\P\T"\)\(\(\(".*"\)\|\(""\)\)\(\("\>"\)\(\(\(".*"\)\|\(""\)\)\(\("\<\/\S\C\R\I\P\T"\)\(\(\(".*"\)\|\(""\)\)\("\>"\)\)\)\)\)\)\)\(.*\)\)\)
+sigmaStar_1461 \(.*\)
+regex_14 \("\|"\)
+regex_15 \("\&\#\1\6\6\;"\)
+regex_16 \(~\(\(.*\)\("\|"\)\(.*\)\)\)
+sigmaStar_1265 \(.*\)
+regex_18 \("\\\\\t"\)
+regex_19 \(""\)
+regex_20 \(~\(\(.*\)\("\\\\\t"\)\(.*\)\)\)
+sigmaStar_169 \(.*\)
+regex_22 \("\\\\\n"\)
+regex_23 \("\<\B\R\>"\)
+regex_24 \(~\(\(.*\)\("\\\\\n"\)\(.*\)\)\)
+sigmaStar_773 \(.*\)
+regex_26 \("\\\\\r"\)
+regex_27 \(""\)
+regex_28 \(~\(\(.*\)\("\\\\\r"\)\(.*\)\)\)
+sigmaStar_277 \(.*\)
+regex_30 \("\'"\)
+regex_31 \("\\\\\'"\)
+regex_32 \(~\(\(.*\)\("\'"\)\(.*\)\)\)
+literal_65 "\|"
+sigmaStar_082 \(.*\)
+sigmaStar_1883 \(.*\)
+regex_36 \("\h\t\t\p\:\/\/"\)
+regex_37 \(""\)
+regex_38 \(~\(\(.*\)\("\h\t\t\p\:\/\/"\)\(.*\)\)\)
+sigmaStar_1987 \(.*\)
+literal_66 "\'"
+sigmaStar_2089 \(.*\)
+literal_84 "\'\,\'"
+literal_82 "\'"
+regex_44 \("\'"\)
+regex_45 \("\\\\\'"\)
+regex_46 \(~\(\(.*\)\("\'"\)\(.*\)\)\)
+literal_92 "\|"
+sigmaStar_596 \(.*\)
+sigmaStar_697 \(.*\)
+literal_99 "\'\,\'"
+sigmaStar_1199 \(.*\)
+literal_100 "\'"
+literal_114 "\'\,\'"
+regex_54 \("\'"\)
+regex_55 \("\\\\\'"\)
+regex_56 \(~\(\(.*\)\("\'"\)\(.*\)\)\)
+literal_119 "\|"
+sigmaStar_3106 \(.*\)
+literal_121 "\'\,\'"
+sigmaStar_9108 \(.*\)
+literal_126 "\'\,\'"
+sigmaStar_16110 \(.*\)
+literal_141 "\'\,\'"
+literal_143 "\|"
+sigmaStar_13113 \(.*\)
+sigmaStar_10114 \(.*\)
+literal_146 "\'\,\'"
+sigmaStar_17116 \(.*\)
+literal_149 "\'\,\'"
+literal_145 "\`\c\u\s\t\o\m\q\3\`\,\`\c\u\s\t\o\m\q\4\`\,\`\c\u\s\t\o\m\q\5\`\,\`\r\a\t\e\`\,\`\c\o\m\m\e\n\t\s\`\,\`\p\r\i\v\a\t\e\`\,\`\a\p\p\`\)\ \V\A\L\U\E\S\(\'"
+sigmaStar_4119 \(.*\)
+literal_170 "\'\,\'"
+literal_176 "\'\,"
+sigmaStar_15122 \(.*\)
+literal_182 "\'\,\'"
+literal_184 "\'\,"
+literal_181 "\I\N\S\E\R\T\ \I\N\T\O\ \`\p\b\l\g\u\e\s\t\b\o\o\k\_\p\o\s\t\s\`\ \(\`\n\a\m\e\`\,\`\e\m\a\i\l\`\,\`\i\p\`\,\`\t\i\m\e\`\,\`\w\e\b\s\i\t\e\`\,\`\c\u\s\t\o\m\q\1\`\,\`\c\u\s\t\o\m\q\2\`\,"
+literal_186 "\1"
+literal_185 "\0"
+literal_192 "\'\,"
+literal_196 "\'\)"
+atkPtn \(\(.*\)\("' or 1=1 '"\)\(.*\)\)
+sigmaStar_n0 \(\(.\)*\)
+sigmaStar_n1 \(\(.\)*\)
+sigmaStar_n2 \(\(.\)*\)
+sigmaStar_n3 \(\(.\)*\)
+sigmaStar_n4 \(\(.\)*\)
+sigmaStar_n5 \(\(.\)*\)
+sigmaStar_n6 \(\(.\)*\)
+sigmaStar_n7 \(\(.\)*\)
+sigmaStar_n8 \(\(.\)*\)
+sigmaStar_n9 \(\(.\)*\)
+sigmaStar_n10 \(\(.\)*\)
+sigmaStar_n11 \(\(.\)*\)
+sigmaStar_n12 \(\(.\)*\)
+sigmaStar_n13 \(\(.\)*\)
+sigmaStar_n14 \(\(.\)*\)
+sigmaStar_n15 \(\(.\)*\)
+sigmaStar_n16 \(\(.\)*\)
+sigmaStar_n17 \(\(.\)*\)
+sigmaStar_n18 \(\(.\)*\)
+sigmaStar_n19 \(\(.\)*\)
+sigmaStar_n20 \(\(.\)*\)
+sigmaStar_n21 \(\(.\)*\)
+sigmaStar_n22 \(\(.\)*\)
+sigmaStar_n23 \(\(.\)*\)
+sigmaStar_n24 \(\(.\)*\)
+sigmaStar_n25 \(\(.\)*\)
+sigmaStar_n26 \(\(.\)*\)
+sigmaStar_n27 \(\(.\)*\)
+sigmaStar_n28 \(\(.\)*\)
+sigmaStar_n29 \(\(.\)*\)
+sigmaStar_n30 \(\(.\)*\)
+sigmaStar_n31 \(\(.\)*\)
+sigmaStar_n32 \(\(.\)*\)
+sigmaStar_n33 \(\(.\)*\)
+sigmaStar_n34 \(\(.\)*\)
+sigmaStar_n35 \(\(.\)*\)
+sigmaStar_n36 \(\(.\)*\)
+sigmaStar_n37 \(\(.\)*\)
+sigmaStar_n38 \(\(.\)*\)
+sigmaStar_n39 \(\(.\)*\)
+sigmaStar_n40 \(\(.\)*\)
+sigmaStar_n41 \(\(.\)*\)
+sigmaStar_n42 \(\(.\)*\)
+sigmaStar_n43 \(\(.\)*\)
+sigmaStar_n44 \(\(.\)*\)
+sigmaStar_n45 \(\(.\)*\)
+sigmaStar_n46 \(\(.\)*\)
+sigmaStar_n47 \(\(.\)*\)
+sigmaStar_n48 \(\(.\)*\)
+sigmaStar_n49 \(\(.\)*\)
+sigmaStar_n50 \(\(.\)*\)
+sigmaStar_n51 \(\(.\)*\)
+sigmaStar_n52 \(\(.\)*\)
+sigmaStar_n53 \(\(.\)*\)
+sigmaStar_n54 \(\(.\)*\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(= 20 (+ i1 i2))
+;
+union sigmaStar_safe_48 sigmaStar_safe_49
+write x_21
+replace x_21 regex_2 regex_3 regex_4
+write x_25
+replace sigmaStar_n0 regex_5 regex_6 regex_7
+write x_30
+concate x_25 literal_28
+write x_31
+replace sigmaStar_857 regex_10 regex_11 regex_12
+write x_36
+replace sigmaStar_1461 regex_14 regex_15 regex_16
+write x_41
+replace sigmaStar_1265 regex_18 regex_19 regex_20
+write x_46
+replace sigmaStar_169 regex_22 regex_23 regex_24
+write x_51
+replace sigmaStar_773 regex_26 regex_27 regex_28
+write x_56
+union x_56 x_51
+write x_57
+union x_57 x_46
+write x_58
+union x_58 x_41
+write x_59
+union x_59 sigmaStar_277
+write x_60
+union x_60 x_36
+write x_61
+concate x_31 x_61
+write x_62
+replace sigmaStar_n1 regex_30 regex_31 regex_32
+write x_68
+concate x_30 literal_65
+write x_69
+union sigmaStar_082 x_62
+write x_70
+trklen x_70 0
+write x_70_len
+replace sigmaStar_1883 regex_36 regex_37 regex_38
+write x_74
+union sigmaStar_n2 sigmaStar_n3
+write x_75
+union x_75 sigmaStar_n4
+write x_76
+union x_76 sigmaStar_n5
+write x_77
+union x_77 sigmaStar_1987
+write x_78
+union x_78 x_74
+write x_79
+union x_79 sigmaStar_n6
+write x_80
+concate literal_66 x_70_len
+write x_81
+concate x_69 x_80
+write x_83
+union sigmaStar_n7 sigmaStar_n8
+write x_85
+union x_85 sigmaStar_n9
+write x_86
+union x_86 sigmaStar_n10
+write x_87
+union x_87 sigmaStar_2089
+write x_88
+union x_88 sigmaStar_n11
+write x_89
+concate x_81 literal_84
+write x_93
+concate literal_82 x_89
+write x_94
+replace sigmaStar_n12 regex_44 regex_45 regex_46
+write x_96
+concate x_68 literal_92
+write x_97
+union sigmaStar_596 x_83
+write x_98
+union sigmaStar_n13 sigmaStar_n14
+write x_101
+union x_101 sigmaStar_n15
+write x_102
+union x_102 sigmaStar_n16
+write x_103
+union x_103 sigmaStar_697
+write x_104
+union x_104 sigmaStar_n17
+write x_105
+concate x_93 x_98
+write x_106
+concate x_94 literal_99
+write x_107
+union sigmaStar_n18 sigmaStar_n19
+write x_108
+union x_108 sigmaStar_n20
+write x_109
+union x_109 sigmaStar_n21
+write x_110
+union x_110 sigmaStar_1199
+write x_111
+union x_111 sigmaStar_n22
+write x_112
+concate x_97 x_105
+write x_113
+concate literal_100 x_112
+write x_116
+concate x_106 literal_114
+write x_120
+replace sigmaStar_n23 regex_54 regex_55 regex_56
+write x_123
+concate x_96 literal_119
+write x_124
+union x_113 sigmaStar_3106
+write x_125
+concate x_116 literal_121
+write x_127
+union sigmaStar_n24 sigmaStar_n25
+write x_128
+union x_128 sigmaStar_n26
+write x_129
+union x_129 sigmaStar_n27
+write x_130
+union x_130 sigmaStar_9108
+write x_131
+union x_131 sigmaStar_n28
+write x_132
+concate x_120 x_125
+write x_133
+concate x_107 literal_126
+write x_134
+union sigmaStar_n29 sigmaStar_n30
+write x_135
+union x_135 sigmaStar_n31
+write x_136
+union x_136 sigmaStar_n32
+write x_137
+union x_137 sigmaStar_16110
+write x_138
+union x_138 sigmaStar_n33
+write x_139
+concate x_124 x_132
+write x_140
+concate x_127 x_139
+write x_142
+concate x_133 literal_141
+write x_144
+concate x_123 literal_143
+write x_147
+union sigmaStar_13113 x_140
+write x_148
+union sigmaStar_n34 sigmaStar_n35
+write x_150
+union x_150 sigmaStar_n36
+write x_151
+union x_151 sigmaStar_n37
+write x_152
+union x_152 sigmaStar_10114
+write x_153
+union x_153 sigmaStar_n38
+write x_154
+concate x_142 literal_146
+write x_155
+union sigmaStar_n39 sigmaStar_n40
+write x_156
+union x_156 sigmaStar_n41
+write x_157
+union x_157 sigmaStar_n42
+write x_158
+union x_158 sigmaStar_17116
+write x_159
+union x_159 sigmaStar_n43
+write x_160
+concate x_144 x_148
+write x_161
+concate x_134 literal_149
+write x_162
+concate literal_145 x_154
+write x_163
+union sigmaStar_n44 sigmaStar_n45
+write x_164
+union x_164 sigmaStar_n46
+write x_165
+union x_165 sigmaStar_n47
+write x_166
+union x_166 sigmaStar_4119
+write x_167
+union x_167 sigmaStar_n48
+write x_168
+concate x_147 x_160
+write x_169
+union sigmaStar_n49 sigmaStar_n50
+write x_171
+union x_171 sigmaStar_n51
+write x_172
+union x_172 sigmaStar_n52
+write x_173
+union x_173 sigmaStar_n53
+write x_174
+union x_174 sigmaStar_n54
+write x_175
+concate x_155 x_168
+write x_177
+concate x_161 literal_170
+write x_178
+concate x_162 x_175
+write x_179
+concate x_163 literal_176
+write x_180
+union x_169 sigmaStar_15122
+write x_183
+concate x_177 literal_182
+write x_187
+concate x_178 x_183
+write x_188
+concate x_179 literal_184
+write x_189
+concate literal_181 x_180
+write x_190
+union literal_186 literal_185
+write x_191
+concate x_187 x_191
+write x_193
+concate x_188 literal_192
+write x_194
+concate x_190 x_189
+write x_195
+concate x_193 literal_196
+write x_197
+concate x_195 x_194
+write x_198
+concate x_198 x_197
+write x_199
+intersect x_199 atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

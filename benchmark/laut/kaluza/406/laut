@@ -1,0 +1,135 @@
+NEW_DGNode_33 ""
+NEW_DGNode_27 ""
+NEW_DGNode_5 ""
+NEW_DGNode_6 ""
+T1_14 ".*"
+PCTEMP_LHS_3 ~\("\-"\)
+T3_14 ".*"
+NEW_DGNode_31 ""
+NEW_DGNode_37 ""
+T1_44 ".*"
+PCTEMP_LHS_8 ~\("\-"\)
+T3_44 ".*"
+;
+T_1 Bool
+T_10 Bool
+T_11 Bool
+T_12 Bool
+T_13 Bool
+T_17 Bool
+T_18 Bool
+T_19 Bool
+T_1a Bool
+T_1c Bool
+T_2 Bool
+T_22 Bool
+T_23 Bool
+T_3 Bool
+T_4 Bool
+T_6 Bool
+T_8 Bool
+T_9 Bool
+T_SELECT_1 Bool
+T_SELECT_2 Bool
+T_SELECT_4 Bool
+T_c Bool
+I0_14 Int
+I0_44 Int
+I1_14 Int
+I1_44 Int
+I2_14 Int
+I2_44 Int
+PCTEMP_LHS_1 Int
+PCTEMP_LHS_2 Int
+PCTEMP_LHS_6 Int
+T_1f Int
+T_20 Int
+T_a Int
+;
+(= T_SELECT_2 (not (= PCTEMP_LHS_2 (- 1))))
+T_9
+(= T_9 (not T_8))
+(= T_8 (< PCTEMP_LHS_2 0))
+(= T_SELECT_1 (not (= PCTEMP_LHS_1 (- 1))))
+T_6
+(= T_6 (< (- 1) PCTEMP_LHS_1))
+(= T_a (+ PCTEMP_LHS_1 7))
+(>= T_a 0)
+(>= PCTEMP_LHS_2 T_a)
+(= I0_14 (- PCTEMP_LHS_2 T_a))
+(<= PCTEMP_LHS_2 I1_14)
+(= I2_14 I1_14)
+(trklen I1_14 0)
+(= T_SELECT_4 (not (= PCTEMP_LHS_6 (- 1))))
+T_1c
+(= T_1c (< (- 1) PCTEMP_LHS_6))
+(= T_1f (+ PCTEMP_LHS_6 7))
+(>= T_1f 0)
+(>= T_20 T_1f)
+(= I0_44 (- T_20 T_1f))
+(= I2_44 I1_44)
+(<= T_20 I1_44)
+(trklen T_20 0)
+(trklen I1_44 0)
+T_1
+T_2
+(= T_2 (not T_1))
+T_3
+T_4
+(= T_4 (not T_3))
+T_10
+T_11
+(= T_11 (not T_10))
+T_12
+T_13
+(= T_13 (not T_12))
+T_17
+T_18
+(= T_18 (not T_17))
+T_19
+T_1a
+(= T_1a (not T_19))
+(trklen T_a 1)
+(trklen I0_14 2)
+T_c
+(trklen T_1f 3)
+(trklen I0_44 4)
+T_22
+T_23
+(= T_23 (not T_22))
+;
+intersect NEW_DGNode_5 NEW_DGNode_6
+write NEW_DGNode_8
+trklen T1_14 1
+write T1_14_l
+trklen PCTEMP_LHS_3 2
+write PCTEMP_LHS_3_l
+concate PCTEMP_LHS_3_l T3_14
+write T2_14
+concate T1_14_l T2_14
+write NEW_DGNode_9
+intersect NEW_DGNode_8 NEW_DGNode_9
+write NEW_DGNode_28
+intersect NEW_DGNode_27 NEW_DGNode_28
+write NEW_DGNode_30
+intersect NEW_DGNode_30 NEW_DGNode_31
+write NEW_DGNode_34
+intersect NEW_DGNode_33 NEW_DGNode_34
+write NEW_DGNode_36
+intersect NEW_DGNode_36 NEW_DGNode_37
+write NEW_DGNode_39
+trklen T1_44 3
+write T1_44_l
+trklen PCTEMP_LHS_8 4
+write PCTEMP_LHS_8_l
+concate PCTEMP_LHS_8_l T3_44
+write T2_44
+concate T1_44_l T2_44
+write NEW_DGNode_40
+intersect NEW_DGNode_39 NEW_DGNode_40
+write var_0xINPUT_13776
+trklen var_0xINPUT_13776 0
+write var_0xINPUT_13776_l
+addpred
+write sink
+isempty sink

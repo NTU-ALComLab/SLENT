@@ -1,0 +1,46 @@
+NEW_DGNode_706 ~\(""\)
+NEW_DGNode_705 ~\("\+"\)
+NEW_DGNode_708 ~\("\%"\)
+NEW_DGNode_780 ~\("\%"\)
+;
+T_102 Bool
+T_66 Bool
+T_67 Bool
+T_SELECT_10 Bool
+I0_154 Int
+I0_158 Int
+I1_154 Int
+I1_158 Int
+I2_154 Int
+I2_158 Int
+PCTEMP_LHS_40 Int
+T_6b Int
+;
+(= T_SELECT_10 (not (= PCTEMP_LHS_40 (- 1))))
+T_67
+(= T_67 (not T_66))
+(= T_66 (= PCTEMP_LHS_40 (- 1)))
+(= I0_154 (- PCTEMP_LHS_40 0))
+(>= PCTEMP_LHS_40 0)
+(= I2_154 I1_154)
+(<= PCTEMP_LHS_40 I1_154)
+(= T_6b (+ PCTEMP_LHS_40 1))
+(>= T_6b 0)
+(>= I2_158 T_6b)
+(= I2_158 I1_158)
+(<= I2_158 I1_158)
+(= I0_158 (- I2_158 T_6b))
+(trklen I0_158 0)
+T_102
+;
+intersect NEW_DGNode_706 NEW_DGNode_705
+write NEW_DGNode_709
+intersect NEW_DGNode_709 NEW_DGNode_708
+write NEW_DGNode_781
+intersect NEW_DGNode_781 NEW_DGNode_780
+write PCTEMP_LHS_103
+trklen PCTEMP_LHS_103 0
+write PCTEMP_LHS_103_l
+addpred
+write sink
+isempty sink

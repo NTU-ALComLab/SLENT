@@ -1,0 +1,61 @@
+NEW_DGNode_5 ""
+NEW_DGNode_6 "\-"
+T1_14 ".*"
+PCTEMP_LHS_3 ".*"
+T3_14 ".*"
+;
+T_1 Bool
+T_2 Bool
+T_3 Bool
+T_5 Bool
+T_7 Bool
+T_8 Bool
+T_SELECT_1 Bool
+T_SELECT_2 Bool
+I0_14 Int
+I1_14 Int
+I2_14 Int
+PCTEMP_LHS_1 Int
+PCTEMP_LHS_2 Int
+T_9 Int
+T_a Int
+;
+(= T_SELECT_2 (not (= PCTEMP_LHS_2 (- 1))))
+T_8
+(= T_8 (not T_7))
+(= T_7 (< PCTEMP_LHS_2 0))
+(= T_SELECT_1 (not (= PCTEMP_LHS_1 (- 1))))
+T_5
+(= T_5 (< (- 1) PCTEMP_LHS_1))
+(= T_9 (+ PCTEMP_LHS_1 6))
+(= T_a (+ T_9 1))
+(>= T_a 0)
+(>= PCTEMP_LHS_2 T_a)
+(= I0_14 (- PCTEMP_LHS_2 T_a))
+(<= PCTEMP_LHS_2 I1_14)
+(= I2_14 I1_14)
+(trklen I1_14 0)
+T_1
+T_2
+(= T_2 (not T_1))
+T_3
+(trklen T_a 1)
+(trklen I0_14 2)
+;
+intersect NEW_DGNode_5 NEW_DGNode_6
+write NEW_DGNode_8
+trklen T1_14 1
+write T1_14_l
+trklen PCTEMP_LHS_3 2
+write PCTEMP_LHS_3_l
+concate PCTEMP_LHS_3_l T3_14
+write T2_14
+concate T1_14_l T2_14
+write NEW_DGNode_9
+intersect NEW_DGNode_8 NEW_DGNode_9
+write var_0xINPUT_100738
+trklen var_0xINPUT_100738 0
+write var_0xINPUT_100738_l
+addpred
+write sink
+isempty sink

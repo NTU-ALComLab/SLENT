@@ -1,0 +1,28 @@
+sigmaStar_751 \(.*\)
+regex_4 \("\\\\\r"\)
+regex_5 \(""\)
+regex_6 \(~\(\(.*\)\("\\\\\r"\)\(.*\)\)\)
+regex_7 \("\\\\\n"\)
+regex_8 \(""\)
+regex_9 \(~\(\(.*\)\("\\\\\n"\)\(.*\)\)\)
+atkPtn \(\(.*\)\("exec(\s|\+)+(s|x)p"\)\(.*\)\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(< 50 (+ i1 i2))
+;
+trklen sigmaStar_751 0
+write sigmaStar_751_len
+replace sigmaStar_751_len regex_4 regex_5 regex_6
+write x_12
+replace x_12 regex_7 regex_8 regex_9
+write x_16
+intersect x_16 atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

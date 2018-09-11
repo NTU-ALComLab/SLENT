@@ -1,0 +1,3 @@
+read benchmark/laut/f_lan_rep_nt/5239/sink.blif
+strash
+pdr

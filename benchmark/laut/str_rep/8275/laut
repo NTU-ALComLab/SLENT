@@ -1,0 +1,102 @@
+literal_1 "\D\B\ \c\a\c\h\e\_\f\i\l\t\e\r\s\ \e\n\t\r\y\ \f\o\r\ "
+sigmaStar_749 \(.*\)
+literal_11 "\\\\\n"
+literal_15 "\i\d\ \=\ \\\\\n"
+literal_18 "\f\i\l\t\e\r\ \=\ \\\\\n"
+literal_22 "\v\e\r\s\i\o\n\ \=\ \\\\\n"
+literal_30 "\1"
+literal_29 "\0"
+literal_25 "\D\e\l\e\t\i\n\g\ \D\B\ \c\a\c\h\e\_\f\i\l\t\e\r\s\ \e\n\t\r\y\ \f\o\r\ "
+sigmaStar_757 \(.*\)
+literal_27 "\m\d\5\k\e\y\ \=\ \\\\\n"
+literal_31 "\N\u\m\b\e\r\ \o\f\ \r\e\c\o\r\d\s\ \d\e\l\e\t\e\d\ \=\ "
+literal_40 "\\\\\n"
+literal_35 "\D\B\ \c\a\c\h\e\_\f\i\l\t\e\r\s\ \e\n\t\r\y\ \f\o\r\ "
+sigmaStar_762 \(.*\)
+literal_36 "\C\o\u\l\d\ \n\o\t\ \d\e\l\e\t\e\ \D\B\ \c\a\c\h\e\_\f\i\l\t\e\r\s\ \e\n\t\r\y\ \f\o\r\ "
+sigmaStar_764 \(.*\)
+literal_37 "\r\a\w\t\e\x\t\ \=\ \\\\\n"
+literal_42 "\\\\\n"
+literal_49 "\ \n\o\t\ \f\o\u\n\d\\\\\n"
+literal_50 "\\\\\n\b\e\c\a\u\s\e\ \i\t\ \c\o\u\l\d\ \n\o\t\ \b\e\ \f\o\u\n\d\.\\\\\n"
+literal_46 "\t\i\m\e\m\o\d\i\f\i\e\d\ \=\ \\\\\n"
+sigmaStar_270 \(.*\)
+regex_23 \("\<"\)
+regex_24 \("\&\l\t\;"\)
+regex_25 \(~\(\(.*\)\("\<"\)\(.*\)\)\)
+regex_26 \("\>"\)
+regex_27 \("\&\g\t\;"\)
+regex_28 \(~\(\(.*\)\("\>"\)\(.*\)\)\)
+regex_29 \("\\\\"\)
+regex_30 \("\&\q\u\o\t\;"\)
+regex_31 \(~\(\(.*\)\("\\\\"\)\(.*\)\)\)
+literal_71 "\\\\\n\\\\\n"
+atkPtn \(\(.*\)\('\\\";.*\/\/'\)\(.*\)\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(< 40 (+ i1 i2))
+;
+concate literal_1 sigmaStar_749
+write x_9
+concate x_9 literal_11
+write x_13
+concate x_13 literal_15
+write x_19
+concate x_19 literal_18
+write x_23
+concate x_23 literal_22
+write x_28
+union literal_30 literal_29
+write x_33
+concate literal_25 sigmaStar_757
+write x_34
+concate x_28 literal_27
+write x_38
+concate literal_31 x_33
+write x_39
+concate x_34 literal_40
+write x_43
+concate literal_35 sigmaStar_762
+write x_44
+concate literal_36 sigmaStar_764
+write x_45
+concate x_38 literal_37
+write x_47
+concate x_39 literal_42
+write x_48
+concate x_44 literal_49
+write x_51
+concate x_45 literal_50
+write x_52
+concate x_47 literal_46
+write x_53
+concate x_43 x_48
+write x_54
+union x_52 sigmaStar_270
+write x_55
+union x_55 x_51
+write x_56
+union x_56 x_54
+write x_57
+union x_57 x_53
+write x_58
+trklen x_58 0
+write x_58_len
+replace x_58_len regex_23 regex_24 regex_25
+write x_62
+replace x_62 regex_26 regex_27 regex_28
+write x_66
+replace x_66 regex_29 regex_30 regex_31
+write x_70
+concate x_70 literal_71
+write x_72
+intersect x_72 atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

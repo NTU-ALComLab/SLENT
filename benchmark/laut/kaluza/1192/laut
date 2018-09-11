@@ -1,0 +1,49 @@
+T0_175 ".*"
+T4_175 ~\("\_\_utma\=169413169\."\)
+T5_175 "\_\_utma\=169413169\."
+T3_175 ".*"
+;
+T_68 Bool
+T_70 Bool
+T_71 Bool
+T_SELECT_10 Bool
+T_SELECT_9 Bool
+I0_175 Int
+I0_207 Int
+I1_207 Int
+I2_207 Int
+PCTEMP_LHS_11 Int
+PCTEMP_LHS_12 Int
+T_78 Int
+;
+T_68
+(= T_68 (< (- 1) PCTEMP_LHS_11))
+(= T_SELECT_10 (not (= PCTEMP_LHS_12 (- 1))))
+T_71
+(= T_71 (not T_70))
+(= T_70 (< PCTEMP_LHS_12 0))
+(>= PCTEMP_LHS_12 T_78)
+(= I2_207 I1_207)
+(<= PCTEMP_LHS_12 I1_207)
+(= I0_207 (- PCTEMP_LHS_12 T_78))
+(>= T_78 0)
+(= T_78 (+ PCTEMP_LHS_11 7))
+(= PCTEMP_LHS_11 (+ I0_175 0))
+(= T_SELECT_9 (not (= PCTEMP_LHS_11 (- 1))))
+(trklen 0 0)
+(trklen I0_175 1)
+T_SELECT_9
+;
+trklen T0_175 0
+write T0_175_l
+trklen T4_175 1
+write T4_175_l
+concate T4_175_l T5_175
+write T2_175
+concate T2_175 T3_175
+write T1_175
+concate T0_175_l T1_175
+write T_66
+addpred
+write sink
+isempty sink

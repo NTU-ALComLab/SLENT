@@ -1,0 +1,50 @@
+T0_73 ".*"
+T4_73 ~\("\="\)
+T5_73 "\="
+T3_73 ".*"
+;
+T_32 Bool
+T_33 Bool
+T_SELECT_6 Bool
+I0_73 Int
+I0_78 Int
+I0_82 Int
+I1_78 Int
+I1_82 Int
+I2_78 Int
+I2_82 Int
+PCTEMP_LHS_20 Int
+T_37 Int
+;
+T_33
+(= T_33 (not T_32))
+(= T_32 (= PCTEMP_LHS_20 (- 1)))
+(= I0_78 (- PCTEMP_LHS_20 0))
+(>= PCTEMP_LHS_20 0)
+(= I2_78 I1_78)
+(<= PCTEMP_LHS_20 I1_78)
+(>= I2_82 T_37)
+(= I2_82 I1_82)
+(<= I2_82 I1_82)
+(= I0_82 (- I2_82 T_37))
+(>= T_37 0)
+(= T_37 (+ PCTEMP_LHS_20 1))
+(= PCTEMP_LHS_20 (+ I0_73 0))
+(= T_SELECT_6 (not (= PCTEMP_LHS_20 (- 1))))
+(trklen 0 0)
+(trklen I0_73 1)
+T_SELECT_6
+;
+trklen T0_73 0
+write T0_73_l
+trklen T4_73 1
+write T4_73_l
+concate T4_73_l T5_73
+write T2_73
+concate T2_73 T3_73
+write T1_73
+concate T0_73_l T1_73
+write T_30
+addpred
+write sink
+isempty sink

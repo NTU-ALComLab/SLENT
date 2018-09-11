@@ -1,0 +1,21 @@
+T0_4 ".*"
+T1_4 ~\("\_\_utmb\=169413169"\)
+;
+T_5 Bool
+T_SELECT_2 Bool
+PCTEMP_LHS_2 Int
+;
+T_5
+(= T_5 (<= 0 PCTEMP_LHS_2))
+(= PCTEMP_LHS_2 (- 1))
+(= T_SELECT_2 (not (= PCTEMP_LHS_2 (- 1))))
+(trklen 0 0)
+(not T_SELECT_2)
+;
+trklen T0_4 0
+write T0_4_l
+concate T0_4_l T1_4
+write var_0xINPUT_14693
+addpred
+write sink
+isempty sink

@@ -1,0 +1,102 @@
+Not_tree ""
+literal_33 "\/\/"
+sigmaStar_2361 \(.*\)
+sigmaStar_362 \(.*\)
+sigmaStar_464 \(.*\)
+sigmaStar_165 \(.*\)
+literal_36 '\ \+\+\ \-\e\ \ \\\"'
+sigmaStar_067 \(.*\)
+literal_40 '\\\"\/\/\m\i\m\e\t\e\x\.\d\a\r\w\i\n\\\"\ \-\e\ \\\"'
+literal_41 '\\\"\/\/\m\i\m\e\t\e\x\.\l\i\n\u\x\\\"\ \-\e\ \\\"'
+literal_45 "\/\/\m\i\m\e\t\e\x\ \-\e\ "
+literal_53 '\\\"\ \-\-\ '
+literal_55 '\\\"\ \-\-\ '
+literal_56 '\\\"\ \-\-\ '
+literal_49 "\/\/\m\i\m\e\t\e\x\.\e\x\e"
+regex_27 \("\ "\)
+regex_28 \("\^\ "\)
+regex_29 \(~\(\(.*\)\("\ "\)\(.*\)\)\)
+literal_61 "\ \-\-\ "
+sigmaStar_6079 \(.*\)
+sigmaStar_6080 \(.*\)
+sigmaStar_6081 \(.*\)
+sigmaStar_6082 \(.*\)
+literal_71 ""
+literal_73 "\T\h\e\ \s\h\e\l\l\ \c\o\m\m\a\n\d\<\b\r\ \/\>"
+literal_79 "\<\b\r\ \/\>\r\e\t\u\r\n\e\d\ \s\t\a\t\u\s\ \=\ "
+literal_80 ""
+literal_83 "\<\b\r\ \/\>\\\\\n"
+atkPtn \(\(.*\)\("livescript:"\)\(.*\)\)
+sigmaStar_n0 \(\(.\)*\)
+sigmaStar_n1 \(\(.\)*\)
+sigmaStar_n2 \(\(.\)*\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(= 10 (+ i1 i2))
+;
+concate literal_33 sigmaStar_2361
+write x_38
+union x_38 sigmaStar_362
+write x_42
+union sigmaStar_n0 sigmaStar_464
+write x_46
+union sigmaStar_n1 sigmaStar_165
+write x_47
+concate literal_36 x_42
+write x_48
+union sigmaStar_n2 sigmaStar_067
+write x_50
+concate literal_40 x_46
+write x_51
+concate literal_41 x_47
+write x_52
+concate literal_45 x_50
+write x_54
+concate x_48 literal_53
+write x_57
+concate x_51 literal_55
+write x_62
+concate x_52 literal_56
+write x_63
+replace literal_49 regex_27 regex_28 regex_29
+write x_65
+concate x_54 literal_61
+write x_66
+concate x_57 sigmaStar_6079
+write x_67
+concate x_62 sigmaStar_6080
+write x_68
+concate x_63 sigmaStar_6081
+write x_69
+concate x_66 sigmaStar_6082
+write x_70
+concate x_65 x_67
+write x_72
+union x_70 x_72
+write x_74
+union x_74 literal_71
+write x_75
+union x_75 x_69
+write x_76
+union x_76 x_68
+write x_77
+trklen x_77 0
+write x_77_len
+concate literal_73 x_77_len
+write x_78
+concate x_78 literal_79
+write x_81
+concate x_81 literal_80
+write x_82
+concate x_82 literal_83
+write x_84
+intersect x_84 atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

@@ -1,0 +1,193 @@
+T1_21 ".*"
+PCTEMP_LHS_6 ".*"
+T3_21 ".*"
+T1_25 ".*"
+NEW_DGNode_256 ~\("\+"\)
+NEW_DGNode_255 ~\("\%"\)
+T3_25 ".*"
+NEW_DGNode_249 ~\("\&"\)
+M0_10 "\&"
+T_16 ~\("\&"\)
+M1_10 "\&"
+PCTEMP_LHS_4_idx_2 ~\("\&"\)
+M2_10 "\&"
+PCTEMP_LHS_4_idx_3 ~\("\&"\)
+M3_10 "\&"
+PCTEMP_LHS_4_idx_4 ~\("\&"\)
+M4_10 "\&"
+PCTEMP_LHS_4_idx_5 ~\("\&"\)
+M5_10 "\&"
+PCTEMP_LHS_4_idx_6 ~\("\&"\)
+M6_10 "\&"
+PCTEMP_LHS_4_idx_7 ~\("\&"\)
+M7_10 "\&"
+PCTEMP_LHS_4_idx_8 ~\("\&"\)
+M8_10 "\&"
+PCTEMP_LHS_4_idx_9 ~\("\&"\)
+M9_10 "\&"
+PCTEMP_LHS_4_idx_10 ~\("\&"\)
+M10_10 "\&"
+PCTEMP_LHS_4_idx_11 ~\("\&"\)
+M11_10 "\&"
+PCTEMP_LHS_4_idx_12 ~\("\&"\)
+M12_10 "\&"
+PCTEMP_LHS_4_idx_13 ~\("\&"\)
+M13_10 "\&"
+PCTEMP_LHS_4_idx_14 ~\("\&"\)
+M14_10 "\&"
+PCTEMP_LHS_4_idx_15 ~\("\&"\)
+M15_10 "\&"
+PCTEMP_LHS_4_idx_16 ~\("\&"\)
+M16_10 "\&"
+PCTEMP_LHS_4_idx_17 ~\("\&"\)
+M17_10 "\&"
+T18_10 ".*"
+;
+T_SELECT_1 Bool
+T_SELECT_3 Bool
+T_b Bool
+T_c Bool
+I0_21 Int
+I0_25 Int
+I0_8 Int
+I1_21 Int
+I1_25 Int
+I1_8 Int
+I2_21 Int
+I2_25 Int
+I2_8 Int
+PCTEMP_LHS_1 Int
+PCTEMP_LHS_5 Int
+T_10 Int
+T_4 Int
+;
+(= T_SELECT_1 (not (= PCTEMP_LHS_1 (- 1))))
+(= T_4 (+ PCTEMP_LHS_1 1))
+(>= T_4 0)
+(>= I2_8 T_4)
+(= I2_8 I1_8)
+(<= I2_8 I1_8)
+(= I0_8 (- I2_8 T_4))
+(trklen I0_8 0)
+(= T_SELECT_3 (not (= PCTEMP_LHS_5 (- 1))))
+T_c
+(= T_c (not T_b))
+(= T_b (= PCTEMP_LHS_5 (- 1)))
+(= I0_21 (- PCTEMP_LHS_5 0))
+(>= PCTEMP_LHS_5 0)
+(>= I2_25 T_10)
+(= I2_25 I1_25)
+(<= I2_25 I1_25)
+(= I0_25 (- I2_25 T_10))
+(>= T_10 0)
+(= T_10 (+ PCTEMP_LHS_5 1))
+(<= PCTEMP_LHS_5 I1_21)
+(= I2_21 I1_21)
+(trklen I1_21 1)
+(trklen I1_25 1)
+(trklen 0 2)
+(trklen I0_21 3)
+(trklen T_10 4)
+(trklen I0_25 5)
+;
+trklen T1_21 2
+write T1_21_l
+trklen PCTEMP_LHS_6 3
+write PCTEMP_LHS_6_l
+concate PCTEMP_LHS_6_l T3_21
+write T2_21
+concate T1_21_l T2_21
+write NEW_DGNode_186
+trklen T1_25 4
+write T1_25_l
+intersect NEW_DGNode_256 NEW_DGNode_255
+write PCTEMP_LHS_9
+trklen PCTEMP_LHS_9 5
+write PCTEMP_LHS_9_l
+concate PCTEMP_LHS_9_l T3_25
+write T2_25
+concate T1_25_l T2_25
+write NEW_DGNode_187
+intersect NEW_DGNode_186 NEW_DGNode_187
+write NEW_DGNode_250
+intersect NEW_DGNode_250 NEW_DGNode_249
+write T_f
+trklen T_f 1
+write T_f_l
+concate T_f_l M0_10
+write P0_10
+concate T_16 M1_10
+write P1_10
+concate PCTEMP_LHS_4_idx_2 M2_10
+write P2_10
+concate PCTEMP_LHS_4_idx_3 M3_10
+write P3_10
+concate PCTEMP_LHS_4_idx_4 M4_10
+write P4_10
+concate PCTEMP_LHS_4_idx_5 M5_10
+write P5_10
+concate PCTEMP_LHS_4_idx_6 M6_10
+write P6_10
+concate PCTEMP_LHS_4_idx_7 M7_10
+write P7_10
+concate PCTEMP_LHS_4_idx_8 M8_10
+write P8_10
+concate PCTEMP_LHS_4_idx_9 M9_10
+write P9_10
+concate PCTEMP_LHS_4_idx_10 M10_10
+write P10_10
+concate PCTEMP_LHS_4_idx_11 M11_10
+write P11_10
+concate PCTEMP_LHS_4_idx_12 M12_10
+write P12_10
+concate PCTEMP_LHS_4_idx_13 M13_10
+write P13_10
+concate PCTEMP_LHS_4_idx_14 M14_10
+write P14_10
+concate PCTEMP_LHS_4_idx_15 M15_10
+write P15_10
+concate PCTEMP_LHS_4_idx_16 M16_10
+write P16_10
+concate PCTEMP_LHS_4_idx_17 M17_10
+write P17_10
+concate P17_10 T18_10
+write T17_10
+concate P16_10 T17_10
+write T16_10
+concate P15_10 T16_10
+write T15_10
+concate P14_10 T15_10
+write T14_10
+concate P13_10 T14_10
+write T13_10
+concate P12_10 T13_10
+write T12_10
+concate P11_10 T12_10
+write T11_10
+concate P10_10 T11_10
+write T10_10
+concate P9_10 T10_10
+write T9_10
+concate P8_10 T9_10
+write T8_10
+concate P7_10 T8_10
+write T7_10
+concate P6_10 T7_10
+write T6_10
+concate P5_10 T6_10
+write T5_10
+concate P4_10 T5_10
+write T4_10
+concate P3_10 T4_10
+write T3_10
+concate P2_10 T3_10
+write T2_10
+concate P1_10 T2_10
+write T1_10
+concate P0_10 T1_10
+write T0_10
+trklen T0_10 0
+write T0_10_l
+addpred
+write sink
+isempty sink

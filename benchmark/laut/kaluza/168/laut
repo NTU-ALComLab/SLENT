@@ -1,0 +1,33 @@
+T0_16 ".*"
+T4_16 ~\("\="\)
+T5_16 "\="
+T3_16 ".*"
+;
+T_SELECT_3 Bool
+T_c Bool
+T_d Bool
+I0_16 Int
+PCTEMP_LHS_5 Int
+;
+T_d
+(= T_d (not T_c))
+(= T_c (not (= PCTEMP_LHS_5 (- 1))))
+(= PCTEMP_LHS_5 (+ I0_16 0))
+(= T_SELECT_3 (not (= PCTEMP_LHS_5 (- 1))))
+(trklen 0 0)
+(trklen I0_16 1)
+T_SELECT_3
+;
+trklen T0_16 0
+write T0_16_l
+trklen T4_16 1
+write T4_16_l
+concate T4_16_l T5_16
+write T2_16
+concate T2_16 T3_16
+write T1_16
+concate T0_16_l T1_16
+write T_a
+addpred
+write sink
+isempty sink

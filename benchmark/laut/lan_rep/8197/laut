@@ -1,0 +1,42 @@
+Not_tree ""
+sigmaStar_safe_48 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+sigmaStar_safe_49 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+sigmaStar_050 \(.*\)
+regex_3 \(\(.\)\(\(\("\d"\)+\)\(.\)\)\)
+regex_4 \("\_\$\1\."\)
+regex_5 \(~\(\(.*\)\(\(.\)\(\(\("\d"\)+\)\(.\)\)\)\(.*\)\)\)
+literal_8 "\ \ \ \ "
+literal_10 "\ \=\ \'"
+literal_13 "\'\;\\\\\n"
+atkPtn \(\(.*\)\('\\\";.*\/\/'\)\(.*\)\)
+sigmaStar_n0 \(\(.\)*\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(= 10 (+ i1 i2))
+;
+union sigmaStar_safe_48 sigmaStar_safe_49
+write x_1
+union x_1 sigmaStar_050
+write x_2
+trklen x_2 0
+write x_2_len
+replace x_2_len regex_3 regex_4 regex_5
+write x_7
+concate literal_8 x_7
+write x_9
+concate x_9 literal_10
+write x_11
+concate x_11 sigmaStar_n0
+write x_12
+concate x_12 literal_13
+write x_14
+intersect x_14 atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

@@ -1,0 +1,14 @@
+var_0xINPUT_432194 ".*"
+;
+T_2 Bool
+T_1 Int
+;
+T_2
+(= T_2 (= T_1 0))
+(trklen T_1 0)
+;
+trklen var_0xINPUT_432194 0
+write var_0xINPUT_432194_l
+addpred
+write sink
+isempty sink

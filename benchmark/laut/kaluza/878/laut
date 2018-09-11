@@ -1,0 +1,33 @@
+T0_256 ".*"
+T4_256 ~\("\_\_utmx\=169413169"\)
+T5_256 "\_\_utmx\=169413169"
+T3_256 ".*"
+;
+T_95 Bool
+T_96 Bool
+T_SELECT_11 Bool
+I0_256 Int
+PCTEMP_LHS_15 Int
+;
+T_96
+(= T_96 (not T_95))
+(= T_95 (< (- 1) PCTEMP_LHS_15))
+(= PCTEMP_LHS_15 (+ I0_256 0))
+(= T_SELECT_11 (not (= PCTEMP_LHS_15 (- 1))))
+(trklen 0 0)
+(trklen I0_256 1)
+T_SELECT_11
+;
+trklen T0_256 0
+write T0_256_l
+trklen T4_256 1
+write T4_256_l
+concate T4_256_l T5_256
+write T2_256
+concate T2_256 T3_256
+write T1_256
+concate T0_256_l T1_256
+write T_93
+addpred
+write sink
+isempty sink

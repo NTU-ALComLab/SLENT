@@ -1,0 +1,14 @@
+digraph Automaton {
+  rankdir = LR;
+  0 [shape=circle,label=""];
+  initial [shape=plaintext,label=""];
+  initial -> 0
+  0 -> 1 [label=";-?"]
+  0 -> 1 [label="!-,"]
+  0 -> 1 [label="T-\uffff"]
+  0 -> 1 [label="B"]
+  0 -> 1 [label="0-9"]
+  0 -> 1 [label="D-Q"]
+  0 -> 1 [label="\u0000-\u001f"]
+  1 [shape=doublecircle,label=""];
+}

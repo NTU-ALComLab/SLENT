@@ -1,0 +1,33 @@
+T0_42 ".*"
+T4_42 ~\("\_\_utmv\=16886264"\)
+T5_42 "\_\_utmv\=16886264"
+T3_42 ".*"
+;
+T_23 Bool
+T_24 Bool
+T_SELECT_5 Bool
+I0_42 Int
+PCTEMP_LHS_7 Int
+;
+T_24
+(= T_24 (not T_23))
+(= T_23 (< (- 1) PCTEMP_LHS_7))
+(= PCTEMP_LHS_7 (+ I0_42 0))
+(= T_SELECT_5 (not (= PCTEMP_LHS_7 (- 1))))
+(trklen 0 0)
+(trklen I0_42 1)
+T_SELECT_5
+;
+trklen T0_42 0
+write T0_42_l
+trklen T4_42 1
+write T4_42_l
+concate T4_42_l T5_42
+write T2_42
+concate T2_42 T3_42
+write T1_42
+concate T0_42_l T1_42
+write var_0xINPUT_35398
+addpred
+write sink
+isempty sink

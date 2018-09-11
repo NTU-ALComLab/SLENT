@@ -1,0 +1,35 @@
+sigmaStar_048 \(.*\)
+regex_1 \(\(.\)\(\(\("\d"\)+\)\(.\)\)\)
+regex_2 \("\_\$\1\."\)
+regex_3 \(~\(\(.*\)\(\(.\)\(\(\("\d"\)+\)\(.\)\)\)\(.*\)\)\)
+literal_6 "\ \ \ \ "
+literal_8 "\ \=\ \'"
+sigmaStar_054 \(.*\)
+literal_11 "\'\;\\\\\n"
+atkPtn \(\(.*\)\("\\<SCRIPT .*\\>"\)\(.*\)\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(< 20 (+ i1 i2))
+;
+trklen sigmaStar_048 0
+write sigmaStar_048_len
+replace sigmaStar_048_len regex_1 regex_2 regex_3
+write x_5
+concate literal_6 x_5
+write x_7
+concate x_7 literal_8
+write x_9
+concate x_9 sigmaStar_054
+write x_10
+concate x_10 literal_11
+write x_12
+intersect x_12 atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

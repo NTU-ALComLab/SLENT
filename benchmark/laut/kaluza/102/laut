@@ -1,0 +1,50 @@
+T0_301 ".*"
+T4_301 ~\("\="\)
+T5_301 "\="
+T3_301 ".*"
+;
+T_SELECT_18 Bool
+T_ce Bool
+T_cf Bool
+I0_301 Int
+I0_306 Int
+I0_310 Int
+I1_306 Int
+I1_310 Int
+I2_306 Int
+I2_310 Int
+PCTEMP_LHS_80 Int
+T_d3 Int
+;
+T_cf
+(= T_cf (not T_ce))
+(= T_ce (= PCTEMP_LHS_80 (- 1)))
+(= I0_306 (- PCTEMP_LHS_80 0))
+(>= PCTEMP_LHS_80 0)
+(= I2_306 I1_306)
+(<= PCTEMP_LHS_80 I1_306)
+(>= I2_310 T_d3)
+(= I2_310 I1_310)
+(<= I2_310 I1_310)
+(= I0_310 (- I2_310 T_d3))
+(>= T_d3 0)
+(= T_d3 (+ PCTEMP_LHS_80 1))
+(= PCTEMP_LHS_80 (+ I0_301 0))
+(= T_SELECT_18 (not (= PCTEMP_LHS_80 (- 1))))
+(trklen 0 0)
+(trklen I0_301 1)
+T_SELECT_18
+;
+trklen T0_301 0
+write T0_301_l
+trklen T4_301 1
+write T4_301_l
+concate T4_301_l T5_301
+write T2_301
+concate T2_301 T3_301
+write T1_301
+concate T0_301_l T1_301
+write T_cc
+addpred
+write sink
+isempty sink

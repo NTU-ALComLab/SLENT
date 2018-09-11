@@ -1,0 +1,10 @@
+benchmark       : r_pisa
+timeout         : 20.000000 (s)
+number of cases : 6
+
+solver   Abort      Timeout    SAT        UNSAT      Inconsistent    Exclusive  Cumulative Time
+abc*     0          0          4          2          0               0          19.20392  
+ic3ia    0          0          4          2          0               0          8.921507  
+s3p      0          2          2          2          0               0          1.071248  
+
+* : reference solver

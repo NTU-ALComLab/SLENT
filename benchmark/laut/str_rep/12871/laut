@@ -1,0 +1,32 @@
+literal_29 ""
+sigmaStar_3060 \(.*\)
+regex_13 \("\'"\)
+regex_14 \("\\\\\'"\)
+regex_15 \(~\(\(.*\)\("\'"\)\(.*\)\)\)
+literal_37 "\'"
+literal_39 "\'"
+atkPtn \(\(.*\)\("PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4K"\)\(.*\)\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(< 10 (+ i1 i2))
+;
+union sigmaStar_3060 literal_29
+write x_31
+trklen x_31 0
+write x_31_len
+replace x_31_len regex_13 regex_14 regex_15
+write x_36
+concate literal_37 x_36
+write x_38
+concate x_38 literal_39
+write x_40
+intersect x_40 atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

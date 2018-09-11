@@ -1,0 +1,39 @@
+T0_18 ".*"
+T1_18 ~\("\;"\)
+;
+T_SELECT_4 Bool
+T_SELECT_5 Bool
+T_c Bool
+T_e Bool
+T_f Bool
+I0_23 Int
+I1_23 Int
+I2_23 Int
+PCTEMP_LHS_4 Int
+PCTEMP_LHS_5 Int
+T_10 Int
+;
+T_f
+(= T_f (not T_e))
+(= T_e (< PCTEMP_LHS_5 0))
+(= T_SELECT_4 (not (= PCTEMP_LHS_4 (- 1))))
+T_c
+(= T_c (< (- 1) PCTEMP_LHS_4))
+(= T_10 (+ PCTEMP_LHS_4 7))
+(>= T_10 0)
+(>= PCTEMP_LHS_5 T_10)
+(= I0_23 (- PCTEMP_LHS_5 T_10))
+(= I2_23 I1_23)
+(<= PCTEMP_LHS_5 I1_23)
+(= PCTEMP_LHS_5 (- 1))
+(= T_SELECT_5 (not (= PCTEMP_LHS_5 (- 1))))
+(trklen PCTEMP_LHS_4 0)
+(not T_SELECT_5)
+;
+trklen T0_18 0
+write T0_18_l
+concate T0_18_l T1_18
+write var_0xINPUT_15467
+addpred
+write sink
+isempty sink

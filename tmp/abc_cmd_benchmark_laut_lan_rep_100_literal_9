@@ -1,0 +1,3 @@
+read benchmark/laut/lan_rep/100/literal_9.blif
+espresso
+write benchmark/laut/lan_rep/100/literal_9.blif

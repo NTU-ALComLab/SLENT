@@ -1,0 +1,33 @@
+T0_6 ".*"
+T4_6 ~\("GASO\="\)
+T5_6 "GASO\="
+T3_6 ".*"
+;
+T_6 Bool
+T_7 Bool
+T_SELECT_1 Bool
+I0_6 Int
+PCTEMP_LHS_1 Int
+;
+T_7
+(= T_7 (not T_6))
+(= T_6 (< (- 1) PCTEMP_LHS_1))
+(= PCTEMP_LHS_1 (+ I0_6 0))
+(= T_SELECT_1 (not (= PCTEMP_LHS_1 (- 1))))
+(trklen 0 0)
+(trklen I0_6 1)
+T_SELECT_1
+;
+trklen T0_6 0
+write T0_6_l
+trklen T4_6 1
+write T4_6_l
+concate T4_6_l T5_6
+write T2_6
+concate T2_6 T3_6
+write T1_6
+concate T0_6_l T1_6
+write var_0xINPUT_12312
+addpred
+write sink
+isempty sink

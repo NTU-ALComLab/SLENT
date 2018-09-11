@@ -1,0 +1,146 @@
+PCTEMP_LHS_4 ".*"
+;
+T_10c Bool
+T_119 Bool
+T_126 Bool
+T_133 Bool
+T_140 Bool
+T_14d Bool
+T_15 Bool
+T_15a Bool
+T_15b Bool
+T_22 Bool
+T_2f Bool
+T_3c Bool
+T_49 Bool
+T_56 Bool
+T_63 Bool
+T_70 Bool
+T_7d Bool
+T_8 Bool
+T_8a Bool
+T_97 Bool
+T_a4 Bool
+T_b1 Bool
+T_be Bool
+T_cb Bool
+T_d8 Bool
+T_e5 Bool
+T_f2 Bool
+T_ff Bool
+T_10b Int
+T_118 Int
+T_125 Int
+T_132 Int
+T_13f Int
+T_14 Int
+T_14c Int
+T_159 Int
+T_21 Int
+T_2e Int
+T_3b Int
+T_48 Int
+T_55 Int
+T_62 Int
+T_6f Int
+T_7 Int
+T_7c Int
+T_89 Int
+T_96 Int
+T_a3 Int
+T_b0 Int
+T_bd Int
+T_ca Int
+T_d7 Int
+T_e4 Int
+T_f1 Int
+T_fe Int
+;
+T_8
+(= T_8 (< 0 T_7))
+(trklen T_7 0)
+T_15
+(= T_15 (< 1 T_14))
+(trklen T_14 0)
+T_22
+(= T_22 (< 2 T_21))
+(trklen T_21 0)
+T_2f
+(= T_2f (< 3 T_2e))
+(trklen T_2e 0)
+T_3c
+(= T_3c (< 4 T_3b))
+(trklen T_3b 0)
+T_49
+(= T_49 (< 5 T_48))
+(trklen T_48 0)
+T_56
+(= T_56 (< 6 T_55))
+(trklen T_55 0)
+T_63
+(= T_63 (< 7 T_62))
+(trklen T_62 0)
+T_70
+(= T_70 (< 8 T_6f))
+(trklen T_6f 0)
+T_7d
+(= T_7d (< 9 T_7c))
+(trklen T_7c 0)
+T_8a
+(= T_8a (< 10 T_89))
+(trklen T_89 0)
+T_97
+(= T_97 (< 11 T_96))
+(trklen T_96 0)
+T_a4
+(= T_a4 (< 12 T_a3))
+(trklen T_a3 0)
+T_b1
+(= T_b1 (< 13 T_b0))
+(trklen T_b0 0)
+T_be
+(= T_be (< 14 T_bd))
+(trklen T_bd 0)
+T_cb
+(= T_cb (< 15 T_ca))
+(trklen T_ca 0)
+T_d8
+(= T_d8 (< 16 T_d7))
+(trklen T_d7 0)
+T_e5
+(= T_e5 (< 17 T_e4))
+(trklen T_e4 0)
+T_f2
+(= T_f2 (< 18 T_f1))
+(trklen T_f1 0)
+T_ff
+(= T_ff (< 19 T_fe))
+(trklen T_fe 0)
+T_10c
+(= T_10c (< 20 T_10b))
+(trklen T_10b 0)
+T_119
+(= T_119 (< 21 T_118))
+(trklen T_118 0)
+T_126
+(= T_126 (< 22 T_125))
+(trklen T_125 0)
+T_133
+(= T_133 (< 23 T_132))
+(trklen T_132 0)
+T_140
+(= T_140 (< 24 T_13f))
+(trklen T_13f 0)
+T_14d
+(= T_14d (< 25 T_14c))
+(trklen T_14c 0)
+T_15b
+(= T_15b (not T_15a))
+(= T_15a (< 26 T_159))
+(trklen T_159 0)
+;
+trklen PCTEMP_LHS_4 0
+write PCTEMP_LHS_4_l
+addpred
+write sink
+isempty sink

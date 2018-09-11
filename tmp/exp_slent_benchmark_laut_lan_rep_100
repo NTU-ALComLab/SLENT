@@ -1,0 +1,104 @@
+parsed system with 32 state variables
+adding predicate 1: .pred.4 := (= n0 0)
+adding predicate 2: .pred.6 := (= n1 0)
+adding predicate 3: .pred.8 := (= n0 K0)
+adding predicate 4: .pred.10 := (= n1 K1)
+adding predicate 5: .pred.12 := (<= (+ K0 K1) 10)
+initialized IC3: 32 state vars, 0 input vars, 5 predicates
+1: 1 
+2: 1 1 
+3: 2 1 1 
+4: 1 1 1 1 
+5: 1 1 1 1 1 
+6: 1 1 1 2 2 2 
+7: 1 1 1 2 1 1 2 
+8: 1 1 1 2 1 1 2 1 
+9: 2 2 3 4 3 3 4 4 6 
+fixpoint found at frame 9
+invariant:
+[ s1 s10 ~s8 ]
+[ s10 ~s3 ~s8 ]
+[ ~s6 ~s7 ~s8 ]
+[ s0 s9 ]
+[ s7 s9 ]
+[ s1 s9 ]
+[ s10 ~s9 ~s8 ]
+[ s9 ~s3 ]
+[ s9 ~s6 ]
+[ s9 ~s2 ]
+invariant
+;; clause 0
+(or
+  (not s1)
+  (not s10)
+  s8
+)
+;; clause 1
+(or
+  (not s10)
+  s3
+  s8
+)
+;; clause 2
+(or
+  s6
+  s7
+  s8
+)
+;; clause 3
+(or
+  (not s0)
+  (not s9)
+)
+;; clause 4
+(or
+  (not s7)
+  (not s9)
+)
+;; clause 5
+(or
+  (not s1)
+  (not s9)
+)
+;; clause 6
+(or
+  (not s10)
+  s9
+  s8
+)
+;; clause 7
+(or
+  (not s9)
+  s3
+)
+;; clause 8
+(or
+  (not s9)
+  s6
+)
+;; clause 9
+(or
+  (not s9)
+  s2
+)
+num_solve_calls = 969
+num_solve_sat_calls = 310
+num_solve_unsat_calls = 659
+num_solver_reset = 0
+num_added_cubes = 94
+num_subsumed_cubes = 87
+num_block = 426
+num_refinements = 0
+num_predicates = 5
+max_cube_size = 4
+avg_cube_size = 2.383
+solve_time = 0.098
+solve_sat_time = 0.065
+solve_unsat_time = 0.030
+block_time = 0.080
+generalize_and_push_time = 0.052
+rec_block_time = 0.087
+propagate_time = 0.017
+refinement_time = 0.000
+total_time = 0.111
+safe

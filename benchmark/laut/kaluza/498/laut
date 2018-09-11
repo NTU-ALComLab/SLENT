@@ -1,0 +1,51 @@
+T0_23 ".*"
+T4_23 ~\("\;"\)
+T5_23 "\;"
+T3_23 ".*"
+;
+T_11 Bool
+T_13 Bool
+T_14 Bool
+T_SELECT_4 Bool
+T_SELECT_5 Bool
+I0_23 Int
+I0_29 Int
+I1_29 Int
+I2_29 Int
+PCTEMP_LHS_4 Int
+PCTEMP_LHS_5 Int
+T_15 Int
+T_16 Int
+;
+T_14
+(= T_14 (not T_13))
+(= T_13 (< PCTEMP_LHS_5 0))
+(= T_SELECT_4 (not (= PCTEMP_LHS_4 (- 1))))
+T_11
+(= T_11 (< (- 1) PCTEMP_LHS_4))
+(= PCTEMP_LHS_5 (+ I0_23 PCTEMP_LHS_4))
+(= T_15 (+ PCTEMP_LHS_4 6))
+(= T_16 (+ T_15 1))
+(>= T_16 0)
+(>= PCTEMP_LHS_5 T_16)
+(= I0_29 (- PCTEMP_LHS_5 T_16))
+(= I2_29 I1_29)
+(<= PCTEMP_LHS_5 I1_29)
+(= T_SELECT_5 (not (= PCTEMP_LHS_5 (- 1))))
+(trklen PCTEMP_LHS_4 0)
+(trklen I0_23 1)
+T_SELECT_5
+;
+trklen T0_23 0
+write T0_23_l
+trklen T4_23 1
+write T4_23_l
+concate T4_23_l T5_23
+write T2_23
+concate T2_23 T3_23
+write T1_23
+concate T0_23_l T1_23
+write var_0xINPUT_131094
+addpred
+write sink
+isempty sink

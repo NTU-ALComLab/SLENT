@@ -1,0 +1,5 @@
+(declare-fun I0_2 () Int)
+(declare-fun PCTEMP_LHS_2 () String)
+(assert (= I0_2 (- 20 7)))
+(assert (= I0_2 (Length PCTEMP_LHS_2))) ; len 0
+(check-sat)

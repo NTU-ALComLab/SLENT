@@ -1,0 +1,29 @@
+sigmaStar_048 \(.*\)
+regex_1 \("\W"\)
+regex_2 \(""\)
+regex_3 \(~\(\(.*\)\("\W"\)\(.*\)\)\)
+literal_9 "\S\E\L\E\C\T\ \i\d\,\u\s\e\r\n\a\m\e\,\r\e\a\l\n\a\m\e\,\p\a\s\s\w\d\ \F\R\O\M\ \u\s\e\r\s\ \W\H\E\R\E\ \u\s\e\r\n\a\m\e\=\'"
+literal_11 "\'"
+atkPtn \(\(.*\)\("' or 1=1 '"\)\(.*\)\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(> 10 (+ i1 i2))
+;
+trklen sigmaStar_048 0
+write sigmaStar_048_len
+replace sigmaStar_048_len regex_1 regex_2 regex_3
+write x_7
+concate literal_9 x_7
+write x_10
+concate x_10 literal_11
+write x_12
+intersect x_12 atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

@@ -1,0 +1,10 @@
+benchmark=h_str_rep,solver=s3p,TO=600.000000
+path,sat,time
+benchmark/laut/h_str_rep_nt/3307/sink.s3,x,0.0
+benchmark/laut/h_str_rep_nt/14857/sink.s3,x,0.0
+benchmark/laut/h_str_rep_nt/9102/sink.s3,x,0.0
+benchmark/laut/h_str_rep_nt/7172/sink.s3,x,0.0
+benchmark/laut/h_str_rep_nt/11004/sink.s3,x,0.0
+benchmark/laut/h_str_rep_nt/689/sink.s3,x,0.000000
+benchmark/laut/h_str_rep_nt/5239/sink.s3,x,0.000000
+benchmark/laut/h_str_rep_nt/12941/sink.s3,0,0.035780

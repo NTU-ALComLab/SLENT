@@ -1,0 +1,117 @@
+Not_tree ""
+literal_37 "\/\/"
+sigmaStar_2661 \(.*\)
+sigmaStar_362 \(.*\)
+sigmaStar_164 \(.*\)
+literal_39 '\ \+\+\ \-\e\ \ \\\"'
+sigmaStar_266 \(.*\)
+sigmaStar_067 \(.*\)
+sigmaStar_568 \(.*\)
+literal_45 "\/\/\m\i\m\e\t\e\x\ \-\e\ "
+literal_48 '\\\"\/\/\m\i\m\e\t\e\x\.\f\r\e\e\b\s\d\\\"\ \-\e\ \\\"'
+literal_49 '\\\"\/\/\m\i\m\e\t\e\x\.\d\a\r\w\i\n\\\"\ \-\e\ \\\"'
+literal_51 '\\\"\/\/\m\i\m\e\t\e\x\.\l\i\n\u\x\\\"\ \-\e\ \\\"'
+literal_59 '\\\"\ \-\-\ '
+literal_63 "\ \-\-\ "
+literal_54 "\/\/\m\i\m\e\t\e\x\.\e\x\e"
+regex_28 \("\ "\)
+regex_29 \("\^\ "\)
+regex_30 \(~\(\(.*\)\("\ "\)\(.*\)\)\)
+literal_67 '\\\"\ '
+literal_68 '\\\"\ \-\-\ '
+literal_70 '\\\"\ \-\-\ '
+sigmaStar_6982 \(.*\)
+sigmaStar_6983 \(.*\)
+sigmaStar_6984 \(.*\)
+sigmaStar_6985 \(.*\)
+sigmaStar_6986 \(.*\)
+literal_83 ""
+literal_84 "\T\h\e\ \s\h\e\l\l\ \c\o\m\m\a\n\d\<\b\r\ \/\>"
+literal_91 "\<\b\r\ \/\>\r\e\t\u\r\n\e\d\ \s\t\a\t\u\s\ \=\ "
+literal_92 ""
+literal_95 "\<\b\r\ \/\>\\\\\n"
+atkPtn \(\(.*\)\("\\<SCRIPT .*\\>"\)\(.*\)\)
+sigmaStar_n0 \(\(.\)*\)
+sigmaStar_n1 \(\(.\)*\)
+sigmaStar_n2 \(\(.\)*\)
+sigmaStar_n3 \(\(.\)*\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(> 10 (+ i1 i2))
+;
+concate literal_37 sigmaStar_2661
+write x_43
+union sigmaStar_362 x_43
+write x_46
+union sigmaStar_164 sigmaStar_n0
+write x_52
+concate literal_39 x_46
+write x_53
+union sigmaStar_266 sigmaStar_n1
+write x_55
+union sigmaStar_067 sigmaStar_n2
+write x_56
+union sigmaStar_568 sigmaStar_n3
+write x_57
+concate literal_45 x_52
+write x_58
+concate literal_48 x_55
+write x_60
+concate literal_49 x_56
+write x_61
+concate literal_51 x_57
+write x_62
+concate x_53 literal_59
+write x_64
+concate x_58 literal_63
+write x_71
+replace literal_54 regex_28 regex_29 regex_30
+write x_73
+concate x_60 literal_67
+write x_74
+concate x_61 literal_68
+write x_75
+concate x_62 literal_70
+write x_76
+concate x_64 sigmaStar_6982
+write x_77
+concate x_71 sigmaStar_6983
+write x_78
+concate x_74 sigmaStar_6984
+write x_79
+concate x_75 sigmaStar_6985
+write x_80
+concate x_76 sigmaStar_6986
+write x_81
+concate x_73 x_77
+write x_82
+union literal_83 x_81
+write x_85
+union x_85 x_80
+write x_86
+union x_86 x_79
+write x_87
+union x_87 x_82
+write x_88
+union x_88 x_78
+write x_89
+trklen x_89 0
+write x_89_len
+concate literal_84 x_89_len
+write x_90
+concate x_90 literal_91
+write x_93
+concate x_93 literal_92
+write x_94
+concate x_94 literal_95
+write x_96
+intersect x_96 atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

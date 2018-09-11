@@ -1,0 +1,15 @@
+# Benchmark "benchmark/laut/lan_rep/100/literal_11" written by ABC on Tue Sep 11 09:16:48 2018
+.model benchmark/laut/lan_rep/100/literal_11
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 s0 s1 s2 n0 n1 n2
+.outputs i o t
+.names s0 s1 s2 i
+010 1
+.names s0 s1 s2 o
+001 1
+.names x0 x1 x2 x3 x4 x5 x6 x7 s0 s1 s2 n0 n1 n2 t
+00101111101000 1
+01100100100011 1
+01110100000100 1
+00111110011001 1
+00111100010101 1
+.end

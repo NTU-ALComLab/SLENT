@@ -1,0 +1,147 @@
+############################### Command Usage ##################################
+Attention: 1. file | cfile | sfile : a string literal without file extension (e.g., .blif .vmt)
+           2. index                : non-negative integer
+           3. L(*) indicates the language recognized by the automaton describing by *
+           4. due to the incapability of constructing complement of language, the complemented automaton
+              used in replace, trkidx, notcontains, notprefixof_smt and notsuffixof_smt is assumed to be known
+           5. current version only support script-mode, no command-mode
+
+usage: trklen            <file> <index>
+                         add an integer variable to track the length of an automaton
+       file            : the file describing an automaton
+       integer         : the index of the integer variable
+
+usage: intersect         <file_1> <file_2>
+                         construct the intersection of L(file_1) and L(file_2)
+       file_*          : the file describing an automaton
+
+usage: concate           <file_1> <file_2>
+                         construct the concatenation of L(file_1) and L(file_2)
+       file_*          : the file describing an automaton
+
+usage: replace           <file_1> <file_2> <file_3> <cfile>
+                         language-to-language replace corresponding to Rep(A1,A2,A3) in the paper
+       file_*          : the file describing an automaton
+       cfile           : the file describing a complmented automaton
+
+usage: contains          <file_1> <file_2>
+                         construct the intersection of L(file_1) and .*L(file_2).*
+       file_*          : the file describing an automaton
+
+usage: notcontains       <file> <cfile>
+                         construct the intersection of L(file) and L(cfile)
+       file            : the file describing an automaton
+       cfile           : the file describing a complemented automaton
+
+usage: trkidx            <file> <sfile> <cfile> <index_1> <index_2>
+                         construct an automaton that accept the intersection of L(file) and .*L(sfile).* with 
+                         index_1 indicating the not-less-than position of L(sfile) and index_2 indicating 
+                         the first occurence position of L(sfile) (first occurence after index_1 position)
+       file            : the file describing an automaton
+       sfile           : the file describing an automaton recognizing a string literal
+       cfile           : the file describing a complemented automaton
+       index_1         : the index of the integer variable indicating the not-less-than position
+       index_2         : the index of the integer variable indicating the answer position
+
+usage: substr            <file> <index_1> <index_2>
+                         construct the automaton recognizing the set of substrings with starting position and 
+                         pass-the-end position specified by index_1 and index_2 respectively
+       file            : the file describing an automaton
+       index_1         : the index of the integer variable indicating the beginning position
+       index_2         : the index of the integer variable indicating the pass-the-end position
+
+usage: prefixof_smt      <file_1> <file_2>
+                         construct the intersection of L(file_1).* and L(file_2)
+       file            : the file describing an automaton
+
+usage: suffixof_smt      <file_1> <file_2>
+                         construct the intersection of .*L(file_1) and L(file_2)
+       file            : the file describing an automaton
+
+usage: notprefixof_smt   <cfile> <file>
+                         construct the intersection of L(cfile) and L(file)
+       file            : the file describing an automaton
+       cfile           : the file describing a complemented automaton
+
+usage: notsuffixof_smt   <cfile> <file>
+                         construct the intersection of L(cfile) and L(file)
+       file            : the file describing an automaton
+       cfile           : the file describing a complemented automaton
+
+usage: read              <file>
+                         read an automaton
+       file            : the file describing an automaton
+
+usage: write             <file>
+                         write the current automaton into file
+       file            : the file describing an automaton
+
+usage: addpred
+                         add predicates into current automaton
+
+usage: isempty           <file>
+                         construct the sequential circuit for emptyness checking in BLIF format
+       file            : the file describing an automaton
+
+############################### Length Automaton Format Description ##################################
+A Length Automaton file (LAUT) includes 3 sections
+
+<leaf automaton regex>
+;
+<declarations>
+;
+<predicates>
+;
+<dependencies>
+
+section : leaf automaton regex
+desc    : the regular expression of each leaf automaton
+format  : <leaf-automaton-name> <regular-expression>
+notice  : character not in [0-9a-zA-Z] must be escaped by a backslash if it is treated as a character
+
+section : declarations
+dese    : declarations of variables
+format  : <variable-name> <type>
+          type     : Int | Bool
+
+section : predicates
+desc    : predicates in prefix expression with n-ary(n>1) operation embraced by parentheses
+format  : <prefix-expression-of-operations>
+
+          operations for boolean and integer are conventional, three operations associated with legnth
+          are specified as follows:
+          
+          alias*   : an integer variable or a constant integer
+          index*   : an non-negative integer used in LAut construction
+          smt2     : the corresponding expression in smt2 format
+
+          operation: get string length
+          desc     : assert an integer variable to represents the embedded integer in a trklen operation
+          smt2     : (= <alias> str.len <string variable>)
+          format   : (trklen <alias> <index>)
+
+          operation: get string indexof
+          desc     : assert two integer variable to represent the integer added in trkidx, with alias_1
+                     indicate the not-less-than position and alias_2 indicate the index
+          smt2     : (= <alias_2> (str.indexof <string variable> <constant string> <alias_1>))
+          format   : (trkidx <alias_1> <alias_2> <index_1> <index_2>)
+                     <alias_1>: the not-less-than position
+                     <alias_2>: the answer position
+                     <index_1>: for <alias_1>
+                     <index_2>: for <alias_2>
+          
+          operation: string substr
+          desc     : assert the substring of a string variable starts from alias_1 with offset alias_2
+          smt2     : (str.substr <string variable> <alias_1> <alias_2>)
+          format   : (substr <alias_1> <alias_2> <index_1> <index_2>)
+                     <alias_1>: the start position
+                     <alias_2>: the offset
+                     <index_1>: for <alias_1>
+                     <index_2>: for <alias_2>
+
+section : dependencies
+desc    : bottom-up construction of the sink node, must be a tree structure
+format  : [commands] (a intermediate command should be followed with a "write" command)
+          <addpred>
+          <write sink>
+          <isempty sink>

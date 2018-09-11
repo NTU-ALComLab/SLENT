@@ -1,0 +1,4 @@
+benchmark=slog,solver=ic3ia,TO=20.000000
+path,sat,time,step
+benchmark/laut/slog/30/sink.vmt,x,0.000000,x
+benchmark/laut/slog/92/sink.vmt,0,0.517798,16

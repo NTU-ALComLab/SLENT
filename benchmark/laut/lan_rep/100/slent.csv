@@ -1,0 +1,3 @@
+benchmark=benchmark/laut/lan_rep/100,solver=slent,TO=20.000000
+path,sat,time,step
+benchmark/laut/lan_rep/100/sink.vmt,0,0.130788,9

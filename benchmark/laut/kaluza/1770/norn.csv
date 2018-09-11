@@ -1,0 +1,3 @@
+benchmark=benchmark/laut/kaluza/1770/,solver=norn,TO=600.000000
+path,sat,time
+benchmark/laut/kaluza/1770/sink.smt2,t,0.0

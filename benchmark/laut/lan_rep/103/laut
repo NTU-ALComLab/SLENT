@@ -1,0 +1,39 @@
+sigmaStar_048 \(.*\)
+regex_1 \(\(\("\J"\)\|\("\j"\)\)\(\(\("\A"\)\|\("\a"\)\)\(\(\("\V"\)\|\("\v"\)\)\(\(\("\A"\)\|\("\a"\)\)\(\(\("\S"\)\|\("\s"\)\)\(\(\("\C"\)\|\("\c"\)\)\(\(\("\R"\)\|\("\r"\)\)\(\(\("\I"\)\|\("\i"\)\)\(\(\("\P"\)\|\("\p"\)\)\(\("\T"\)\|\("\t"\)\)\)\)\)\)\)\)\)\)\)
+regex_2 \("\j\a\v\a\ \s\c\r\i\p\t"\)
+regex_3 \(~\(\(.*\)\(\(\("\J"\)\|\("\j"\)\)\(\(\("\A"\)\|\("\a"\)\)\(\(\("\V"\)\|\("\v"\)\)\(\(\("\A"\)\|\("\a"\)\)\(\(\("\S"\)\|\("\s"\)\)\(\(\("\C"\)\|\("\c"\)\)\(\(\("\R"\)\|\("\r"\)\)\(\(\("\I"\)\|\("\i"\)\)\(\(\("\P"\)\|\("\p"\)\)\(\("\T"\)\|\("\t"\)\)\)\)\)\)\)\)\)\)\)\(.*\)\)\)
+regex_4 \("\<"\)
+regex_5 \("\&\l\t\;"\)
+regex_6 \(~\(\(.*\)\("\<"\)\(.*\)\)\)
+regex_7 \("\u003e"\)
+regex_8 \("\&\g\t\;"\)
+regex_9 \(~\(\(.*\)\("\u003e"\)\(.*\)\)\)
+literal_13 "\<\p\>\T\i\t\l\e\:\<\b\r\ \/\>"
+literal_15 "\<\/\p\>"
+atkPtn \(\(.*\)\("livescript:"\)\(.*\)\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(< 40 (+ i1 i2))
+;
+trklen sigmaStar_048 0
+write sigmaStar_048_len
+replace sigmaStar_048_len regex_1 regex_2 regex_3
+write x_4
+replace x_4 regex_4 regex_5 regex_6
+write x_8
+replace x_8 regex_7 regex_8 regex_9
+write x_12
+concate literal_13 x_12
+write x_14
+concate x_14 literal_15
+write x_16
+intersect x_16 atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

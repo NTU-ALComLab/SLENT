@@ -1,0 +1,10 @@
+benchmark       : testing
+timeout         : 20.000000 (s)
+number of cases : 30
+
+solver   Abort      Timeout    SAT        UNSAT      Inconsistent    Exclusive  Cumulative Time
+cvc4     1          0          19         10         0               0          2.619371  
+ic3ia    0          1          19         10         0               0          9.110939  
+z3*      30         0          0          0          0               0          0         
+
+* : reference solver

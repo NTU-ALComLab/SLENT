@@ -1,0 +1,50 @@
+T0_263 ".*"
+T4_263 ~\("\="\)
+T5_263 "\="
+T3_263 ".*"
+;
+T_SELECT_16 Bool
+T_b4 Bool
+T_b5 Bool
+I0_263 Int
+I0_268 Int
+I0_272 Int
+I1_268 Int
+I1_272 Int
+I2_268 Int
+I2_272 Int
+PCTEMP_LHS_70 Int
+T_b9 Int
+;
+T_b5
+(= T_b5 (not T_b4))
+(= T_b4 (= PCTEMP_LHS_70 (- 1)))
+(= I0_268 (- PCTEMP_LHS_70 0))
+(>= PCTEMP_LHS_70 0)
+(= I2_268 I1_268)
+(<= PCTEMP_LHS_70 I1_268)
+(>= I2_272 T_b9)
+(= I2_272 I1_272)
+(<= I2_272 I1_272)
+(= I0_272 (- I2_272 T_b9))
+(>= T_b9 0)
+(= T_b9 (+ PCTEMP_LHS_70 1))
+(= PCTEMP_LHS_70 (+ I0_263 0))
+(= T_SELECT_16 (not (= PCTEMP_LHS_70 (- 1))))
+(trklen 0 0)
+(trklen I0_263 1)
+T_SELECT_16
+;
+trklen T0_263 0
+write T0_263_l
+trklen T4_263 1
+write T4_263_l
+concate T4_263_l T5_263
+write T2_263
+concate T2_263 T3_263
+write T1_263
+concate T0_263_l T1_263
+write T_b2
+addpred
+write sink
+isempty sink

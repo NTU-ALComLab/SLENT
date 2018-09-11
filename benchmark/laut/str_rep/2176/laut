@@ -1,0 +1,41 @@
+sigmaStar_150 \(.*\)
+sigmaStar_751 \(.*\)
+regex_4 \("\.\g\i\f"\)
+regex_5 \(""\)
+regex_6 \(~\(\(.*\)\("\.\g\i\f"\)\(.*\)\)\)
+literal_13 "\/"
+literal_15 "\.\g\i\f"
+sigmaStar_safe_57 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+sigmaStar_safe_58 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+sigmaStar_safe_59 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+atkPtn \(\(.*\)\("/evil"\)\(.*\)\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(= 50 (+ i1 i2))
+;
+union sigmaStar_150 sigmaStar_751
+write x_8
+replace x_8 regex_4 regex_5 regex_6
+write x_12
+concate literal_13 x_12
+write x_14
+concate x_14 literal_15
+write x_16
+union sigmaStar_safe_57 x_16
+write x_17
+union x_17 sigmaStar_safe_58
+write x_18
+union x_18 sigmaStar_safe_59
+write x_19
+trklen x_19 0
+write x_19_len
+intersect x_19_len atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

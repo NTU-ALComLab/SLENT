@@ -1,0 +1,42 @@
+T0_300 ".*"
+T4_300 ~\("\_\_utmz\=169413169\."\)
+T5_300 "\_\_utmz\=169413169\."
+T3_300 ".*"
+;
+T_SELECT_12 Bool
+T_ae Bool
+I0_300 Int
+I0_345 Int
+I1_345 Int
+I2_345 Int
+PCTEMP_LHS_16 Int
+T_bd Int
+T_c4 Int
+;
+T_ae
+(= T_ae (< (- 1) PCTEMP_LHS_16))
+(>= T_c4 T_bd)
+(= I2_345 I1_345)
+(<= T_c4 I1_345)
+(= I0_345 (- T_c4 T_bd))
+(>= T_bd 0)
+(= T_bd (+ PCTEMP_LHS_16 7))
+(= PCTEMP_LHS_16 (+ I0_300 0))
+(= T_SELECT_12 (not (= PCTEMP_LHS_16 (- 1))))
+(trklen 0 0)
+(trklen I0_300 1)
+T_SELECT_12
+;
+trklen T0_300 0
+write T0_300_l
+trklen T4_300 1
+write T4_300_l
+concate T4_300_l T5_300
+write T2_300
+concate T2_300 T3_300
+write T1_300
+concate T0_300_l T1_300
+write T_ac
+addpred
+write sink
+isempty sink

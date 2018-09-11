@@ -1,0 +1,10 @@
+benchmark=h_str_rep,solver=trau,TO=600.000000
+path,sat,time
+benchmark/laut/h_str_rep_nt/3307/sink.trau,1,0.425631
+benchmark/laut/h_str_rep_nt/14857/sink.trau,t,0.0
+benchmark/laut/h_str_rep_nt/9102/sink.trau,0,2.416670
+benchmark/laut/h_str_rep_nt/7172/sink.trau,1,1.122772
+benchmark/laut/h_str_rep_nt/11004/sink.trau,1,0.720753
+benchmark/laut/h_str_rep_nt/689/sink.trau,1,0.723329
+benchmark/laut/h_str_rep_nt/5239/sink.trau,x,0.0
+benchmark/laut/h_str_rep_nt/12941/sink.trau,0,0.468823

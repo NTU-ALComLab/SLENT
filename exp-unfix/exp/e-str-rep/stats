@@ -1,0 +1,10 @@
+benchmark       : e-str-rep
+timeout         : 600.000000 (s)
+number of cases : 44
+
+solver   Abort      Timeout    SAT        UNSAT      Inconsistent    Exclusive  Cumulative Time
+trau*    20         2          8          14         0               0          6.721293  
+ic3ia    0          0          24         13         7               0          1081.056163
+s3p      15         0          16         8          5               0          5.052995  
+
+* : reference solver

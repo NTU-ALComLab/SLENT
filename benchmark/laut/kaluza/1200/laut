@@ -1,0 +1,21 @@
+T0_27 ".*"
+T1_27 ~\("\_\_utmx\=169413169"\)
+;
+T_15 Bool
+T_SELECT_3 Bool
+PCTEMP_LHS_5 Int
+;
+T_15
+(= T_15 (< (- 1) PCTEMP_LHS_5))
+(= PCTEMP_LHS_5 (- 1))
+(= T_SELECT_3 (not (= PCTEMP_LHS_5 (- 1))))
+(trklen 0 0)
+(not T_SELECT_3)
+;
+trklen T0_27 0
+write T0_27_l
+concate T0_27_l T1_27
+write var_0xINPUT_14469
+addpred
+write sink
+isempty sink

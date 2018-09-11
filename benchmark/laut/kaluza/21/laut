@@ -1,0 +1,12 @@
+PCTEMP_LHS_2 ".*"
+;
+I0_2 Int
+;
+(= I0_2 (- 20 7))
+(trklen I0_2 0)
+;
+trklen PCTEMP_LHS_2 0
+write PCTEMP_LHS_2_l
+addpred
+write sink
+isempty sink

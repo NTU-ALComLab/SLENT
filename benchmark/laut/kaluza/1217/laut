@@ -1,0 +1,41 @@
+T0_34 ".*"
+T1_34 ~\("\_\_utmb\=16886264"\)
+;
+T_1c Bool
+T_1e Bool
+T_1f Bool
+T_SELECT_6 Bool
+T_SELECT_7 Bool
+I0_43 Int
+I1_43 Int
+I2_43 Int
+PCTEMP_LHS_7 Int
+PCTEMP_LHS_8 Int
+T_20 Int
+T_21 Int
+;
+T_1c
+(= T_1c (< (- 1) PCTEMP_LHS_7))
+(= T_SELECT_7 (not (= PCTEMP_LHS_8 (- 1))))
+T_1f
+(= T_1f (not T_1e))
+(= T_1e (< PCTEMP_LHS_8 0))
+(>= PCTEMP_LHS_8 T_21)
+(= I2_43 I1_43)
+(<= PCTEMP_LHS_8 I1_43)
+(= I0_43 (- PCTEMP_LHS_8 T_21))
+(>= T_21 0)
+(= T_21 (+ T_20 1))
+(= T_20 (+ PCTEMP_LHS_7 6))
+(= PCTEMP_LHS_7 (- 1))
+(= T_SELECT_6 (not (= PCTEMP_LHS_7 (- 1))))
+(trklen 0 0)
+(not T_SELECT_6)
+;
+trklen T0_34 0
+write T0_34_l
+concate T0_34_l T1_34
+write var_0xINPUT_95188
+addpred
+write sink
+isempty sink

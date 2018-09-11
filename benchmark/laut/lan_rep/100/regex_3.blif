@@ -1,0 +1,17 @@
+# Benchmark "benchmark/laut/lan_rep/100/regex_3" written by ABC on Tue Sep 11 09:16:48 2018
+.model benchmark/laut/lan_rep/100/regex_3
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 s0 n0
+.outputs i o t
+.names s0 i
+0 1
+.names s0 o
+0 1
+.names x0 x1 x2 x3 x4 x5 x6 x7 s0 n0 t
+010-001100 1
+001011-100 1
+0011101000 1
+0010111-00 1
+0101001-00 1
+0100000-00 1
+0010000000 1
+.end

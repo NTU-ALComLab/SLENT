@@ -1,0 +1,120 @@
+Not_tree ""
+sigmaStar_safe_50 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+sigmaStar_safe_51 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+literal_10 ""
+sigmaStar_053 \(.*\)
+literal_9 "\ \O\R\ \b\l\a\c\k\l\i\s\t\_\i\p\="
+sigmaStar_555 \(.*\)
+regex_8 \("\."\)
+regex_9 \("\'\ \O\R\ \a\d\m\i\n\_\r\i\g\h\t\s\=\'"\)
+regex_10 \(~\(\(.*\)\("\."\)\(.*\)\)\)
+literal_20 "\ \O\R\ \b\l\a\c\k\l\i\s\t\_\i\p\="
+literal_21 "\ \(\a\d\m\i\n\_\r\i\g\h\t\s\=\'"
+sigmaStar_1961 \(.*\)
+literal_24 "\'\)"
+literal_27 "\'"
+literal_33 "\(\*\)"
+literal_32 "\(\*\)"
+literal_31 "\(\*\)"
+literal_30 "\(\*\)"
+literal_29 "\(\*\)"
+literal_39 "\S\E\L\E\C\T\ \C\o\u\n\t"
+literal_40 "\ \A\N\D\ \a\d\m\i\n\_\l\i\n\k\!\=\'\r\e\s\e\r\v\e\d\'\ \A\N\D\ \a\d\m\i\n\_\p\a\g\e\=\'\4\'"
+literal_41 "\ \A\N\D\ \a\d\m\i\n\_\l\i\n\k\!\=\'\r\e\s\e\r\v\e\d\'\ \A\N\D\ \a\d\m\i\n\_\p\a\g\e\=\'\2\'"
+literal_42 "\ \A\N\D\ \a\d\m\i\n\_\l\i\n\k\!\=\'\r\e\s\e\r\v\e\d\'\ \A\N\D\ \a\d\m\i\n\_\p\a\g\e\=\'\1\'"
+literal_43 "\ \A\N\D\ \a\d\m\i\n\_\l\i\n\k\!\=\'\r\e\s\e\r\v\e\d\'\ \A\N\D\ \a\d\m\i\n\_\p\a\g\e\=\'\3\'"
+literal_28 "\b\l\a\c\k\l\i\s\t\_\i\p\=\'"
+literal_50 "\ \F\R\O\M\ "
+literal_56 "\ \W\H\E\R\E\ "
+literal_62 "\b\l\a\c\k\l\i\s\t"
+literal_61 "\a\d\m\i\n"
+literal_60 "\a\d\m\i\n"
+literal_59 "\a\d\m\i\n"
+literal_58 "\a\d\m\i\n"
+literal_63 ""
+atkPtn \(\(.*\)\("' or 1=1 '"\)\(.*\)\)
+sigmaStar_n0 \(\(.\)*\)
+sigmaStar_n1 \(\(.\)*\)
+sigmaStar_n2 \(\(.\)*\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(= 10 (+ i1 i2))
+;
+union sigmaStar_safe_50 sigmaStar_safe_51
+write x_8
+union literal_10 sigmaStar_053
+write x_11
+union x_11 x_8
+write x_12
+concate literal_9 sigmaStar_555
+write x_16
+replace x_12 regex_8 regex_9 regex_10
+write x_18
+concate x_16 literal_20
+write x_22
+concate literal_21 x_18
+write x_23
+concate x_22 sigmaStar_1961
+write x_25
+concate x_23 literal_24
+write x_26
+concate x_25 literal_27
+write x_34
+union literal_33 literal_32
+write x_35
+union x_35 literal_31
+write x_36
+union x_36 literal_30
+write x_37
+union x_37 literal_29
+write x_38
+concate literal_39 x_38
+write x_44
+concate x_26 literal_40
+write x_45
+concate sigmaStar_n0 literal_41
+write x_46
+concate sigmaStar_n1 literal_42
+write x_47
+concate sigmaStar_n2 literal_43
+write x_48
+concate literal_28 x_34
+write x_49
+concate x_44 literal_50
+write x_51
+union x_49 x_48
+write x_52
+union x_52 x_47
+write x_53
+union x_53 x_46
+write x_54
+union x_54 x_45
+write x_55
+concate literal_56 x_55
+write x_57
+union literal_62 literal_61
+write x_64
+union x_64 literal_60
+write x_65
+union x_65 literal_59
+write x_66
+union x_66 literal_58
+write x_67
+union x_57 literal_63
+write x_68
+trklen x_68 0
+write x_68_len
+concate x_51 x_67
+write x_69
+concate x_69 x_68_len
+write x_70
+intersect x_70 atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

@@ -1,0 +1,120 @@
+sigmaStar_348 \(.*\)
+regex_1 \(\("\<\S\C\R\I\P\T"\)\(\(".*"\)\|\(""\)\)\)
+regex_2 \("BLOCKED"\)
+regex_3 \(~\(\(.*\)\(\("\<\S\C\R\I\P\T"\)\(\(".*"\)\|\(""\)\)\)\(.*\)\)\)
+sigmaStar_552 \(.*\)
+regex_5 \(\("\<\S\C\R\I\P\T"\)\(\(".*"\)\|\(""\)\)\)
+regex_6 \("BLOCKED"\)
+regex_7 \(~\(\(.*\)\(\("\<\S\C\R\I\P\T"\)\(\(".*"\)\|\(""\)\)\)\(.*\)\)\)
+regex_8 \(\("\<\s\c\r\i\p\t"\)\(\(".*"\)\|\(""\)\)\)
+regex_9 \("BLOCKED"\)
+regex_10 \(~\(\(.*\)\(\("\<\s\c\r\i\p\t"\)\(\(".*"\)\|\(""\)\)\)\(.*\)\)\)
+regex_11 \(\("\<\s\c\r\i\p\t"\)\(\(".*"\)\|\(""\)\)\)
+regex_12 \("BLOCKED"\)
+regex_13 \(~\(\(.*\)\(\("\<\s\c\r\i\p\t"\)\(\(".*"\)\|\(""\)\)\)\(.*\)\)\)
+sigmaStar_662 \(.*\)
+regex_15 \(\("\<\S\C\R\I\P\T"\)\(\(".*"\)\|\(""\)\)\)
+regex_16 \("BLOCKED"\)
+regex_17 \(~\(\(.*\)\(\("\<\S\C\R\I\P\T"\)\(\(".*"\)\|\(""\)\)\)\(.*\)\)\)
+literal_29 '\&\n\b\s\p\;\<\A\ \S\T\Y\L\E\=\C\O\L\O\R\:\b\l\u\e\;\ \H\R\E\F\=\\\"\m\a\i\l\t\o\:'
+literal_40 '\&\n\b\s\p\;\<\A\ \S\T\Y\L\E\=\C\O\L\O\R\:\b\l\u\e\;\ \H\R\E\F\=\\\"\h\t\t\p\:\/\/'
+literal_42 '\\\"\>\<\I\M\G\ \S\R\C\='
+regex_21 \(\("\<\s\c\r\i\p\t"\)\(\(".*"\)\|\(""\)\)\)
+regex_22 \("BLOCKED"\)
+regex_23 \(~\(\(.*\)\(\("\<\s\c\r\i\p\t"\)\(\(".*"\)\|\(""\)\)\)\(.*\)\)\)
+literal_52 '\\\"\>\<\I\M\G\ \S\R\C\='
+literal_47 "\h\t\t\p\:\/\/\l\o\c\a\l\h\o\s\t\/\e\m\a\i\l\b\u\t\.\p\n\g"
+literal_53 "\&\n\b\s\p\;\<\A\ \S\T\Y\L\E\=\C\O\L\O\R\:\b\l\u\e\;\ \H\R\E\F\=\p\b\l\g\u\e\s\t\b\o\o\k\.\p\h\p\?\a\c\t\i\o\n\=\d\e\l\e\t\e\&\i\d\="
+literal_54 "\h\t\t\p\:\/\/\l\o\c\a\l\h\o\s\t\/\h\o\m\e\b\u\t\.\p\n\g"
+literal_58 '\ \B\O\R\D\E\R\=\0\ \A\L\T\=\\\"'
+literal_65 "\>\<\I\M\G\ \S\R\C\="
+literal_67 '\ \B\O\R\D\E\R\=\0\ \A\L\T\=\\\"'
+literal_68 '\e\m\a\i\l\"\>\<\/\A\>\&\n\b\s\p\;'
+literal_69 "\h\t\t\p\:\/\/\l\o\c\a\l\h\o\s\t\/\d\e\l\b\u\t\.\p\n\g"
+sigmaStar_081 \(.*\)
+literal_75 '\w\e\b\s\i\t\e\ \U\R\L\"\>\<\/\A\>\&\n\b\s\p\;'
+literal_77 "\<\/\T\D\>\<\T\D\ \S\T\Y\L\E\=\T\E\X\T\-\A\L\I\G\N\:\r\i\g\h\t\;\>\<\F\O\N\T\ \S\I\Z\E\=\1\>"
+literal_83 '\ \B\O\R\D\E\R\=\0\ \A\L\T\=\\\"'
+sigmaStar_185 \(.*\)
+literal_90 '\&\n\b\s\p\;\<\I\M\G\ \S\R\C\=\h\t\t\p\:\/\/\l\o\c\a\l\h\o\s\t\/\i\p\b\u\t\.\p\n\g\ \B\O\R\D\E\R\=\0\ \A\L\T\=\\\"\"\>\&\n\b\s\p\;'
+sigmaStar_287 \(.*\)
+literal_89 '\d\e\l\e\t\e\"\>\<\/\A\>\&\n\b\s\p\;'
+literal_96 "\<\/\F\O\N\T\>\<\/\T\D\>\<\/\T\R\>"
+sigmaStar_490 \(.*\)
+atkPtn \(\(.*\)\("javascript:"\)\(.*\)\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(< 40 (+ i1 i2))
+;
+trklen sigmaStar_662 0
+write sigmaStar_662_len
+replace sigmaStar_348 regex_1 regex_2 regex_3
+write x_10
+replace sigmaStar_552 regex_5 regex_6 regex_7
+write x_17
+replace x_10 regex_8 regex_9 regex_10
+write x_23
+replace x_17 regex_11 regex_12 regex_13
+write x_34
+replace sigmaStar_662_len regex_15 regex_16 regex_17
+write x_37
+concate literal_29 x_23
+write x_41
+concate literal_40 x_34
+write x_46
+concate x_41 literal_42
+write x_48
+replace x_37 regex_21 regex_22 regex_23
+write x_50
+concate x_46 literal_52
+write x_55
+concate x_48 literal_47
+write x_56
+concate literal_53 x_50
+write x_59
+concate x_55 literal_54
+write x_62
+concate x_56 literal_58
+write x_64
+concate x_59 literal_65
+write x_70
+concate x_62 literal_67
+write x_73
+concate x_64 literal_68
+write x_76
+concate x_70 literal_69
+write x_78
+union x_76 sigmaStar_081
+write x_81
+concate x_73 literal_75
+write x_84
+concate literal_77 x_81
+write x_85
+concate x_78 literal_83
+write x_87
+union x_84 sigmaStar_185
+write x_88
+concate x_85 x_88
+write x_91
+union literal_90 sigmaStar_287
+write x_92
+concate x_87 literal_89
+write x_93
+concate x_91 x_92
+write x_94
+concate x_94 x_93
+write x_95
+concate x_95 literal_96
+write x_97
+concate sigmaStar_490 x_97
+write x_98
+intersect x_98 atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

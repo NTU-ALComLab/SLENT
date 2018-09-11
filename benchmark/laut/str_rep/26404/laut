@@ -1,0 +1,56 @@
+Not_tree ""
+sigmaStar_safe_50 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+sigmaStar_safe_51 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+sigmaStar_052 \(.*\)
+regex_5 \("\@"\)
+regex_6 \("\&\#\6\4\;"\)
+regex_7 \(~\(\(.*\)\("\@"\)\(.*\)\)\)
+literal_10 "\[\<\a\ \h\r\e\f\=\'\m\a\i\l\t\o\:"
+sigmaStar_157 \(.*\)
+regex_10 \("\@"\)
+regex_11 \("\&\#\6\4\;"\)
+regex_12 \(~\(\(.*\)\("\@"\)\(.*\)\)\)
+literal_15 "\'\ \t\i\t\l\e\=\'"
+literal_20 "\'\>"
+sigmaStar_263 \(.*\)
+literal_23 "\<\/\a\>\]\\\\\n"
+atkPtn \(\(.*\)\("\\\\0075\\\\0072\\\\006C\\\\0028\'\\\\006a\\\\0061\\\\0076\\\\0061\\\\0073\\\\0063\\\\0072\\\\0069\\\\0070\\\\0074\\\\003a\\\\0061\\\\006c\\\\0065\\\\0072\\\\0074\\\\0028\.1027\\\\0058\.1053\\\\0053\\\\0027\\\\0029\'\\\\0029"\)\(.*\)\)
+sigmaStar_n0 \(\(.\)*\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(> 40 (+ i1 i2))
+;
+union sigmaStar_safe_50 sigmaStar_safe_51
+write x_4
+union x_4 sigmaStar_052
+write x_5
+trklen x_5 0
+write x_5_len
+replace x_5_len regex_5 regex_6 regex_7
+write x_9
+concate literal_10 x_9
+write x_11
+union sigmaStar_n0 sigmaStar_157
+write x_12
+replace x_12 regex_10 regex_11 regex_12
+write x_17
+concate x_11 literal_15
+write x_18
+concate x_18 x_17
+write x_19
+concate x_19 literal_20
+write x_21
+concate x_21 sigmaStar_263
+write x_22
+concate x_22 literal_23
+write x_24
+intersect x_24 atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

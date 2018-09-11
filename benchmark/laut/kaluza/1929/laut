@@ -1,0 +1,41 @@
+T0_38 ".*"
+T1_38 ~\("\_\_utma\=16886264\."\)
+;
+T_25 Bool
+T_27 Bool
+T_28 Bool
+T_SELECT_2 Bool
+T_SELECT_3 Bool
+I0_47 Int
+I1_47 Int
+I2_47 Int
+PCTEMP_LHS_2 Int
+PCTEMP_LHS_3 Int
+T_29 Int
+T_2a Int
+;
+T_25
+(= T_25 (< (- 1) PCTEMP_LHS_2))
+(= T_SELECT_3 (not (= PCTEMP_LHS_3 (- 1))))
+T_28
+(= T_28 (not T_27))
+(= T_27 (< PCTEMP_LHS_3 0))
+(>= PCTEMP_LHS_3 T_2a)
+(= I2_47 I1_47)
+(<= PCTEMP_LHS_3 I1_47)
+(= I0_47 (- PCTEMP_LHS_3 T_2a))
+(>= T_2a 0)
+(= T_2a (+ T_29 1))
+(= T_29 (+ PCTEMP_LHS_2 6))
+(= PCTEMP_LHS_2 (- 1))
+(= T_SELECT_2 (not (= PCTEMP_LHS_2 (- 1))))
+(trklen 0 0)
+(not T_SELECT_2)
+;
+trklen T0_38 0
+write T0_38_l
+concate T0_38_l T1_38
+write var_0xINPUT_14862
+addpred
+write sink
+isempty sink

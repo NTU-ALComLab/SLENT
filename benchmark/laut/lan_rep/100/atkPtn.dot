@@ -1,0 +1,71 @@
+digraph Automaton {
+  rankdir = LR;
+  0 [shape=circle,label=""];
+  0 -> 11 [label="m-\uffff"]
+  0 -> 11 [label="j-k"]
+  0 -> 11 [label="\u0000-h"]
+  0 -> 0 [label="l"]
+  0 -> 8 [label="i"]
+  1 [shape=circle,label=""];
+  1 -> 11 [label="m-\uffff"]
+  1 -> 4 [label="e"]
+  1 -> 0 [label="l"]
+  1 -> 11 [label="\u0000-d"]
+  1 -> 11 [label="f-k"]
+  2 [shape=circle,label=""];
+  2 -> 11 [label="s-\uffff"]
+  2 -> 11 [label="\u0000-k"]
+  2 -> 10 [label="r"]
+  2 -> 0 [label="l"]
+  2 -> 11 [label="m-q"]
+  3 [shape=circle,label=""];
+  3 -> 5 [label=":"]
+  3 -> 11 [label="m-\uffff"]
+  3 -> 11 [label=";-k"]
+  3 -> 11 [label="\u0000-9"]
+  3 -> 0 [label="l"]
+  4 [shape=circle,label=""];
+  4 -> 11 [label="m-r"]
+  4 -> 11 [label="\u0000-k"]
+  4 -> 11 [label="t-\uffff"]
+  4 -> 0 [label="l"]
+  4 -> 6 [label="s"]
+  5 [shape=doublecircle,label=""];
+  5 -> 5 [label="\u0000-\uffff"]
+  6 [shape=circle,label=""];
+  6 -> 11 [label="m-\uffff"]
+  6 -> 11 [label="\u0000-b"]
+  6 -> 11 [label="d-k"]
+  6 -> 0 [label="l"]
+  6 -> 2 [label="c"]
+  7 [shape=circle,label=""];
+  7 -> 11 [label="\u0000-k"]
+  7 -> 11 [label="m-s"]
+  7 -> 3 [label="t"]
+  7 -> 11 [label="u-\uffff"]
+  7 -> 0 [label="l"]
+  8 [shape=circle,label=""];
+  8 -> 11 [label="\u0000-k"]
+  8 -> 11 [label="w-\uffff"]
+  8 -> 11 [label="m-u"]
+  8 -> 0 [label="l"]
+  8 -> 1 [label="v"]
+  9 [shape=circle,label=""];
+  9 -> 7 [label="p"]
+  9 -> 11 [label="\u0000-k"]
+  9 -> 11 [label="m-o"]
+  9 -> 0 [label="l"]
+  9 -> 11 [label="q-\uffff"]
+  10 [shape=circle,label=""];
+  10 -> 11 [label="m-\uffff"]
+  10 -> 11 [label="j-k"]
+  10 -> 11 [label="\u0000-h"]
+  10 -> 0 [label="l"]
+  10 -> 9 [label="i"]
+  11 [shape=circle,label=""];
+  initial [shape=plaintext,label=""];
+  initial -> 11
+  11 -> 11 [label="\u0000-k"]
+  11 -> 11 [label="m-\uffff"]
+  11 -> 0 [label="l"]
+}

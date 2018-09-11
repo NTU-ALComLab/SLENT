@@ -1,0 +1,33 @@
+T0_24 ".*"
+T4_24 ~\("\_\_utmz\=218069774\."\)
+T5_24 "\_\_utmz\=218069774\."
+T3_24 ".*"
+;
+T_SELECT_1 Bool
+T_e Bool
+T_f Bool
+I0_24 Int
+PCTEMP_LHS_5 Int
+;
+T_f
+(= T_f (not T_e))
+(= T_e (< (- 1) PCTEMP_LHS_5))
+(= PCTEMP_LHS_5 (+ I0_24 0))
+(= T_SELECT_1 (not (= PCTEMP_LHS_5 (- 1))))
+(trklen 0 0)
+(trklen I0_24 1)
+T_SELECT_1
+;
+trklen T0_24 0
+write T0_24_l
+trklen T4_24 1
+write T4_24_l
+concate T4_24_l T5_24
+write T2_24
+concate T2_24 T3_24
+write T1_24
+concate T0_24_l T1_24
+write T_c
+addpred
+write sink
+isempty sink

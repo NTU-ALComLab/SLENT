@@ -1,0 +1,37 @@
+T0_18 ".*"
+T4_18 ~\("\;"\)
+T5_18 "\;"
+T3_18 ".*"
+;
+T_SELECT_4 Bool
+T_SELECT_5 Bool
+T_c Bool
+T_e Bool
+I0_18 Int
+PCTEMP_LHS_4 Int
+PCTEMP_LHS_5 Int
+;
+T_e
+(= T_e (< PCTEMP_LHS_5 0))
+(= T_SELECT_4 (not (= PCTEMP_LHS_4 (- 1))))
+T_c
+(= T_c (< (- 1) PCTEMP_LHS_4))
+(= PCTEMP_LHS_5 (+ I0_18 PCTEMP_LHS_4))
+(= T_SELECT_5 (not (= PCTEMP_LHS_5 (- 1))))
+(trklen PCTEMP_LHS_4 0)
+(trklen I0_18 1)
+T_SELECT_5
+;
+trklen T0_18 0
+write T0_18_l
+trklen T4_18 1
+write T4_18_l
+concate T4_18_l T5_18
+write T2_18
+concate T2_18 T3_18
+write T1_18
+concate T0_18_l T1_18
+write var_0xINPUT_15467
+addpred
+write sink
+isempty sink

@@ -1,0 +1,23 @@
+T0_40 ".*"
+T1_40 ~\("gclid\="\)
+;
+T_1d Bool
+T_1e Bool
+T_SELECT_3 Bool
+PCTEMP_LHS_3 Int
+;
+T_1e
+(= T_1e (not T_1d))
+(= T_1d (< (- 1) PCTEMP_LHS_3))
+(= PCTEMP_LHS_3 (- 1))
+(= T_SELECT_3 (not (= PCTEMP_LHS_3 (- 1))))
+(trklen 0 0)
+(not T_SELECT_3)
+;
+trklen T0_40 0
+write T0_40_l
+concate T0_40_l T1_40
+write T_1b
+addpred
+write sink
+isempty sink

@@ -1,0 +1,23 @@
+T0_394 ".*"
+T1_394 ~\("\_\_utmv\=169413169\."\)
+;
+T_SELECT_14 Bool
+T_e1 Bool
+T_e2 Bool
+PCTEMP_LHS_20 Int
+;
+T_e2
+(= T_e2 (not T_e1))
+(= T_e1 (< (- 1) PCTEMP_LHS_20))
+(= PCTEMP_LHS_20 (- 1))
+(= T_SELECT_14 (not (= PCTEMP_LHS_20 (- 1))))
+(trklen 0 0)
+(not T_SELECT_14)
+;
+trklen T0_394 0
+write T0_394_l
+concate T0_394_l T1_394
+write T_df
+addpred
+write sink
+isempty sink

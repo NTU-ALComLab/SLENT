@@ -1,0 +1,31 @@
+T0_3 ".*"
+T4_3 ~\("\?"\)
+T5_3 "\?"
+T3_3 ".*"
+;
+T_3 Bool
+T_SELECT_1 Bool
+I0_3 Int
+PCTEMP_LHS_1 Int
+;
+T_3
+(= T_3 (= PCTEMP_LHS_1 (- 1)))
+(= PCTEMP_LHS_1 (+ I0_3 0))
+(= T_SELECT_1 (not (= PCTEMP_LHS_1 (- 1))))
+(trklen 0 0)
+(trklen I0_3 1)
+T_SELECT_1
+;
+trklen T0_3 0
+write T0_3_l
+trklen T4_3 1
+write T4_3_l
+concate T4_3_l T5_3
+write T2_3
+concate T2_3 T3_3
+write T1_3
+concate T0_3_l T1_3
+write var_0xINPUT_3690
+addpred
+write sink
+isempty sink

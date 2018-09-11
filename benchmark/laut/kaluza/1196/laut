@@ -1,0 +1,21 @@
+T0_6 ".*"
+T1_6 ~\("\/\/"\)
+;
+T_4 Bool
+T_SELECT_1 Bool
+PCTEMP_LHS_2 Int
+;
+T_4
+(= T_4 (= PCTEMP_LHS_2 0))
+(= PCTEMP_LHS_2 (- 1))
+(= T_SELECT_1 (not (= PCTEMP_LHS_2 (- 1))))
+(trklen 0 0)
+(not T_SELECT_1)
+;
+trklen T0_6 0
+write T0_6_l
+concate T0_6_l T1_6
+write T_2
+addpred
+write sink
+isempty sink

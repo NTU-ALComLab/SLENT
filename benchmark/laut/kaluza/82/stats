@@ -1,0 +1,8 @@
+file            : benchmark/laut/kaluza/82/
+timeout         : 300.000000 (s)
+number of cases : 1
+
+solver   Abort      Timeout    SAT        UNSAT      Inconsistent    Exclusive  Cumulative Time
+ic3ia*   0          0          1          0          0               1          67.016112 
+
+* : reference solver

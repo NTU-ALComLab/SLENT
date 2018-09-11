@@ -1,0 +1,33 @@
+T0_6 ".*"
+T4_6 ~\("\_\_utmc\=16886264"\)
+T5_6 "\_\_utmc\=16886264"
+T3_6 ".*"
+;
+T_SELECT_3 Bool
+T_b Bool
+T_c Bool
+I0_6 Int
+PCTEMP_LHS_3 Int
+;
+T_c
+(= T_c (not T_b))
+(= T_b (< (- 1) PCTEMP_LHS_3))
+(= PCTEMP_LHS_3 (+ I0_6 0))
+(= T_SELECT_3 (not (= PCTEMP_LHS_3 (- 1))))
+(trklen 0 0)
+(trklen I0_6 1)
+T_SELECT_3
+;
+trklen T0_6 0
+write T0_6_l
+trklen T4_6 1
+write T4_6_l
+concate T4_6_l T5_6
+write T2_6
+concate T2_6 T3_6
+write T1_6
+concate T0_6_l T1_6
+write var_0xINPUT_95184
+addpred
+write sink
+isempty sink

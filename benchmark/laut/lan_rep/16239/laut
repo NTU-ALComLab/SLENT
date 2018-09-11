@@ -1,0 +1,29 @@
+sigmaStar_safe_48 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+regex_1 \(\(\("\."\)\|\("\|"\)\)\|\("\ "\)\)
+regex_2 \("\_"\)
+regex_3 \(~\(\(.*\)\(\(\("\."\)\|\("\|"\)\)\|\("\ "\)\)\(.*\)\)\)
+literal_11 '\<\c\e\n\t\e\r\>\<\f\o\n\t\ \c\o\l\o\r\=\"\r\e\d\"\>\n\o\n\u\m\e\r\i\c\w\e\i\g\h\t\:\ \"'
+literal_13 '\"\<\/\f\o\n\t\>\<\/\c\e\n\t\e\r\>\<\b\r\ \/\>'
+atkPtn \(\(.*\)\("\\\\0075\\\\0072\\\\006C\\\\0028\'\\\\006a\\\\0061\\\\0076\\\\0061\\\\0073\\\\0063\\\\0072\\\\0069\\\\0070\\\\0074\\\\003a\\\\0061\\\\006c\\\\0065\\\\0072\\\\0074\\\\0028\.1027\\\\0058\.1053\\\\0053\\\\0027\\\\0029\'\\\\0029"\)\(.*\)\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(> 10 (+ i1 i2))
+;
+trklen sigmaStar_safe_48 0
+write sigmaStar_safe_48_len
+replace sigmaStar_safe_48_len regex_1 regex_2 regex_3
+write x_8
+concate literal_11 x_8
+write x_12
+concate x_12 literal_13
+write x_14
+intersect x_14 atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

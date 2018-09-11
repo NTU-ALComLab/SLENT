@@ -1,0 +1,78 @@
+NEW_DGNode_115 ""
+NEW_DGNode_116 "\-"
+NEW_DGNode_174 ""
+NEW_DGNode_175 "\-"
+NEW_DGNode_215 ~\("\."\)
+M0_55 "\\\\\."
+PCTEMP_LHS_13_idx_1 ~\("\."\)
+M1_55 "\\\\\."
+PCTEMP_LHS_13_idx_2 ~\("\."\)
+M2_55 "\\\\\."
+PCTEMP_LHS_13_idx_3 ~\("\."\)
+M3_55 "\\\\\."
+PCTEMP_LHS_13_idx_4 ~\("\."\)
+M4_55 "\\\\\."
+T5_55 ".*"
+;
+T_26 Bool
+T_27 Bool
+T_28 Bool
+T_29 Bool
+T_2e Bool
+T_2f Bool
+T_31 Bool
+T_32 Bool
+T_35 Bool
+T_36 Bool
+T_34 Int
+;
+T_26
+T_27
+(= T_27 (not T_26))
+T_28
+T_29
+(= T_29 (not T_28))
+T_36
+(= T_36 (not T_35))
+(= T_35 (< 0 T_34))
+(trklen T_34 0)
+T_2e
+T_2f
+(= T_2f (not T_2e))
+T_31
+T_32
+(= T_32 (not T_31))
+;
+intersect NEW_DGNode_115 NEW_DGNode_116
+write NEW_DGNode_164
+intersect NEW_DGNode_174 NEW_DGNode_175
+write NEW_DGNode_216
+intersect NEW_DGNode_216 NEW_DGNode_215
+write T_33
+trklen T_33 0
+write T_33_l
+concate T_33_l M0_55
+write P0_55
+concate PCTEMP_LHS_13_idx_1 M1_55
+write P1_55
+concate PCTEMP_LHS_13_idx_2 M2_55
+write P2_55
+concate PCTEMP_LHS_13_idx_3 M3_55
+write P3_55
+concate PCTEMP_LHS_13_idx_4 M4_55
+write P4_55
+concate P4_55 T5_55
+write T4_55
+concate P3_55 T4_55
+write T3_55
+concate P2_55 T3_55
+write T2_55
+concate P1_55 T2_55
+write T1_55
+concate P0_55 T1_55
+write NEW_DGNode_165
+intersect NEW_DGNode_164 NEW_DGNode_165
+write T0_55
+addpred
+write sink
+isempty sink

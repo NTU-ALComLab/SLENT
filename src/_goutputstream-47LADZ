@@ -1,0 +1,8 @@
+CC = g++
+CFLAGS = -g3
+SRC = $(wildcard *.cpp)
+EXEC = ./bin/sla
+all: $(SRC)
+	$(CC) -o $(EXEC) $^ $(CFLAGS)
+clean:
+	rm *.o tags ../bin/sla

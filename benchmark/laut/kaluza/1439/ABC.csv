@@ -1,0 +1,3 @@
+benchmark=benchmark/laut/kaluza/1439/,solver=ABC,TO=600.000000
+path,sat,time
+benchmark/laut/kaluza/1439/sink.s3,t,0.0

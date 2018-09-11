@@ -1,0 +1,62 @@
+literal_32 "\/\/\m\i\m\e\t\e\x\.\e\x\e"
+regex_4 \("\ "\)
+regex_5 \("\^\ "\)
+regex_6 \(~\(\(.*\)\("\ "\)\(.*\)\)\)
+literal_39 '\ \+\+\ \-\e\ \ \\\"\/\/\.\g\i\f\\\"\ '
+sigmaStar_4256 \(.*\)
+literal_44 '\\\"\/\/\m\i\m\e\t\e\x\.\d\a\r\w\i\n\\\"\ \-\e\ \\\"\/\/\.\g\i\f\\\"\ '
+sigmaStar_4258 \(.*\)
+literal_45 '\\\"\/\/\m\i\m\e\t\e\x\.\l\i\n\u\x\\\"\ \-\e\ \\\"\/\/\.\g\i\f\\\"\ '
+sigmaStar_4260 \(.*\)
+literal_48 "\/\/\m\i\m\e\t\e\x\ \-\e\ \/\/\.\g\i\f\ "
+sigmaStar_4262 \(.*\)
+sigmaStar_safe_63 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+literal_53 ""
+literal_55 "\T\h\e\ \s\h\e\l\l\ \c\o\m\m\a\n\d\<\b\r\ \/\>"
+literal_62 "\<\b\r\ \/\>\r\e\t\u\r\n\e\d\ \s\t\a\t\u\s\ \=\ "
+literal_64 "\<\b\r\ \/\>\\\\\n"
+atkPtn \(\(.*\)\("javascript:"\)\(.*\)\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(< 20 (+ i1 i2))
+;
+replace literal_32 regex_4 regex_5 regex_6
+write x_47
+concate literal_39 sigmaStar_4256
+write x_49
+concate literal_44 sigmaStar_4258
+write x_50
+concate literal_45 sigmaStar_4260
+write x_51
+concate literal_48 sigmaStar_4262
+write x_52
+concate x_47 x_49
+write x_54
+union x_52 sigmaStar_safe_63
+write x_56
+union x_56 x_54
+write x_57
+union x_57 literal_53
+write x_58
+union x_58 x_51
+write x_59
+union x_59 x_50
+write x_60
+trklen x_60 0
+write x_60_len
+concate literal_55 x_60_len
+write x_61
+concate x_61 literal_62
+write x_63
+concate x_63 literal_64
+write x_65
+intersect x_65 atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

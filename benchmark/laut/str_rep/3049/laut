@@ -1,0 +1,23 @@
+sigmaStar_safe_48 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+regex_1 \("\h\t\t\p\:\/\/"\)
+regex_2 \("\h\t\t\p\s\:\/\/"\)
+regex_3 \(~\(\(.*\)\("\h\t\t\p\:\/\/"\)\(.*\)\)\)
+atkPtn \(\(.*\)\("/evil"\)\(.*\)\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(= 30 (+ i1 i2))
+;
+trklen sigmaStar_safe_48 0
+write sigmaStar_safe_48_len
+replace sigmaStar_safe_48_len regex_1 regex_2 regex_3
+write x_3
+intersect x_3 atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

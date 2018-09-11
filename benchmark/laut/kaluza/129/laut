@@ -1,0 +1,77 @@
+T1_59 ".*"
+PCTEMP_LHS_16 ".*"
+T3_59 ".*"
+T1_63 ".*"
+NEW_DGNode_676 ~\(""\)
+NEW_DGNode_675 ~\("\+"\)
+NEW_DGNode_678 ~\("\%"\)
+NEW_DGNode_783 ~\("\%"\)
+T3_63 ".*"
+NEW_DGNode_654 ~\("\&"\)
+;
+T_103 Bool
+T_25 Bool
+T_26 Bool
+T_SELECT_5 Bool
+I0_59 Int
+I0_63 Int
+I1_59 Int
+I1_63 Int
+I2_59 Int
+I2_63 Int
+PCTEMP_LHS_15 Int
+T_2a Int
+;
+(= T_SELECT_5 (not (= PCTEMP_LHS_15 (- 1))))
+T_26
+(= T_26 (not T_25))
+(= T_25 (= PCTEMP_LHS_15 (- 1)))
+(= I0_59 (- PCTEMP_LHS_15 0))
+(>= PCTEMP_LHS_15 0)
+(>= I2_63 T_2a)
+(= I2_63 I1_63)
+(<= I2_63 I1_63)
+(= I0_63 (- I2_63 T_2a))
+(>= T_2a 0)
+(= T_2a (+ PCTEMP_LHS_15 1))
+(<= PCTEMP_LHS_15 I1_59)
+(= I2_59 I1_59)
+(trklen I1_59 0)
+(trklen I1_63 0)
+(trklen 0 1)
+(trklen I0_59 2)
+(trklen T_2a 3)
+(trklen I0_63 4)
+T_103
+;
+trklen T1_59 1
+write T1_59_l
+trklen PCTEMP_LHS_16 2
+write PCTEMP_LHS_16_l
+concate PCTEMP_LHS_16_l T3_59
+write T2_59
+concate T1_59_l T2_59
+write NEW_DGNode_230
+trklen T1_63 3
+write T1_63_l
+intersect NEW_DGNode_676 NEW_DGNode_675
+write NEW_DGNode_679
+intersect NEW_DGNode_679 NEW_DGNode_678
+write NEW_DGNode_784
+intersect NEW_DGNode_784 NEW_DGNode_783
+write PCTEMP_LHS_105
+trklen PCTEMP_LHS_105 4
+write PCTEMP_LHS_105_l
+concate PCTEMP_LHS_105_l T3_63
+write T2_63
+concate T1_63_l T2_63
+write NEW_DGNode_231
+intersect NEW_DGNode_230 NEW_DGNode_231
+write NEW_DGNode_655
+intersect NEW_DGNode_655 NEW_DGNode_654
+write T_29
+trklen T_29 0
+write T_29_l
+addpred
+write sink
+isempty sink

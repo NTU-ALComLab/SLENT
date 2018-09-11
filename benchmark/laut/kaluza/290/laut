@@ -1,0 +1,40 @@
+T0_339 ".*"
+T1_339 ~\("\="\)
+;
+T_SELECT_20 Bool
+T_e8 Bool
+T_e9 Bool
+I0_344 Int
+I0_348 Int
+I1_344 Int
+I1_348 Int
+I2_344 Int
+I2_348 Int
+PCTEMP_LHS_90 Int
+T_ed Int
+;
+T_e9
+(= T_e9 (not T_e8))
+(= T_e8 (= PCTEMP_LHS_90 (- 1)))
+(= I0_344 (- PCTEMP_LHS_90 0))
+(>= PCTEMP_LHS_90 0)
+(= I2_344 I1_344)
+(<= PCTEMP_LHS_90 I1_344)
+(>= I2_348 T_ed)
+(= I2_348 I1_348)
+(<= I2_348 I1_348)
+(= I0_348 (- I2_348 T_ed))
+(>= T_ed 0)
+(= T_ed (+ PCTEMP_LHS_90 1))
+(= PCTEMP_LHS_90 (- 1))
+(= T_SELECT_20 (not (= PCTEMP_LHS_90 (- 1))))
+(trklen 0 0)
+(not T_SELECT_20)
+;
+trklen T0_339 0
+write T0_339_l
+concate T0_339_l T1_339
+write T_e6
+addpred
+write sink
+isempty sink

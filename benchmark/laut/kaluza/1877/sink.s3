@@ -1,0 +1,12 @@
+(declare-fun T_SELECT_3 () Bool)
+(declare-fun PCTEMP_LHS_3 () Int)
+(declare-fun T0_6 () String)
+(declare-fun T1_6 () String)
+(declare-fun var_0xINPUT_8671 () String)
+(assert (= var_0xINPUT_8671 (Concat T0_6 T1_6)))
+(assert (not (= T1_6 "__utmc=169413169")))
+(assert (= PCTEMP_LHS_3 (- 1)))
+(assert (= T_SELECT_3 (not (= PCTEMP_LHS_3 (- 1)))))
+(assert (= 0 (Length T0_6))) ; len 0
+(assert (not T_SELECT_3))
+(check-sat)

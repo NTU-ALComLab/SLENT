@@ -1,0 +1,84 @@
+Not_tree ""
+literal_5 "\t\b\l\1"
+literal_4 "\t\b\l\2"
+literal_2 ""
+sigmaStar_053 \(.*\)
+sigmaStar_safe_54 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+sigmaStar_safe_55 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+literal_3 "\<\t\r\>\r\n\<\t\d\ \c\l\a\s\s\=\'"
+regex_9 \("\."\)
+regex_10 \("\ "\)
+regex_11 \(~\(\(.*\)\("\."\)\(.*\)\)\)
+literal_11 ""
+literal_16 "\>\<\s\p\a\n\ \t\i\t\l\e\="
+literal_19 "\<\/\s\p\a\n\>\<\/\t\d\>\r\n\<\t\d\ \a\l\i\g\n\=\'\c\e\n\t\e\r\'\ \w\i\d\t\h\=\'\1\%\'\ \c\l\a\s\s\=\'"
+literal_21 "\'\ \s\t\y\l\e\=\'\c\u\r\s\o\r\:\h\a\n\d\;\'\>"
+literal_24 "\ \s\t\y\l\e\=\w\h\i\t\e\-\s\p\a\c\e\:\n\o\w\r\a\p\'\>"
+literal_25 "\<\/\t\d\>\r\n\<\t\d\ \a\l\i\g\n\=\'\c\e\n\t\e\r\'\ \w\i\d\t\h\=\'\1\%\'\ \c\l\a\s\s\=\'"
+sigmaStar_safe_66 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+sigmaStar_safe_67 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+sigmaStar_safe_68 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+sigmaStar_safe_69 \(\("[0-9]|[a-z]|[A-Z]"\)*\)
+literal_33 "\ \s\t\y\l\e\=\w\h\i\t\e\-\s\p\a\c\e\:\n\o\w\r\a\p\'\>\\\\\n"
+atkPtn \(\(.*\)\("vbscript:"\)\(.*\)\)
+sigmaStar_n0 \(\(.\)*\)
+sigmaStar_n1 \(\(.\)*\)
+sigmaStar_n2 \(\(.\)*\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(> 30 (+ i1 i2))
+;
+union literal_5 literal_4
+write x_6
+concate literal_2 sigmaStar_053
+write x_7
+union sigmaStar_safe_54 sigmaStar_safe_55
+write x_8
+concate literal_3 x_6
+write x_12
+replace x_8 regex_9 regex_10 regex_11
+write x_14
+concate x_7 literal_11
+write x_15
+concate x_12 literal_16
+write x_17
+union x_15 x_14
+write x_18
+trklen x_18 0
+write x_18_len
+concate x_17 x_18_len
+write x_20
+concate literal_19 sigmaStar_n0
+write x_22
+concate x_20 literal_21
+write x_23
+concate x_22 literal_24
+write x_26
+concate x_23 sigmaStar_n1
+write x_27
+concate literal_25 sigmaStar_n2
+write x_28
+union sigmaStar_safe_66 sigmaStar_safe_67
+write x_29
+union x_29 sigmaStar_safe_68
+write x_30
+union x_30 sigmaStar_safe_69
+write x_31
+concate x_27 x_26
+write x_32
+concate x_28 literal_33
+write x_34
+concate x_32 x_31
+write x_35
+concate x_35 x_34
+write x_36
+intersect x_36 atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

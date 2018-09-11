@@ -1,0 +1,8 @@
+benchmark=r_pisa,solver=abc,TO=20.000000
+path,sat,time,step
+benchmark/laut/r_pisa/pisa-008-1/sink.abc,0,7.741112,3
+benchmark/laut/r_pisa/pisa-008-2/sink.abc,0,7.142433,4
+benchmark/laut/r_pisa/pisa-009-1/sink.abc,1,0.478708,8
+benchmark/laut/r_pisa/pisa-009-2/sink.abc,1,0.520552,9
+benchmark/laut/r_pisa/pisa-010-1/sink.abc,1,2.638922,56
+benchmark/laut/r_pisa/pisa-011-1/sink.abc,1,0.682193,50

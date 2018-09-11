@@ -1,0 +1,3 @@
+benchmark=benchmark/laut/kaluza/204/,solver=ic3ia,TO=300.000000
+path,sat,time,step
+benchmark/laut/kaluza/204/sink.vmt,1,139.331215,74

@@ -1,0 +1,31 @@
+PCTEMP_LHS_4 ".*"
+;
+T_15 Bool
+T_22 Bool
+T_2f Bool
+T_30 Bool
+T_8 Bool
+T_14 Int
+T_21 Int
+T_2e Int
+T_7 Int
+;
+T_8
+(= T_8 (< 0 T_7))
+(trklen T_7 0)
+T_15
+(= T_15 (< 1 T_14))
+(trklen T_14 0)
+T_22
+(= T_22 (< 2 T_21))
+(trklen T_21 0)
+T_30
+(= T_30 (not T_2f))
+(= T_2f (< 3 T_2e))
+(trklen T_2e 0)
+;
+trklen PCTEMP_LHS_4 0
+write PCTEMP_LHS_4_l
+addpred
+write sink
+isempty sink

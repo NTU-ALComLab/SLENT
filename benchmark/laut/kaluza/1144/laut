@@ -1,0 +1,50 @@
+NEW_DGNode_1160 ~\(""\)
+NEW_DGNode_1159 ~\("\+"\)
+NEW_DGNode_1162 ~\("\%"\)
+;
+T_102 Bool
+T_103 Bool
+T_19d Bool
+T_19f Bool
+T_1a0 Bool
+T_SELECT_22 Bool
+I0_382 Int
+I0_386 Int
+I1_382 Int
+I1_386 Int
+I2_382 Int
+I2_386 Int
+PCTEMP_LHS_100 Int
+T_107 Int
+T_19e Int
+;
+(= T_SELECT_22 (not (= PCTEMP_LHS_100 (- 1))))
+T_103
+(= T_103 (not T_102))
+(= T_102 (= PCTEMP_LHS_100 (- 1)))
+(= I0_382 (- PCTEMP_LHS_100 0))
+(>= PCTEMP_LHS_100 0)
+(= I2_382 I1_382)
+(<= PCTEMP_LHS_100 I1_382)
+(= T_107 (+ PCTEMP_LHS_100 1))
+(>= T_107 0)
+(>= I2_386 T_107)
+(= I2_386 I1_386)
+(<= I2_386 I1_386)
+(= I0_386 (- I2_386 T_107))
+(trklen I0_386 0)
+T_1a0
+(= T_1a0 (not T_19f))
+(= T_19f (< 0 T_19e))
+(trklen T_19e 0)
+T_19d
+;
+intersect NEW_DGNode_1160 NEW_DGNode_1159
+write NEW_DGNode_1163
+intersect NEW_DGNode_1163 NEW_DGNode_1162
+write PCTEMP_LHS_156
+trklen PCTEMP_LHS_156 0
+write PCTEMP_LHS_156_l
+addpred
+write sink
+isempty sink

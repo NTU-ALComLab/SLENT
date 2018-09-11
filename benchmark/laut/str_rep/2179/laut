@@ -1,0 +1,32 @@
+sigmaStar_150 \(.*\)
+sigmaStar_751 \(.*\)
+regex_4 \("\.\g\i\f"\)
+regex_5 \(""\)
+regex_6 \(~\(\(.*\)\("\.\g\i\f"\)\(.*\)\)\)
+literal_13 "\/"
+literal_15 "\.\t\e\x"
+atkPtn \(\(.*\)\("/evil"\)\(.*\)\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(> 30 (+ i1 i2))
+;
+union sigmaStar_150 sigmaStar_751
+write x_8
+trklen x_8 0
+write x_8_len
+replace x_8_len regex_4 regex_5 regex_6
+write x_12
+concate literal_13 x_12
+write x_14
+concate x_14 literal_15
+write x_16
+intersect x_16 atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

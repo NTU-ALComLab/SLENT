@@ -1,0 +1,26 @@
+sigmaStar_048 \(.*\)
+regex_1 \(\("\#"\)\([\\\\\|\/]\)\("\#"\)\)
+regex_2 \(""\)
+regex_3 \(~\(\(.*\)\(\("\#"\)\([\\\\\|\/]\)\("\#"\)\)\(.*\)\)\)
+literal_5 "\.\p\h\p"
+atkPtn \(\(.*\)\("/evil"\)\(.*\)\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(> 40 (+ i1 i2))
+;
+trklen sigmaStar_048 0
+write sigmaStar_048_len
+replace sigmaStar_048_len regex_1 regex_2 regex_3
+write x_4
+concate x_4 literal_5
+write x_6
+intersect x_6 atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

@@ -1,0 +1,38 @@
+NEW_DGNode_655 ~\("\+"\)
+NEW_DGNode_654 ~\("\%"\)
+;
+T_SELECT_3 Bool
+T_b Bool
+T_c Bool
+I0_21 Int
+I0_25 Int
+I1_21 Int
+I1_25 Int
+I2_21 Int
+I2_25 Int
+PCTEMP_LHS_5 Int
+T_10 Int
+;
+(= T_SELECT_3 (not (= PCTEMP_LHS_5 (- 1))))
+T_c
+(= T_c (not T_b))
+(= T_b (= PCTEMP_LHS_5 (- 1)))
+(= I0_21 (- PCTEMP_LHS_5 0))
+(>= PCTEMP_LHS_5 0)
+(= I2_21 I1_21)
+(<= PCTEMP_LHS_5 I1_21)
+(= T_10 (+ PCTEMP_LHS_5 1))
+(>= T_10 0)
+(>= I2_25 T_10)
+(= I2_25 I1_25)
+(<= I2_25 I1_25)
+(= I0_25 (- I2_25 T_10))
+(trklen I0_25 0)
+;
+intersect NEW_DGNode_655 NEW_DGNode_654
+write PCTEMP_LHS_9
+trklen PCTEMP_LHS_9 0
+write PCTEMP_LHS_9_l
+addpred
+write sink
+isempty sink

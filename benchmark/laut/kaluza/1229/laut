@@ -1,0 +1,57 @@
+NEW_DGNode_486 "\_\_utmb\="
+PCTEMP_LHS_6 "\-"
+NEW_DGNode_490 "\;"
+NEW_DGNode_494 "\/"
+NEW_DGNode_498 "\;"
+NEW_DGNode_502 ""
+NEW_DGNode_506 ""
+;
+T_12 Bool
+T_13 Bool
+T_SELECT_4 Bool
+T_SELECT_5 Bool
+T_c Bool
+T_e Bool
+T_f Bool
+I0_23 Int
+I1_23 Int
+I2_23 Int
+PCTEMP_LHS_4 Int
+PCTEMP_LHS_5 Int
+T_10 Int
+;
+(= T_SELECT_5 (not (= PCTEMP_LHS_5 (- 1))))
+T_f
+(= T_f (not T_e))
+(= T_e (< PCTEMP_LHS_5 0))
+(= T_SELECT_4 (not (= PCTEMP_LHS_4 (- 1))))
+T_c
+(= T_c (< (- 1) PCTEMP_LHS_4))
+(= T_10 (+ PCTEMP_LHS_4 7))
+(>= T_10 0)
+(>= PCTEMP_LHS_5 T_10)
+(= I2_23 I1_23)
+(<= PCTEMP_LHS_5 I1_23)
+(= I0_23 (- PCTEMP_LHS_5 T_10))
+(trklen I0_23 0)
+T_12
+T_13
+(= T_13 (not T_12))
+;
+trklen PCTEMP_LHS_6 0
+write PCTEMP_LHS_6_l
+concate NEW_DGNode_486 PCTEMP_LHS_6_l
+write T_a7
+concate T_a7 NEW_DGNode_490
+write T_a8
+concate T_a8 NEW_DGNode_494
+write T_a9
+concate T_a9 NEW_DGNode_498
+write T_aa
+concate T_aa NEW_DGNode_502
+write T_ab
+concate T_ab NEW_DGNode_506
+write T_ac
+addpred
+write sink
+isempty sink

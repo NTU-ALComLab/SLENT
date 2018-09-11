@@ -1,0 +1,40 @@
+Not_tree ""
+literal_1 "\S\E\C\U\R\I\T\Y\ \W\A\R\N\I\N\G\:\ \l\o\g\g\e\d\ \i\n\t\r\u\s\i\o\n\ \a\t\t\e\m\p\t\ \a\g\a\i\n\s\t\ \l\i\b\/\a\d\o\d\b\/\t\e\s\t\s\/\t\m\s\s\q\l\.\p\h\p"
+sigmaStar_2256 \(.*\)
+regex_9 \("\\\\\'"\)
+regex_10 \("\'"\)
+regex_11 \(~\(\(.*\)\("\\\\\'"\)\(.*\)\)\)
+regex_12 \('\\\"'\)
+regex_13 \("\\\\"\)
+regex_14 \(~\(\(.*\)\('\\\"'\)\(.*\)\)\)
+regex_15 \("\\\\\\\\"\)
+regex_16 \("\\\\"\)
+regex_17 \(~\(\(.*\)\("\\\\\\\\"\)\(.*\)\)\)
+atkPtn \(\(.*\)\("livescript:"\)\(.*\)\)
+sigmaStar_n0 \(\(.\)*\)
+;
+i1 Int
+i2 Int
+;
+(trklen i1 0)
+(trklen i2 1)
+(> 40 (+ i1 i2))
+;
+union literal_1 sigmaStar_2256
+write x_23
+replace x_23 regex_9 regex_10 regex_11
+write x_27
+replace x_27 regex_12 regex_13 regex_14
+write x_31
+replace x_31 regex_15 regex_16 regex_17
+write x_35
+union sigmaStar_n0 x_35
+write x_36
+trklen x_36 0
+write x_36_len
+intersect x_36_len atkPtn
+write no_len_sink
+trklen no_len_sink 1
+addpred pred
+write sink
+isempty sink

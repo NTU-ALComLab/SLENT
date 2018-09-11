@@ -1,0 +1,730 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ADDLEN	dt_extractor/typedef.h	/^    ADDLEN, PREFIX, SUFFIX, INTERSECT, CONCATE, REPLACE, REPLACE_A4$/;"	e	enum:aut::AutOpType
+AND	dt_extractor/typedef.h	/^    NOT, AND, OR, ITE,$/;"	e	enum:dt::SmtType
+AND	dt_extractor/typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+AND	typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+AType	dt_extractor/typedef.h	/^enum AType {$/;"	g	namespace:aut
+AType	typedef.h	/^enum AType {$/;"	g	namespace:aut
+AUTMGR_NDEBUG	autMgr.h	36;"	d
+AUT_OP_NDEBUG	autMgr.h	35;"	d
+AUT_PARAM_NDEBUG	autMgr.h	34;"	d
+Assertion	dt_extractor/typedef.h	/^typedef pair<bool,SmtNode*>     Assertion; \/\/ Phase and SmtNode*$/;"	t	namespace:dt
+AssertionList	dt_extractor/typedef.h	/^typedef vector<Assertion>       AssertionList;$/;"	t	namespace:dt
+Aut	autMgr.h	/^        Aut ( Aut* a1, Aut* a2, const AutOpType& type ){$/;"	f	class:aut::Aut
+Aut	autMgr.h	/^        Aut ( Aut* a1, Aut* a2, const size_t& alpha, const AutOpType& type) {$/;"	f	class:aut::Aut
+Aut	autMgr.h	/^        Aut ( const string& fileName, const string& lvarIdxStr, const AutOpType& type ){$/;"	f	class:aut::Aut
+Aut	autMgr.h	/^        Aut(){$/;"	f	class:aut::Aut
+Aut	autMgr.h	/^        Aut(const char* fileName){ $/;"	f	class:aut::Aut
+Aut	autMgr.h	/^        Aut(const string& fileName){ $/;"	f	class:aut::Aut
+Aut	autMgr.h	/^class Aut{$/;"	c	namespace:aut
+AutMgr	autMgr.h	/^        AutMgr() {_gflag = 0;}$/;"	f	class:aut::AutMgr
+AutMgr	autMgr.h	/^class AutMgr{$/;"	c	namespace:aut
+AutOpType	dt_extractor/typedef.h	/^enum AutOpType {$/;"	g	namespace:aut
+AutOpType	typedef.h	/^enum AutOpType {$/;"	g	namespace:aut
+BLIFIndent	aut.cpp	/^string   Aut::BLIFIndent  = " \\\\\\n" + string(7,' ');$/;"	m	class:aut::Aut	file:
+BLIFIndent	autMgr.h	/^        static string   BLIFIndent;$/;"	m	class:aut::Aut
+BLIFIndent	old-aut.cpp	/^string   Aut::BLIFIndent  = " \\\\\\n" + string(7,' ');$/;"	m	class:aut::Aut	file:
+CC	Makefile	/^CC = g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g3$/;"	m
+CHRList	dt_extractor/typedef.h	/^typedef vector<char>          CHRList;$/;"	t	namespace:aut
+CHRList	typedef.h	/^typedef vector<char>          CHRList;$/;"	t	namespace:aut
+COMPLE	dt_extractor/typedef.h	/^    LEAF, LVAR, TRKLEN, TRKSTR, COMPLE, $/;"	e	enum:dt::DType
+CONCATE	dt_extractor/typedef.h	/^    ADDLEN, PREFIX, SUFFIX, INTERSECT, CONCATE, REPLACE, REPLACE_A4$/;"	e	enum:aut::AutOpType
+CONCATE	dt_extractor/typedef.h	/^    CONCATE, UNION, INTER, CONTAINS, PREFIXOF, SUFFIXOF,$/;"	e	enum:dt::DType
+CONCATE	typedef.h	/^    TRKLEN, TRKSTR, PREFIX, SUFFIX, INTERSECT, UNION, CONCATE, REPLACE, REPLACE_A4$/;"	e	enum:aut::AutOpType
+CONST0	dt_extractor/typedef.h	/^    NUM   , CONST0 , CONST1 , PARAM , SPECIAL , $/;"	e	enum:aut::VmtType
+CONST0	typedef.h	/^    NUM   , CONST0 , CONST1 , PARAM , SPECIAL , $/;"	e	enum:aut::VmtType
+CONST1	dt_extractor/typedef.h	/^    NUM   , CONST0 , CONST1 , PARAM , SPECIAL , $/;"	e	enum:aut::VmtType
+CONST1	typedef.h	/^    NUM   , CONST0 , CONST1 , PARAM , SPECIAL , $/;"	e	enum:aut::VmtType
+CONST_BOOL	dt_extractor/typedef.h	/^    CONST_BOOL=0, CONST_INT, CONST_STR,$/;"	e	enum:dt::SmtType
+CONST_INT	dt_extractor/typedef.h	/^    CONST_BOOL=0, CONST_INT, CONST_STR,$/;"	e	enum:dt::SmtType
+CONST_STR	dt_extractor/typedef.h	/^    CONST_BOOL=0, CONST_INT, CONST_STR,$/;"	e	enum:dt::SmtType
+CONTAINS	dt_extractor/typedef.h	/^    CONCATE, UNION, INTER, CONTAINS, PREFIXOF, SUFFIXOF,$/;"	e	enum:dt::DType
+CSNSEquiv	aut.cpp	/^string Aut::CSNSEquiv(const VmtType& type) const$/;"	f	class:aut::Aut
+CSNSEquiv	old-aut.cpp	/^string Aut::CSNSEquiv(const VmtType& type) const$/;"	f	class:aut::Aut
+CubeMap	dt_extractor/typedef.h	/^typedef map<size_t,string>    CubeMap;$/;"	t	namespace:aut
+CubeMap	typedef.h	/^typedef map<size_t,string>    CubeMap;$/;"	t	namespace:aut
+DIV	dt_extractor/typedef.h	/^    LT,LTOEQ,MT,MTOEQ,PLUS,MINUS,NEG,DIV,$/;"	e	enum:dt::SmtType
+DTMgr	dt_extractor/dtMgr.h	/^        DTMgr(): _indent(3), _gflag(0) {$/;"	f	class:dt::DTMgr
+DTMgr	dt_extractor/dtMgr.h	/^class DTMgr{$/;"	c	namespace:dt
+DTNode	dt_extractor/dtnode.h	/^        DTNode (const string& name) {$/;"	f	class:dt::DTNode
+DTNode	dt_extractor/dtnode.h	/^        DTNode (const string& name,DTNode* n) {$/;"	f	class:dt::DTNode
+DTNode	dt_extractor/dtnode.h	/^        DTNode (const string& name,const DType& type) {$/;"	f	class:dt::DTNode
+DTNode	dt_extractor/dtnode.h	/^        DTNode (const string& name,const string& regex) {$/;"	f	class:dt::DTNode
+DTNode	dt_extractor/dtnode.h	/^class DTNode {$/;"	c	namespace:dt
+DTNodeList	dt_extractor/typedef.h	/^typedef vector<DTNode*>         DTNodeList;$/;"	t	namespace:dt
+DType	dt_extractor/typedef.h	/^enum DType {$/;"	g	namespace:dt
+EPSILON	dt_extractor/typedef.h	/^    EPSILON, LEFT_ANGLE, RIGHT_ANGLE$/;"	e	enum:aut::AType
+EPSILON	typedef.h	/^    EPSILON, LEFT_ANGLE, RIGHT_ANGLE$/;"	e	enum:aut::AType
+EPSILON_ENCODE	autMgr.h	16;"	d
+EQ	dt_extractor/typedef.h	/^    EQ,$/;"	e	enum:dt::SmtType
+EQ	dt_extractor/typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+EQ	typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+EXCM	dt_extractor/typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+EXCM	typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+EXIST	dt_extractor/typedef.h	/^    INPUT , EXIST  , STATE  , LEN   , STATE_N , LEN_N , PREDBV , PREDIV , $/;"	e	enum:aut::VmtType
+EXIST	typedef.h	/^    INPUT , EXIST  , STATE  , LEN   , STATE_N , LEN_N , PREDBV , PREDIV , $/;"	e	enum:aut::VmtType
+FORCE_ASSIGNED	autMgr.h	3;"	d
+FORCE_SIGNED_BIT_NUM	autMgr.h	15;"	d
+INPUT	dt_extractor/typedef.h	/^    INPUT , EXIST  , STATE  , LEN   , STATE_N , LEN_N , PREDBV , PREDIV , $/;"	e	enum:aut::VmtType
+INPUT	typedef.h	/^    INPUT , EXIST  , STATE  , LEN   , STATE_N , LEN_N , PREDBV , PREDIV , $/;"	e	enum:aut::VmtType
+INPUT_ENCODE_BIT_NUM	autMgr.h	6;"	d
+INPUT_ENCODE_BIT_NUM	autMgr.h	9;"	d
+INTER	dt_extractor/typedef.h	/^    CONCATE, UNION, INTER, CONTAINS, PREFIXOF, SUFFIXOF,$/;"	e	enum:dt::DType
+INTERSECT	dt_extractor/typedef.h	/^    ADDLEN, PREFIX, SUFFIX, INTERSECT, CONCATE, REPLACE, REPLACE_A4$/;"	e	enum:aut::AutOpType
+INTERSECT	typedef.h	/^    TRKLEN, TRKSTR, PREFIX, SUFFIX, INTERSECT, UNION, CONCATE, REPLACE, REPLACE_A4$/;"	e	enum:aut::AutOpType
+ITE	dt_extractor/typedef.h	/^    NOT, AND, OR, ITE,$/;"	e	enum:dt::SmtType
+LEAF	dt_extractor/typedef.h	/^    LEAF, LVAR, TRKLEN, TRKSTR, COMPLE, $/;"	e	enum:dt::DType
+LEFT_ANGLE	dt_extractor/typedef.h	/^    EPSILON, LEFT_ANGLE, RIGHT_ANGLE$/;"	e	enum:aut::AType
+LEFT_ANGLE	typedef.h	/^    EPSILON, LEFT_ANGLE, RIGHT_ANGLE$/;"	e	enum:aut::AType
+LEFT_ANGLE_BRACKET_ENCODE	autMgr.h	17;"	d
+LEN	dt_extractor/typedef.h	/^    INPUT , EXIST  , STATE  , LEN   , STATE_N , LEN_N , PREDBV , PREDIV , $/;"	e	enum:aut::VmtType
+LEN	typedef.h	/^    INPUT , EXIST  , STATE  , LEN   , STATE_N , LEN_N , PREDBV , PREDIV , $/;"	e	enum:aut::VmtType
+LEN_N	dt_extractor/typedef.h	/^    INPUT , EXIST  , STATE  , LEN   , STATE_N , LEN_N , PREDBV , PREDIV , $/;"	e	enum:aut::VmtType
+LEN_N	typedef.h	/^    INPUT , EXIST  , STATE  , LEN   , STATE_N , LEN_N , PREDBV , PREDIV , $/;"	e	enum:aut::VmtType
+LT	dt_extractor/typedef.h	/^    LT,LTOEQ,MT,MTOEQ,PLUS,MINUS,NEG,DIV,$/;"	e	enum:dt::SmtType
+LT	dt_extractor/typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+LT	typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+LTOEQ	dt_extractor/typedef.h	/^    LT,LTOEQ,MT,MTOEQ,PLUS,MINUS,NEG,DIV,$/;"	e	enum:dt::SmtType
+LTOEQ	dt_extractor/typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+LTOEQ	typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+LVAR	dt_extractor/typedef.h	/^    LEAF, LVAR, TRKLEN, TRKSTR, COMPLE, $/;"	e	enum:dt::DType
+LVAR_BIT_NUM	autMgr.h	13;"	d
+MAX_ENCODE	autMgr.h	10;"	d
+MAX_ENCODE	autMgr.h	7;"	d
+MAX_SPECIAL_ALPHABET_ENCODE	autMgr.h	19;"	d
+MINUS	dt_extractor/typedef.h	/^    LT,LTOEQ,MT,MTOEQ,PLUS,MINUS,NEG,DIV,$/;"	e	enum:dt::SmtType
+MINUS	dt_extractor/typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+MINUS	typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+MODULE	dt_extractor/typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+MODULE	typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+MODULE_TYPE_NUM	autMgr.h	14;"	d
+MT	dt_extractor/typedef.h	/^    LT,LTOEQ,MT,MTOEQ,PLUS,MINUS,NEG,DIV,$/;"	e	enum:dt::SmtType
+MT	dt_extractor/typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+MT	typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+MTOEQ	dt_extractor/typedef.h	/^    LT,LTOEQ,MT,MTOEQ,PLUS,MINUS,NEG,DIV,$/;"	e	enum:dt::SmtType
+MTOEQ	dt_extractor/typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+MTOEQ	typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+M_EQ	dt_extractor/typedef.h	/^    M_SFA, M_EQ, M_INC1$/;"	e	enum:aut::ModuleType
+M_EQ	typedef.h	/^    M_SFA, M_EQ, M_INC1$/;"	e	enum:aut::ModuleType
+M_INC1	dt_extractor/typedef.h	/^    M_SFA, M_EQ, M_INC1$/;"	e	enum:aut::ModuleType
+M_INC1	typedef.h	/^    M_SFA, M_EQ, M_INC1$/;"	e	enum:aut::ModuleType
+M_SFA	dt_extractor/typedef.h	/^    M_SFA, M_EQ, M_INC1$/;"	e	enum:aut::ModuleType
+M_SFA	typedef.h	/^    M_SFA, M_EQ, M_INC1$/;"	e	enum:aut::ModuleType
+ModuleType	dt_extractor/typedef.h	/^enum ModuleType {$/;"	g	namespace:aut
+ModuleType	typedef.h	/^enum ModuleType {$/;"	g	namespace:aut
+NEG	dt_extractor/typedef.h	/^    LT,LTOEQ,MT,MTOEQ,PLUS,MINUS,NEG,DIV,$/;"	e	enum:dt::SmtType
+NEG	dt_extractor/typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+NEG	typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+NOT	dt_extractor/typedef.h	/^    NOT, AND, OR, ITE,$/;"	e	enum:dt::SmtType
+NOT	dt_extractor/typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+NOT	typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+NUM	dt_extractor/typedef.h	/^    NUM   , CONST0 , CONST1 , PARAM , SPECIAL , $/;"	e	enum:aut::VmtType
+NUM	typedef.h	/^    NUM   , CONST0 , CONST1 , PARAM , SPECIAL , $/;"	e	enum:aut::VmtType
+OR	dt_extractor/typedef.h	/^    NOT, AND, OR, ITE,$/;"	e	enum:dt::SmtType
+OR	dt_extractor/typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+OR	typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+OTHER	dt_extractor/typedef.h	/^    SUBSTR, REPLACE, TRKIDX, OTHER$/;"	e	enum:dt::DType
+PARAM	dt_extractor/typedef.h	/^    NUM   , CONST0 , CONST1 , PARAM , SPECIAL , $/;"	e	enum:aut::VmtType
+PARAM	typedef.h	/^    NUM   , CONST0 , CONST1 , PARAM , SPECIAL , $/;"	e	enum:aut::VmtType
+PI_NUM	autMgr.h	12;"	d
+PLUS	dt_extractor/typedef.h	/^    LT,LTOEQ,MT,MTOEQ,PLUS,MINUS,NEG,DIV,$/;"	e	enum:dt::SmtType
+PLUS	dt_extractor/typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+PLUS	typedef.h	/^    NOT=30, NEG    , AND    , OR    , PLUS    , MINUS , LT     , LTOEQ  , EQ, MTOEQ, MT, EXCM, MODULE$/;"	e	enum:aut::VmtType
+PREDBV	dt_extractor/typedef.h	/^    INPUT , EXIST  , STATE  , LEN   , STATE_N , LEN_N , PREDBV , PREDIV , $/;"	e	enum:aut::VmtType
+PREDBV	typedef.h	/^    INPUT , EXIST  , STATE  , LEN   , STATE_N , LEN_N , PREDBV , PREDIV , $/;"	e	enum:aut::VmtType
+PREDIV	dt_extractor/typedef.h	/^    INPUT , EXIST  , STATE  , LEN   , STATE_N , LEN_N , PREDBV , PREDIV , $/;"	e	enum:aut::VmtType
+PREDIV	typedef.h	/^    INPUT , EXIST  , STATE  , LEN   , STATE_N , LEN_N , PREDBV , PREDIV , $/;"	e	enum:aut::VmtType
+PREFIX	dt_extractor/typedef.h	/^    ADDLEN, PREFIX, SUFFIX, INTERSECT, CONCATE, REPLACE, REPLACE_A4$/;"	e	enum:aut::AutOpType
+PREFIX	typedef.h	/^    TRKLEN, TRKSTR, PREFIX, SUFFIX, INTERSECT, UNION, CONCATE, REPLACE, REPLACE_A4$/;"	e	enum:aut::AutOpType
+PREFIXOF	dt_extractor/typedef.h	/^    CONCATE, UNION, INTER, CONTAINS, PREFIXOF, SUFFIXOF,$/;"	e	enum:dt::DType
+RECONCATE	dt_extractor/typedef.h	/^    REINTER,REUNION,RECONCATE$/;"	e	enum:dt::SmtType
+REINTER	dt_extractor/typedef.h	/^    REINTER,REUNION,RECONCATE$/;"	e	enum:dt::SmtType
+REPLACE	dt_extractor/typedef.h	/^    ADDLEN, PREFIX, SUFFIX, INTERSECT, CONCATE, REPLACE, REPLACE_A4$/;"	e	enum:aut::AutOpType
+REPLACE	dt_extractor/typedef.h	/^    SUBSTR, REPLACE, TRKIDX, OTHER$/;"	e	enum:dt::DType
+REPLACE	typedef.h	/^    TRKLEN, TRKSTR, PREFIX, SUFFIX, INTERSECT, UNION, CONCATE, REPLACE, REPLACE_A4$/;"	e	enum:aut::AutOpType
+REPLACE_A4	dt_extractor/typedef.h	/^    ADDLEN, PREFIX, SUFFIX, INTERSECT, CONCATE, REPLACE, REPLACE_A4$/;"	e	enum:aut::AutOpType
+REPLACE_A4	typedef.h	/^    TRKLEN, TRKSTR, PREFIX, SUFFIX, INTERSECT, UNION, CONCATE, REPLACE, REPLACE_A4$/;"	e	enum:aut::AutOpType
+REUNION	dt_extractor/typedef.h	/^    REINTER,REUNION,RECONCATE$/;"	e	enum:dt::SmtType
+RIGHT_ANGLE	dt_extractor/typedef.h	/^    EPSILON, LEFT_ANGLE, RIGHT_ANGLE$/;"	e	enum:aut::AType
+RIGHT_ANGLE	typedef.h	/^    EPSILON, LEFT_ANGLE, RIGHT_ANGLE$/;"	e	enum:aut::AType
+RIGHT_ANGLE_BRACKET_ENCODE	autMgr.h	18;"	d
+SPECIAL	dt_extractor/typedef.h	/^    NUM   , CONST0 , CONST1 , PARAM , SPECIAL , $/;"	e	enum:aut::VmtType
+SPECIAL	typedef.h	/^    NUM   , CONST0 , CONST1 , PARAM , SPECIAL , $/;"	e	enum:aut::VmtType
+STATE	dt_extractor/typedef.h	/^    INPUT , EXIST  , STATE  , LEN   , STATE_N , LEN_N , PREDBV , PREDIV , $/;"	e	enum:aut::VmtType
+STATE	typedef.h	/^    INPUT , EXIST  , STATE  , LEN   , STATE_N , LEN_N , PREDBV , PREDIV , $/;"	e	enum:aut::VmtType
+STATE_N	dt_extractor/typedef.h	/^    INPUT , EXIST  , STATE  , LEN   , STATE_N , LEN_N , PREDBV , PREDIV , $/;"	e	enum:aut::VmtType
+STATE_N	typedef.h	/^    INPUT , EXIST  , STATE  , LEN   , STATE_N , LEN_N , PREDBV , PREDIV , $/;"	e	enum:aut::VmtType
+STRCONCATE	dt_extractor/typedef.h	/^    STRTORE,STRINRE,STRLEN,STRCONCATE,STRCONTAINS,$/;"	e	enum:dt::SmtType
+STRCONTAINS	dt_extractor/typedef.h	/^    STRTORE,STRINRE,STRLEN,STRCONCATE,STRCONTAINS,$/;"	e	enum:dt::SmtType
+STRINDEXOF	dt_extractor/typedef.h	/^    STRPREFIXOF,STRSUFFIXOF,STRSUBSTR,STRREPLACE,STRINDEXOF,$/;"	e	enum:dt::SmtType
+STRINRE	dt_extractor/typedef.h	/^    STRTORE,STRINRE,STRLEN,STRCONCATE,STRCONTAINS,$/;"	e	enum:dt::SmtType
+STRLEN	dt_extractor/typedef.h	/^    STRTORE,STRINRE,STRLEN,STRCONCATE,STRCONTAINS,$/;"	e	enum:dt::SmtType
+STRList	dt_extractor/typedef.h	/^typedef vector<string>        STRList;$/;"	t	namespace:aut
+STRList	typedef.h	/^typedef vector<string>        STRList;$/;"	t	namespace:aut
+STRPREFIXOF	dt_extractor/typedef.h	/^    STRPREFIXOF,STRSUFFIXOF,STRSUBSTR,STRREPLACE,STRINDEXOF,$/;"	e	enum:dt::SmtType
+STRREPLACE	dt_extractor/typedef.h	/^    STRPREFIXOF,STRSUFFIXOF,STRSUBSTR,STRREPLACE,STRINDEXOF,$/;"	e	enum:dt::SmtType
+STRSUBSTR	dt_extractor/typedef.h	/^    STRPREFIXOF,STRSUFFIXOF,STRSUBSTR,STRREPLACE,STRINDEXOF,$/;"	e	enum:dt::SmtType
+STRSUFFIXOF	dt_extractor/typedef.h	/^    STRPREFIXOF,STRSUFFIXOF,STRSUBSTR,STRREPLACE,STRINDEXOF,$/;"	e	enum:dt::SmtType
+STRTORE	dt_extractor/typedef.h	/^    STRTORE,STRINRE,STRLEN,STRCONCATE,STRCONTAINS,$/;"	e	enum:dt::SmtType
+SUBSTR	dt_extractor/typedef.h	/^    SUBSTR, REPLACE, TRKIDX, OTHER$/;"	e	enum:dt::DType
+SUFFIX	dt_extractor/typedef.h	/^    ADDLEN, PREFIX, SUFFIX, INTERSECT, CONCATE, REPLACE, REPLACE_A4$/;"	e	enum:aut::AutOpType
+SUFFIX	typedef.h	/^    TRKLEN, TRKSTR, PREFIX, SUFFIX, INTERSECT, UNION, CONCATE, REPLACE, REPLACE_A4$/;"	e	enum:aut::AutOpType
+SUFFIXOF	dt_extractor/typedef.h	/^    CONCATE, UNION, INTER, CONTAINS, PREFIXOF, SUFFIXOF,$/;"	e	enum:dt::DType
+SmtAndNode	dt_extractor/smtnode.h	/^        SmtAndNode() : SmtBoolNode("and",AND) {}$/;"	f	class:dt::SmtAndNode
+SmtAndNode	dt_extractor/smtnode.h	/^class SmtAndNode : public SmtBoolNode {$/;"	c	namespace:dt
+SmtBoolNode	dt_extractor/smtnode.h	/^        SmtBoolNode(const string& name, const SmtType& type) : SmtNode(name,type) {}$/;"	f	class:dt::SmtBoolNode
+SmtBoolNode	dt_extractor/smtnode.h	/^class SmtBoolNode : public SmtNode {$/;"	c	namespace:dt
+SmtConstBoolNode	dt_extractor/smtnode.h	/^        SmtConstBoolNode(const string& name) : SmtNode(name,CONST_BOOL) {}$/;"	f	class:dt::SmtConstBoolNode
+SmtConstBoolNode	dt_extractor/smtnode.h	/^class SmtConstBoolNode : public SmtNode {$/;"	c	namespace:dt
+SmtConstIntNode	dt_extractor/smtnode.h	/^        SmtConstIntNode(const string& name) : SmtNode(name,CONST_INT) {}$/;"	f	class:dt::SmtConstIntNode
+SmtConstIntNode	dt_extractor/smtnode.h	/^class SmtConstIntNode  : public SmtNode {$/;"	c	namespace:dt
+SmtConstStrNode	dt_extractor/smtnode.h	/^        SmtConstStrNode(const string& name) : SmtNode(name,CONST_STR) {}$/;"	f	class:dt::SmtConstStrNode
+SmtConstStrNode	dt_extractor/smtnode.h	/^class SmtConstStrNode  : public SmtNode {$/;"	c	namespace:dt
+SmtEqNode	dt_extractor/smtnode.h	/^        SmtEqNode() : SmtNode("=",EQ) {}$/;"	f	class:dt::SmtEqNode
+SmtEqNode	dt_extractor/smtnode.h	/^class SmtEqNode : public SmtNode {$/;"	c	namespace:dt
+SmtIntNode	dt_extractor/smtnode.h	/^        SmtIntNode(const string& name, const SmtType& type) : SmtNode(name,type) {}$/;"	f	class:dt::SmtIntNode
+SmtIntNode	dt_extractor/smtnode.h	/^class SmtIntNode : public SmtNode {$/;"	c	namespace:dt
+SmtIteNode	dt_extractor/smtnode.h	/^        SmtIteNode() : SmtBoolNode("ite",ITE) { }$/;"	f	class:dt::SmtIteNode
+SmtIteNode	dt_extractor/smtnode.h	/^class SmtIteNode : public SmtBoolNode {$/;"	c	namespace:dt
+SmtNode	dt_extractor/smtnode.h	/^        SmtNode (const string& name, const SmtType& type): _name(name), _type(type), _idx(0), _flag(0), _neg(0) {}$/;"	f	class:dt::SmtNode
+SmtNode	dt_extractor/smtnode.h	/^class SmtNode {$/;"	c	namespace:dt
+SmtNodeList	dt_extractor/typedef.h	/^typedef vector<SmtNode*>        SmtNodeList;$/;"	t	namespace:dt
+SmtNodeQueue	dt_extractor/typedef.h	/^typedef queue<SmtNode*>         SmtNodeQueue;$/;"	t	namespace:dt
+SmtNotNode	dt_extractor/smtnode.h	/^        SmtNotNode() : SmtBoolNode("not",NOT) {}$/;"	f	class:dt::SmtNotNode
+SmtNotNode	dt_extractor/smtnode.h	/^class SmtNotNode : public SmtBoolNode {$/;"	c	namespace:dt
+SmtOrNode	dt_extractor/smtnode.h	/^        SmtOrNode() : SmtBoolNode("or",OR) {}$/;"	f	class:dt::SmtOrNode
+SmtOrNode	dt_extractor/smtnode.h	/^class SmtOrNode : public SmtBoolNode {$/;"	c	namespace:dt
+SmtReConcateNode	dt_extractor/smtnode.h	/^        SmtReConcateNode() : SmtStrNode("re.++",RECONCATE,CONCATE) {}$/;"	f	class:dt::SmtReConcateNode
+SmtReConcateNode	dt_extractor/smtnode.h	/^class SmtReConcateNode : public SmtStrNode {$/;"	c	namespace:dt
+SmtReInterNode	dt_extractor/smtnode.h	/^        SmtReInterNode() : SmtStrNode("re.inter",REINTER,INTER) {}$/;"	f	class:dt::SmtReInterNode
+SmtReInterNode	dt_extractor/smtnode.h	/^class SmtReInterNode : public SmtStrNode {$/;"	c	namespace:dt
+SmtReUnionNode	dt_extractor/smtnode.h	/^        SmtReUnionNode() : SmtStrNode("re.union",REUNION,UNION) {}$/;"	f	class:dt::SmtReUnionNode
+SmtReUnionNode	dt_extractor/smtnode.h	/^class SmtReUnionNode : public SmtStrNode {$/;"	c	namespace:dt
+SmtStrConcateNode	dt_extractor/smtnode.h	/^        SmtStrConcateNode() : SmtStrNode("str.++",STRCONCATE,CONCATE) {}$/;"	f	class:dt::SmtStrConcateNode
+SmtStrConcateNode	dt_extractor/smtnode.h	/^class SmtStrConcateNode : public SmtStrNode {$/;"	c	namespace:dt
+SmtStrContainsNode	dt_extractor/smtnode.h	/^        SmtStrContainsNode() : SmtStrNode("str.contains",STRCONTAINS,CONTAINS) {}$/;"	f	class:dt::SmtStrContainsNode
+SmtStrContainsNode	dt_extractor/smtnode.h	/^class SmtStrContainsNode : public SmtStrNode {$/;"	c	namespace:dt
+SmtStrInReNode	dt_extractor/smtnode.h	/^        SmtStrInReNode() : SmtStrNode("str.in.re",STRINRE,OTHER){}$/;"	f	class:dt::SmtStrInReNode
+SmtStrInReNode	dt_extractor/smtnode.h	/^class SmtStrInReNode : public SmtStrNode {$/;"	c	namespace:dt
+SmtStrIndexofNode	dt_extractor/smtnode.h	/^        SmtStrIndexofNode() : SmtStrNode("str.indexof",STRINDEXOF,TRKIDX) {}$/;"	f	class:dt::SmtStrIndexofNode
+SmtStrIndexofNode	dt_extractor/smtnode.h	/^class SmtStrIndexofNode : public SmtStrNode {$/;"	c	namespace:dt
+SmtStrLenNode	dt_extractor/smtnode.h	/^        SmtStrLenNode() : SmtStrNode("str.len",STRLEN,OTHER) {}$/;"	f	class:dt::SmtStrLenNode
+SmtStrLenNode	dt_extractor/smtnode.h	/^class SmtStrLenNode : public SmtStrNode {$/;"	c	namespace:dt
+SmtStrNode	dt_extractor/smtnode.h	/^        SmtStrNode(const string& name, const SmtType& type, const DType& dtype) : SmtNode(name,type),_dtype(dtype) {}$/;"	f	class:dt::SmtStrNode
+SmtStrNode	dt_extractor/smtnode.h	/^class SmtStrNode : public SmtNode {$/;"	c	namespace:dt
+SmtStrPrefixofNode	dt_extractor/smtnode.h	/^        SmtStrPrefixofNode() : SmtStrNode("str.prefixof",STRPREFIXOF,PREFIXOF) {}$/;"	f	class:dt::SmtStrPrefixofNode
+SmtStrPrefixofNode	dt_extractor/smtnode.h	/^class SmtStrPrefixofNode : public SmtStrNode {$/;"	c	namespace:dt
+SmtStrReplaceNode	dt_extractor/smtnode.h	/^        SmtStrReplaceNode() : SmtStrNode("str.replace",STRREPLACE,REPLACE) {}$/;"	f	class:dt::SmtStrReplaceNode
+SmtStrReplaceNode	dt_extractor/smtnode.h	/^class SmtStrReplaceNode : public SmtStrNode {$/;"	c	namespace:dt
+SmtStrSubstrNode	dt_extractor/smtnode.h	/^        SmtStrSubstrNode() : SmtStrNode("str.substr",STRSUBSTR,SUBSTR) {}$/;"	f	class:dt::SmtStrSubstrNode
+SmtStrSubstrNode	dt_extractor/smtnode.h	/^class SmtStrSubstrNode : public SmtStrNode {$/;"	c	namespace:dt
+SmtStrSuffixofNode	dt_extractor/smtnode.h	/^        SmtStrSuffixofNode() : SmtStrNode("str.suffixof",STRSUFFIXOF,SUFFIXOF) {}$/;"	f	class:dt::SmtStrSuffixofNode
+SmtStrSuffixofNode	dt_extractor/smtnode.h	/^class SmtStrSuffixofNode : public SmtStrNode {$/;"	c	namespace:dt
+SmtStrToReNode	dt_extractor/smtnode.h	/^        SmtStrToReNode() : SmtStrNode("str.to.re",STRTORE,OTHER) {}$/;"	f	class:dt::SmtStrToReNode
+SmtStrToReNode	dt_extractor/smtnode.h	/^class SmtStrToReNode : public SmtStrNode {$/;"	c	namespace:dt
+SmtType	dt_extractor/typedef.h	/^enum SmtType {$/;"	g	namespace:dt
+SmtVarBoolNode	dt_extractor/smtnode.h	/^        SmtVarBoolNode(const string& name) : SmtNode(name,VAR_BOOL) {}$/;"	f	class:dt::SmtVarBoolNode
+SmtVarBoolNode	dt_extractor/smtnode.h	/^class SmtVarBoolNode   : public SmtNode {$/;"	c	namespace:dt
+SmtVarIntNode	dt_extractor/smtnode.h	/^        SmtVarIntNode(const string& name) : SmtNode(name,VAR_INT) {}$/;"	f	class:dt::SmtVarIntNode
+SmtVarIntNode	dt_extractor/smtnode.h	/^class SmtVarIntNode : public SmtNode {$/;"	c	namespace:dt
+SmtVarStrNode	dt_extractor/smtnode.h	/^        SmtVarStrNode(const string& name) : SmtNode(name,VAR_STR) {}$/;"	f	class:dt::SmtVarStrNode
+SmtVarStrNode	dt_extractor/smtnode.h	/^class SmtVarStrNode : public SmtNode {$/;"	c	namespace:dt
+Str2DTNode	dt_extractor/typedef.h	/^typedef pair<string,DTNode*>    Str2DTNode;$/;"	t	namespace:dt
+Str2DTNodeMap	dt_extractor/typedef.h	/^typedef map<string,DTNode*>     Str2DTNodeMap;$/;"	t	namespace:dt
+Str2SmtNode	dt_extractor/typedef.h	/^typedef pair<string,SmtNode*>   Str2SmtNode;$/;"	t	namespace:dt
+Str2SmtNodeList	dt_extractor/typedef.h	/^typedef pair<string,SmtNodeList> Str2SmtNodeList;$/;"	t	namespace:dt
+Str2SmtNodeListMap	dt_extractor/typedef.h	/^typedef map<string,SmtNodeList>  Str2SmtNodeListMap;$/;"	t	namespace:dt
+Str2SmtNodeMap	dt_extractor/typedef.h	/^typedef map<string,SmtNode*>    Str2SmtNodeMap;$/;"	t	namespace:dt
+Str2Uint	dt_extractor/typedef.h	/^typedef pair<string,size_t>     Str2Uint;$/;"	t	namespace:dt
+Str2UintMap	dt_extractor/typedef.h	/^typedef map<string,size_t>      Str2UintMap;$/;"	t	namespace:dt
+Str2VmtNode	dt_extractor/typedef.h	/^typedef pair<string,VmtNode*> Str2VmtNode;$/;"	t	namespace:aut
+Str2VmtNode	typedef.h	/^typedef pair<string,VmtNode*> Str2VmtNode;$/;"	t	namespace:aut
+Str2VmtNodeMap	dt_extractor/typedef.h	/^typedef map<string,VmtNode*>  Str2VmtNodeMap;$/;"	t	namespace:aut
+Str2VmtNodeMap	typedef.h	/^typedef map<string,VmtNode*>  Str2VmtNodeMap;$/;"	t	namespace:aut
+TAG	Makefile	/^TAG = ctags$/;"	m
+TAGFLAGS	Makefile	/^TAGFLAGS = -R$/;"	m
+TGEdge	autMgr.h	/^        TGEdge(const size_t& sIdx, const size_t& eIdx): _sIdx(sIdx), _eIdx(eIdx) {}$/;"	f	class:aut::TGEdge
+TGEdge	autMgr.h	/^class TGEdge{$/;"	c	namespace:aut
+TGEdgeList	dt_extractor/typedef.h	/^typedef vector<TGEdge*>       TGEdgeList;$/;"	t	namespace:aut
+TGEdgeList	typedef.h	/^typedef vector<TGEdge*>       TGEdgeList;$/;"	t	namespace:aut
+TGRAPH_NDEBUG	autMgr.h	31;"	d
+TGraph	autMgr.h	/^        TGraph(const char* fileName) {init();parse(fileName);}$/;"	f	class:aut::TGraph
+TGraph	autMgr.h	/^class TGraph{$/;"	c	namespace:aut
+TRKIDX	dt_extractor/typedef.h	/^    SUBSTR, REPLACE, TRKIDX, OTHER$/;"	e	enum:dt::DType
+TRKLEN	dt_extractor/typedef.h	/^    LEAF, LVAR, TRKLEN, TRKSTR, COMPLE, $/;"	e	enum:dt::DType
+TRKLEN	typedef.h	/^    TRKLEN, TRKSTR, PREFIX, SUFFIX, INTERSECT, UNION, CONCATE, REPLACE, REPLACE_A4$/;"	e	enum:aut::AutOpType
+TRKSTR	dt_extractor/typedef.h	/^    LEAF, LVAR, TRKLEN, TRKSTR, COMPLE, $/;"	e	enum:dt::DType
+TRKSTR	typedef.h	/^    TRKLEN, TRKSTR, PREFIX, SUFFIX, INTERSECT, UNION, CONCATE, REPLACE, REPLACE_A4$/;"	e	enum:aut::AutOpType
+UNION	dt_extractor/typedef.h	/^    CONCATE, UNION, INTER, CONTAINS, PREFIXOF, SUFFIXOF,$/;"	e	enum:dt::DType
+UNION	typedef.h	/^    TRKLEN, TRKSTR, PREFIX, SUFFIX, INTERSECT, UNION, CONCATE, REPLACE, REPLACE_A4$/;"	e	enum:aut::AutOpType
+Uint2BitString	utility.cpp	/^string Uint2BitString(const size_t& n, const size_t& bitNum)$/;"	f
+VAR_BOOL	dt_extractor/typedef.h	/^    VAR_BOOL, VAR_INT, VAR_STR,$/;"	e	enum:dt::SmtType
+VAR_INT	dt_extractor/typedef.h	/^    VAR_BOOL, VAR_INT, VAR_STR,$/;"	e	enum:dt::SmtType
+VAR_STR	dt_extractor/typedef.h	/^    VAR_BOOL, VAR_INT, VAR_STR,$/;"	e	enum:dt::SmtType
+VMTNODE_NDEBUG	autMgr.h	32;"	d
+VarList	dt_extractor/typedef.h	/^typedef vector<VmtNodeList>   VarList;$/;"	t	namespace:aut
+VarList	typedef.h	/^typedef vector<VmtNodeList>   VarList;$/;"	t	namespace:aut
+VmtNode	autMgr.h	/^        VmtNode (const string& name,VmtNode* source) : _name(name), _source(source)$/;"	f	class:aut::VmtNode
+VmtNode	autMgr.h	/^        VmtNode (const string& name,const size_t& idx=0): _name(name), _idx(idx) $/;"	f	class:aut::VmtNode
+VmtNode	autMgr.h	/^class VmtNode{$/;"	c	namespace:aut
+VmtNodeList	dt_extractor/typedef.h	/^typedef vector<VmtNode*>      VmtNodeList;$/;"	t	namespace:aut
+VmtNodeList	typedef.h	/^typedef vector<VmtNode*>      VmtNodeList;$/;"	t	namespace:aut
+VmtNodeSet	dt_extractor/typedef.h	/^typedef set<VmtNode*>         VmtNodeSet;$/;"	t	namespace:aut
+VmtNodeSet	typedef.h	/^typedef set<VmtNode*>         VmtNodeSet;$/;"	t	namespace:aut
+VmtType	dt_extractor/typedef.h	/^enum VmtType {$/;"	g	namespace:aut
+VmtType	typedef.h	/^enum VmtType {$/;"	g	namespace:aut
+_AUT_MGR_	autMgr.h	2;"	d
+_DTMGR_H_	dt_extractor/dtMgr.h	2;"	d
+_DTNODE_H_	dt_extractor/dtnode.h	2;"	d
+_PARAMList	autMgr.h	/^        VmtNodeList     _PARAMList;$/;"	m	class:aut::Aut
+_SMTNODE_H_	dt_extractor/smtnode.h	2;"	d
+_TYPEDEF_H_	dt_extractor/typedef.h	2;"	d
+_TYPEDEF_H_	typedef.h	2;"	d
+_UTIL_H_	utility.h	2;"	d
+_assertionList	dt_extractor/dtnode.h	/^        AssertionList  _assertionList;$/;"	m	class:dt::DTNode
+_bit	autMgr.h	/^        size_t         _bit;       \/\/ number of fanout bits for type=OP for BLIF$/;"	m	class:aut::VmtNode
+_bname	autMgr.h	/^        string         _bname;     \/\/ name for BLIF$/;"	m	class:aut::VmtNode
+_branch	dt_extractor/smtnode.h	/^        size_t          _branch;$/;"	m	class:dt::SmtNode
+_branchList	dt_extractor/dtMgr.h	/^        SmtNodeList         _branchList;$/;"	m	class:dt::DTMgr
+_children	autMgr.h	/^        VmtNodeList    _children;$/;"	m	class:aut::VmtNode
+_children	dt_extractor/dtnode.h	/^        DTNodeList     _children;$/;"	m	class:dt::DTNode
+_children	dt_extractor/smtnode.h	/^        SmtNodeList     _children;$/;"	m	class:dt::SmtNode
+_downCubeMap	autMgr.h	/^        CubeMap            _downCubeMap;$/;"	m	class:aut::TGraph
+_dtype	dt_extractor/smtnode.h	/^        DType _dtype;$/;"	m	class:dt::SmtStrNode
+_eIdx	autMgr.h	/^        size_t         _eIdx;$/;"	m	class:aut::TGEdge
+_flag	autMgr.h	/^        mutable size_t _flag;$/;"	m	class:aut::VmtNode
+_flag	dt_extractor/dtnode.h	/^        size_t         _flag;$/;"	m	class:dt::DTNode
+_flag	dt_extractor/smtnode.h	/^        size_t          _flag;$/;"	m	class:dt::SmtNode
+_furtherRefine	dt_extractor/dtnode.h	/^        bool           _furtherRefine; $/;"	m	class:dt::DTNode
+_gflag	autMgr.h	/^        size_t  _gflag;$/;"	m	class:aut::AutMgr
+_gflag	dt_extractor/dtMgr.h	/^        size_t              _gflag;$/;"	m	class:dt::DTMgr
+_h2dMap	autMgr.h	/^        map<char,size_t>   _h2dMap;$/;"	m	class:aut::TGraph
+_idx	autMgr.h	/^        size_t         _idx;$/;"	m	class:aut::VmtNode
+_idx	dt_extractor/dtnode.h	/^        size_t         _idx;$/;"	m	class:dt::DTNode
+_idx	dt_extractor/smtnode.h	/^        size_t          _idx;$/;"	m	class:dt::SmtNode
+_imdList	autMgr.h	/^        VmtNodeList     _imdList;$/;"	m	class:aut::Aut
+_indent	dt_extractor/dtMgr.h	/^        size_t              _indent;$/;"	m	class:dt::DTMgr
+_initStateIdx	autMgr.h	/^        size_t             _initStateIdx;$/;"	m	class:aut::TGraph
+_isSink	dt_extractor/dtnode.h	/^        bool           _isSink;  \/\/ default 1$/;"	m	class:dt::DTNode
+_itoList	autMgr.h	/^        VmtNodeList     _itoList;$/;"	m	class:aut::Aut
+_labels	autMgr.h	/^        vector<size_t> _labels;$/;"	m	class:aut::TGEdge
+_leader	dt_extractor/dtnode.h	/^        DTNode*        _leader;$/;"	m	class:dt::DTNode
+_name	autMgr.h	/^        string          _name;$/;"	m	class:aut::Aut
+_name	autMgr.h	/^        string         _name;$/;"	m	class:aut::VmtNode
+_name	dt_extractor/dtnode.h	/^        string         _name;    $/;"	m	class:dt::DTNode
+_name	dt_extractor/smtnode.h	/^        string          _name;$/;"	m	class:dt::SmtNode
+_neg	dt_extractor/smtnode.h	/^        bool            _neg;$/;"	m	class:dt::SmtNode
+_numbers	autMgr.h	/^        set<char>          _numbers;$/;"	m	class:aut::TGraph
+_oList	autMgr.h	/^        vector<size_t>     _oList;$/;"	m	class:aut::TGraph
+_pad	autMgr.h	/^        size_t         _pad;       \/\/ number of padding zeros for type=(LEN|NUM)$/;"	m	class:aut::VmtNode
+_paramList	autMgr.h	/^        VarList        _paramList; \/\/ 0-7 follow the order of VmtType$/;"	m	class:aut::VmtNode
+_path	dt_extractor/dtMgr.h	/^        string              _path;$/;"	m	class:dt::DTMgr
+_piList	autMgr.h	/^        VarList         _piList;$/;"	m	class:aut::Aut
+_piList	dt_extractor/dtMgr.h	/^        vector<SmtNodeList> _piList;$/;"	m	class:dt::DTMgr
+_predList	autMgr.h	/^        VmtNodeList     _predList;$/;"	m	class:aut::Aut
+_predMap	dt_extractor/dtMgr.h	/^        Str2SmtNodeListMap  _predMap;$/;"	m	class:dt::DTMgr
+_rangeCubeMap	autMgr.h	/^        CubeMap            _rangeCubeMap;$/;"	m	class:aut::TGraph
+_regex	dt_extractor/dtnode.h	/^        string         _regex;   $/;"	m	class:dt::DTNode
+_root	dt_extractor/dtMgr.h	/^        SmtNode*            _root;$/;"	m	class:dt::DTMgr
+_sIdx	autMgr.h	/^        size_t         _sIdx;$/;"	m	class:aut::TGEdge
+_smtLeafMap	dt_extractor/dtMgr.h	/^        Str2SmtNodeMap      _smtLeafMap;$/;"	m	class:dt::DTMgr
+_source	autMgr.h	/^        VmtNode*       _source;    \/\/ used for _type == PARAM$/;"	m	class:aut::VmtNode
+_stateBitNum	autMgr.h	/^        size_t             _stateBitNum;$/;"	m	class:aut::TGraph
+_stateBitStringList	autMgr.h	/^        vector<string>     _stateBitStringList;$/;"	m	class:aut::TGraph
+_stateVarNum	autMgr.h	/^        size_t          _stateVarNum;$/;"	m	class:aut::Aut
+_tBitString	autMgr.h	/^        string         _tBitString;$/;"	m	class:aut::TGEdge
+_tList	autMgr.h	/^        TGEdgeList         _tList;$/;"	m	class:aut::TGraph
+_type	autMgr.h	/^        VmtType        _type;$/;"	m	class:aut::VmtNode
+_type	dt_extractor/dtnode.h	/^        DType          _type;       $/;"	m	class:dt::DTNode
+_type	dt_extractor/smtnode.h	/^        SmtType         _type;$/;"	m	class:dt::SmtNode
+_vmap	autMgr.h	/^        Str2VmtNodeMap  _vmap;$/;"	m	class:aut::Aut
+addAssertion	dt_extractor/dtnode.h	/^        void           addAssertion(const Assertion& n) {_assertionList.push_back(n);}$/;"	f	class:dt::DTNode
+addChild	dt_extractor/dtnode.h	/^        void           addChild(DTNode* n){_children.push_back(n);}$/;"	f	class:dt::DTNode
+addChild	vmtnode.cpp	/^void VmtNode::addChild(VmtNode* n)$/;"	f	class:aut::VmtNode
+addEVar	aut.cpp	/^size_t Aut::addEVar(const size_t& expandNum)$/;"	f	class:aut::Aut
+addEVar	old-aut.cpp	/^size_t Aut::addEVar(const size_t& expandNum)$/;"	f	class:aut::Aut
+addLVar	aut.cpp	/^void Aut::addLVar(const size_t& lvarIdx)$/;"	f	class:aut::Aut
+addLVar	old-aut.cpp	/^void Aut::addLVar(const size_t& lvarIdx)$/;"	f	class:aut::Aut
+addParamNode	aut.cpp	/^void Aut::addParamNode(const string& name, VmtNode* source)$/;"	f	class:aut::Aut
+addParamNode	aut.cpp	/^void Aut::addParamNode(const string& name, VmtNode* source, const size_t& encode, const bool& isExistential)$/;"	f	class:aut::Aut
+addParamNode	old-aut.cpp	/^void Aut::addParamNode(const string& name, VmtNode* source)$/;"	f	class:aut::Aut
+addParamNode	old-aut.cpp	/^void Aut::addParamNode(const string& name, VmtNode* source, const size_t& encode, const bool& isExistential)$/;"	f	class:aut::Aut
+addStateVar	aut.cpp	/^size_t Aut::addStateVar(const size_t& expandNum)$/;"	f	class:aut::Aut
+addStateVar	old-aut.cpp	/^size_t Aut::addStateVar(const size_t& expandNum)$/;"	f	class:aut::Aut
+addlen	aut.cpp	/^void Aut::addlen(const string& lvarIdxStr)$/;"	f	class:aut::Aut
+addlen	old-aut.cpp	/^void Aut::addlen(const string& lvarIdxStr)$/;"	f	class:aut::Aut
+addpred	aut.cpp	/^void Aut::addpred(const STRList& declList, const STRList& predList)$/;"	f	class:aut::Aut
+addpred	old-aut.cpp	/^void Aut::addpred(const STRList& declList, const STRList& predList)$/;"	f	class:aut::Aut
+assertion	dt_extractor/dtMgr.cpp	/^SmtNode* DTMgr::assertion(const vector<string>& tokList,size_t bpos, size_t epos)$/;"	f	class:dt::DTMgr
+assignGlobalPIList	aut.cpp	/^void Aut::assignGlobalPIList(const VmtType& type)$/;"	f	class:aut::Aut
+assignGlobalPIList	old-aut.cpp	/^void Aut::assignGlobalPIList(const VmtType& type)$/;"	f	class:aut::Aut
+aut	aut.cpp	/^namespace aut {$/;"	n	file:
+aut	autMgr.cpp	/^namespace aut {$/;"	n	file:
+aut	autMgr.h	/^namespace aut {$/;"	n
+aut	dt_extractor/typedef.h	/^namespace aut {$/;"	n
+aut	old-aut.cpp	/^namespace aut {$/;"	n	file:
+aut	tgraph.cpp	/^namespace aut {$/;"	n	file:
+aut	typedef.h	/^namespace aut {$/;"	n
+aut	vmtnode.cpp	/^namespace aut {$/;"	n	file:
+aut_union	aut.cpp	/^void Aut::aut_union(Aut* a1,Aut* a2)$/;"	f	class:aut::Aut
+aut_union	old-aut.cpp	/^void Aut::aut_union(Aut* a1,Aut* a2)$/;"	f	class:aut::Aut
+autmgr	main.cpp	/^aut::AutMgr* autmgr = new aut::AutMgr();$/;"	v
+binaryEncodedBitNum	utility.cpp	/^size_t binaryEncodedBitNum(const size_t& num)$/;"	f
+blif2vmt	autMgr.cpp	/^void AutMgr::blif2vmt(const char* inFileName, const char* outFileName)$/;"	f	class:aut::AutMgr
+buildBLIF	vmtnode.cpp	/^void VmtNode::buildBLIF(int& tCnt)$/;"	f	class:aut::VmtNode
+buildBranchList	dt_extractor/smtnode.cpp	/^void SmtIteNode::buildBranchList(SmtNodeList& bList)$/;"	f	class:dt::SmtIteNode
+buildBranchList	dt_extractor/smtnode.cpp	/^void SmtNode::buildBranchList(SmtNodeList& bList)$/;"	f	class:dt::SmtNode
+buildBranchList	dt_extractor/smtnode.cpp	/^void SmtOrNode::buildBranchList(SmtNodeList& bList)$/;"	f	class:dt::SmtOrNode
+buildDT	dt_extractor/smtnode.cpp	/^DTNode* SmtAndNode::buildDT(Str2DTNodeMap& dtMap)$/;"	f	class:dt::SmtAndNode
+buildDT	dt_extractor/smtnode.cpp	/^DTNode* SmtConstStrNode::buildDT(Str2DTNodeMap& dtMap)$/;"	f	class:dt::SmtConstStrNode
+buildDT	dt_extractor/smtnode.cpp	/^DTNode* SmtEqNode::buildDT(Str2DTNodeMap& dtMap)$/;"	f	class:dt::SmtEqNode
+buildDT	dt_extractor/smtnode.cpp	/^DTNode* SmtIteNode::buildDT(Str2DTNodeMap& dtMap)$/;"	f	class:dt::SmtIteNode
+buildDT	dt_extractor/smtnode.cpp	/^DTNode* SmtNdoe::buildDT(Str2DTNodeMap& dtMap)$/;"	f	class:dt::SmtNdoe
+buildDT	dt_extractor/smtnode.cpp	/^DTNode* SmtOrNode::buildDT(Str2DTNodeMap& dtMap)$/;"	f	class:dt::SmtOrNode
+buildDT	dt_extractor/smtnode.cpp	/^DTNode* SmtStrContainsNode::buildDT(Str2DTNodeMap& dtMap)$/;"	f	class:dt::SmtStrContainsNode
+buildDT	dt_extractor/smtnode.cpp	/^DTNode* SmtStrInReNode::buildDT(Str2DTNodeMap& dtMap)$/;"	f	class:dt::SmtStrInReNode
+buildDT	dt_extractor/smtnode.cpp	/^DTNode* SmtStrIndexofNode::buildDT(Str2DTNodeMap& dtMap)$/;"	f	class:dt::SmtStrIndexofNode
+buildDT	dt_extractor/smtnode.cpp	/^DTNode* SmtStrLenNode::buildDT(Str2DTNodeMap& dtMap)$/;"	f	class:dt::SmtStrLenNode
+buildDT	dt_extractor/smtnode.cpp	/^DTNode* SmtStrNode::buildDT(Str2DTNodeMap dtMap)$/;"	f	class:dt::SmtStrNode
+buildDT	dt_extractor/smtnode.cpp	/^DTNode* SmtStrPrefixofNode::buildDT(Str2DTNodeMap& dtMap)$/;"	f	class:dt::SmtStrPrefixofNode
+buildDT	dt_extractor/smtnode.cpp	/^DTNode* SmtStrReplaceNode::buildDT(Str2DTNodeMap& dtMap)$/;"	f	class:dt::SmtStrReplaceNode
+buildDT	dt_extractor/smtnode.cpp	/^DTNode* SmtStrSubstrNode::buildDT(Str2DTNodeMap& dtMap)$/;"	f	class:dt::SmtStrSubstrNode
+buildDT	dt_extractor/smtnode.cpp	/^DTNode* SmtStrSuffixofNode::buildDT(Str2DTNodeMap& dtMap)$/;"	f	class:dt::SmtStrSuffixofNode
+buildDT	dt_extractor/smtnode.cpp	/^DTNode* SmtStrToReNode::buildDT(Str2DTNodeMap& dtMap)$/;"	f	class:dt::SmtStrToReNode
+buildDT	dt_extractor/smtnode.cpp	/^DTNode* SmtVarStrNode::buildDT(Str2DTNodeMap& dtMap)$/;"	f	class:dt::SmtVarStrNode
+buildParam	aut.cpp	/^void Aut::buildParam()$/;"	f	class:aut::Aut
+buildParam	old-aut.cpp	/^void Aut::buildParam()$/;"	f	class:aut::Aut
+buildParam	vmtnode.cpp	/^void VmtNode::buildParam(const size_t& level)$/;"	f	class:aut::VmtNode
+buildPredMap	dt_extractor/dtMgr.cpp	/^void DTMgr::buildPredMap()$/;"	f	class:dt::DTMgr
+buildPredMap	dt_extractor/smtnode.cpp	/^void SmtEqNode::buildPredMap(Str2SmtNodeListMap& m, SmtNode* root) const$/;"	f	class:dt::SmtEqNode
+buildPredMap	dt_extractor/smtnode.cpp	/^void SmtNode::buildPredMap(Str2SmtNodeListMap& m, SmtSmtNode* root) const$/;"	f	class:dt::SmtNode
+buildPredMap	dt_extractor/smtnode.cpp	/^void SmtVarBoolNode::buildPredMap(Str2SmtNodeListMap& m, SmtNode* root) const$/;"	f	class:dt::SmtVarBoolNode
+buildPredMap	dt_extractor/smtnode.cpp	/^void SmtVarIntNode::buildPredMap(Str2SmtNodeListMap& m, SmtNode* root) const$/;"	f	class:dt::SmtVarIntNode
+buildSmtNode	dt_extractor/dtMgr.cpp	/^SmtNode* DTMgr::buildSmtNode(const string& name)$/;"	f	class:dt::DTMgr
+buildVMap	aut.cpp	/^void Aut::buildVMap(const VmtNodeList& moduleList)$/;"	f	class:aut::Aut
+buildVMap	aut.cpp	/^void Aut::buildVMap(const VmtType& type)$/;"	f	class:aut::Aut
+buildVMap	old-aut.cpp	/^void Aut::buildVMap(const VmtNodeList& moduleList)$/;"	f	class:aut::Aut
+buildVMap	old-aut.cpp	/^void Aut::buildVMap(const VmtType& type)$/;"	f	class:aut::Aut
+buildVmtNode	aut.cpp	/^VmtNode* Aut::buildVmtNode(const string& s, size_t bpos, size_t epos, Str2VmtNodeMap& vmap)$/;"	f	class:aut::Aut
+buildVmtNode	old-aut.cpp	/^VmtNode* Aut::buildVmtNode(const string& s, size_t bpos, size_t epos, Str2VmtNodeMap& vmap)$/;"	f	class:aut::Aut
+check	aut.cpp	/^void Aut::check(Aut* a)$/;"	f	class:aut::Aut
+check	aut.cpp	/^void Aut::check(Aut* a, const size_t& lvarIdx)$/;"	f	class:aut::Aut
+check	aut.cpp	/^void Aut::check(Aut* a1, Aut* a2)$/;"	f	class:aut::Aut
+check	aut.cpp	/^void Aut::check(Aut* a1, Aut* a2, const size_t& lvarIdx)$/;"	f	class:aut::Aut
+check	old-aut.cpp	/^void Aut::check(Aut* a)$/;"	f	class:aut::Aut
+check	old-aut.cpp	/^void Aut::check(Aut* a, const size_t& lvarIdx)$/;"	f	class:aut::Aut
+check	old-aut.cpp	/^void Aut::check(Aut* a1, Aut* a2)$/;"	f	class:aut::Aut
+check	old-aut.cpp	/^void Aut::check(Aut* a1, Aut* a2, const size_t& lvarIdx)$/;"	f	class:aut::Aut
+clearChildren	dt_extractor/dtnode.h	/^        void           clearChildren(){_children.clear();}$/;"	f	class:dt::DTNode
+clearParam	aut.cpp	/^void Aut::clearParam()$/;"	f	class:aut::Aut
+clearParam	old-aut.cpp	/^void Aut::clearParam()$/;"	f	class:aut::Aut
+clearParam	vmtnode.cpp	/^void VmtNode::clearParam(const size_t& level)$/;"	f	class:aut::VmtNode
+collect	dt_extractor/dtnode.cpp	/^void DTNode::collect(DTNodeList& svList) const$/;"	f	class:dt::DTNode
+collectPARAM	aut.cpp	/^void Aut::collectPARAM()$/;"	f	class:aut::Aut
+collectPARAM	old-aut.cpp	/^void Aut::collectPARAM()$/;"	f	class:aut::Aut
+collectPARAM	vmtnode.cpp	/^void VmtNode::collectPARAM(VmtNodeList& PARAMList)$/;"	f	class:aut::VmtNode
+concate	aut.cpp	/^void Aut::concate(Aut* a1,Aut* a2)$/;"	f	class:aut::Aut
+concate	old-aut.cpp	/^void Aut::concate(Aut* a1,Aut* a2)$/;"	f	class:aut::Aut
+const0	aut.cpp	/^VmtNode* Aut::const0      = Aut::initConst(CONST0);$/;"	m	class:aut::Aut	file:
+const0	autMgr.h	/^        static VmtNode* const0;$/;"	m	class:aut::Aut
+const0	old-aut.cpp	/^VmtNode* Aut::const0      = Aut::initConst(CONST0);$/;"	m	class:aut::Aut	file:
+const1	aut.cpp	/^VmtNode* Aut::const1      = Aut::initConst(CONST1);$/;"	m	class:aut::Aut	file:
+const1	autMgr.h	/^        static VmtNode* const1;$/;"	m	class:aut::Aut
+const1	old-aut.cpp	/^VmtNode* Aut::const1      = Aut::initConst(CONST1);$/;"	m	class:aut::Aut	file:
+convertOr2And	dt_extractor/smtnode.cpp	/^void SmtNode::convertOr2And()$/;"	f	class:dt::SmtNode
+cube2vmt	autMgr.cpp	/^string AutMgr::cube2vmt(const string& cube, const VmtNodeList& pList)$/;"	f	class:aut::AutMgr
+declaration	dt_extractor/dtMgr.cpp	/^void DTMgr::declaration(const string& name, const string& type)$/;"	f	class:dt::DTMgr
+defineFun	aut.cpp	/^void Aut::defineFun(const string& fname, const VmtType& type,const string& body, VmtNodeList& list, Str2VmtNodeMap& vmap)$/;"	f	class:aut::Aut
+defineFun	aut.cpp	/^void Aut::defineFun(const string& fname, const string& body, VmtNodeList& list)$/;"	f	class:aut::Aut
+defineFun	aut.cpp	/^void Aut::defineFun(const string& fname, const string& body, VmtNodeList& list, Str2VmtNodeMap& vmap)$/;"	f	class:aut::Aut
+defineFun	aut.cpp	/^void Aut::defineFun(const string& fname, const string& body, VmtNodeList& list, void (Aut::*set) (VmtNode*))$/;"	f	class:aut::Aut
+defineFun	old-aut.cpp	/^void Aut::defineFun(const string& fname, const VmtType& type,const string& body, VmtNodeList& list, Str2VmtNodeMap& vmap)$/;"	f	class:aut::Aut
+defineFun	old-aut.cpp	/^void Aut::defineFun(const string& fname, const string& body, VmtNodeList& list)$/;"	f	class:aut::Aut
+defineFun	old-aut.cpp	/^void Aut::defineFun(const string& fname, const string& body, VmtNodeList& list, Str2VmtNodeMap& vmap)$/;"	f	class:aut::Aut
+defineFun	old-aut.cpp	/^void Aut::defineFun(const string& fname, const string& body, VmtNodeList& list, void (Aut::*set) (VmtNode*))$/;"	f	class:aut::Aut
+dot2blif	autMgr.cpp	/^void AutMgr::dot2blif(const char* inFileName, const char* outFileName)$/;"	f	class:aut::AutMgr
+dt	dt_extractor/dtMgr.cpp	/^namespace dt {$/;"	n	file:
+dt	dt_extractor/dtMgr.h	/^namespace dt {$/;"	n
+dt	dt_extractor/dtnode.cpp	/^namespace dt {$/;"	n	file:
+dt	dt_extractor/dtnode.h	/^namespace dt {$/;"	n
+dt	dt_extractor/smtnode.cpp	/^namespace dt {$/;"	n	file:
+dt	dt_extractor/smtnode.h	/^namespace dt {$/;"	n
+dt	dt_extractor/typedef.h	/^namespace dt {$/;"	n
+epsilon	aut.cpp	/^VmtNode* Aut::epsilon     = Aut::initSpecialAlphabet(EPSILON);$/;"	m	class:aut::Aut	file:
+epsilon	autMgr.h	/^        static VmtNode* epsilon;$/;"	m	class:aut::Aut
+epsilon	old-aut.cpp	/^VmtNode* Aut::epsilon     = Aut::initSpecialAlphabet(EPSILON);$/;"	m	class:aut::Aut	file:
+escape	dt_extractor/dtMgr.cpp	/^string DTMgr::escape(string regex)$/;"	f	class:dt::DTMgr
+escapeSet	dt_extractor/dtMgr.h	/^        static set<char>    escapeSet;$/;"	m	class:dt::DTMgr
+expandPIList	aut.cpp	/^void Aut::expandPIList(const VmtType& type,const size_t& maxIdx)$/;"	f	class:aut::Aut
+expandPIList	old-aut.cpp	/^void Aut::expandPIList(const VmtType& type,const size_t& maxIdx)$/;"	f	class:aut::Aut
+findLeader	dt_extractor/dtnode.cpp	/^DTNode* DTNode::findLeader()$/;"	f	class:dt::DTNode
+getBeginBranchIdx	dt_extractor/smtnode.h	/^        size_t getBeginBranchIdx() {return 1;}$/;"	f	class:dt::SmtIteNode
+getBit	vmtnode.cpp	/^size_t VmtNode::getBit() const$/;"	f	class:aut::VmtNode
+getBranchIdx	dt_extractor/smtnode.h	/^        const size_t& getBranchIdx() {return _branch;}$/;"	f	class:dt::SmtIteNode
+getDTypeString	dt_extractor/dtMgr.cpp	/^string DTMgr::getDTypeString(const DType& t)$/;"	f	class:dt::DTMgr
+getEndBranchIdx	dt_extractor/smtnode.h	/^        size_t getEndBranchIdx()   {return 3;}$/;"	f	class:dt::SmtIteNode
+getFlag	dt_extractor/dtnode.h	/^        const size_t&  getFlag(){return _flag;}$/;"	f	class:dt::DTNode
+getFlag	dt_extractor/smtnode.h	/^        const size_t&  getFlag()const{return _flag;}$/;"	f	class:dt::SmtNode
+getGFlag	autMgr.h	/^        size_t& getGFlag() {return _gflag;}$/;"	f	class:aut::AutMgr
+getGFlag	dt_extractor/dtMgr.h	/^        const size_t& getGFlag() {return _gflag;}$/;"	f	class:dt::DTMgr
+getI	aut.cpp	/^VmtNode* Aut::getI() const$/;"	f	class:aut::Aut
+getI	old-aut.cpp	/^VmtNode* Aut::getI() const$/;"	f	class:aut::Aut
+getName	autMgr.h	/^        const string&  getName ()                        const  {return _name;}$/;"	f	class:aut::VmtNode
+getName	dt_extractor/dtnode.h	/^        const string&  getName(){return _name;}$/;"	f	class:dt::DTNode
+getName	dt_extractor/smtnode.h	/^        const string&  getName()const{return _name;}$/;"	f	class:dt::SmtNode
+getO	aut.cpp	/^VmtNode* Aut::getO() const$/;"	f	class:aut::Aut
+getO	old-aut.cpp	/^VmtNode* Aut::getO() const$/;"	f	class:aut::Aut
+getPITypeByName	aut.cpp	/^VmtType Aut::getPITypeByName(const string& name) $/;"	f	class:aut::Aut
+getPITypeByName	old-aut.cpp	/^VmtType Aut::getPITypeByName(const string& name) $/;"	f	class:aut::Aut
+getRegex	dt_extractor/dtnode.h	/^        const string&  getRegex()const {return _regex;}$/;"	f	class:dt::DTNode
+getSmtTypeString	dt_extractor/dtMgr.cpp	/^string DTMgr::getSmtTypeString(const SmtType& t)$/;"	f	class:dt::DTMgr
+getT	aut.cpp	/^VmtNode* Aut::getT() const$/;"	f	class:aut::Aut
+getT	old-aut.cpp	/^VmtNode* Aut::getT() const$/;"	f	class:aut::Aut
+getType	dt_extractor/dtnode.h	/^        const DType&   getType(){return _type;}$/;"	f	class:dt::DTNode
+getType	dt_extractor/smtnode.h	/^        const SmtType& getType()const{return _type;}$/;"	f	class:dt::SmtNode
+getType	vmtnode.cpp	/^VmtType VmtNode::getType(const string& name) const$/;"	f	class:aut::VmtNode
+getTypeStr	aut.cpp	/^string Aut::getTypeStr(const VmtType& type) $/;"	f	class:aut::Aut
+getTypeStr	aut.cpp	/^string Aut::getTypeStr(const size_t& idx) $/;"	f	class:aut::Aut
+getTypeStr	old-aut.cpp	/^string Aut::getTypeStr(const VmtType& type) $/;"	f	class:aut::Aut
+getTypeStr	old-aut.cpp	/^string Aut::getTypeStr(const size_t& idx) $/;"	f	class:aut::Aut
+gflag	aut.cpp	/^static size_t& gflag = autmgr->getGFlag();$/;"	v	file:
+gflag	dt_extractor/dtMgr.cpp	/^static const size_t& gflag = dtmgr->getGFlag(); $/;"	v	file:
+gflag	dt_extractor/dtnode.cpp	/^static const size_t& gflag = dtmgr->getGFlag(); $/;"	v	file:
+gflag	dt_extractor/smtnode.cpp	/^static const size_t& gflag = dtmgr->getGFlag(); $/;"	v	file:
+gflag	old-aut.cpp	/^static size_t& gflag = autmgr->getGFlag();$/;"	v	file:
+gflag	vmtnode.cpp	/^static size_t& gflag = autmgr->getGFlag();$/;"	v	file:
+hasParam	vmtnode.cpp	/^bool VmtNode::hasParam() const$/;"	f	class:aut::VmtNode
+haveSameParam	vmtnode.cpp	/^bool VmtNode::haveSameParam(VmtNode* n) const$/;"	f	class:aut::VmtNode
+init	aut.cpp	/^void Aut::init(const string& fileName)$/;"	f	class:aut::Aut
+init	old-aut.cpp	/^void Aut::init(const string& fileName)$/;"	f	class:aut::Aut
+init	tgraph.cpp	/^void TGraph::init()$/;"	f	class:aut::TGraph
+initConst	aut.cpp	/^VmtNode* Aut::initConst(const VmtType& type)$/;"	f	class:aut::Aut
+initConst	old-aut.cpp	/^VmtNode* Aut::initConst(const VmtType& type)$/;"	f	class:aut::Aut
+initEscapeSet	dt_extractor/dtMgr.cpp	/^void DTMgr::initEscapeSet()$/;"	f	class:dt::DTMgr
+initPIList	aut.cpp	/^VarList Aut::initPIList() $/;"	f	class:aut::Aut
+initPIList	old-aut.cpp	/^VarList Aut::initPIList() $/;"	f	class:aut::Aut
+initPISymbolC	aut.cpp	/^CHRList Aut::initPISymbolC()$/;"	f	class:aut::Aut
+initPISymbolC	old-aut.cpp	/^CHRList Aut::initPISymbolC()$/;"	f	class:aut::Aut
+initPISymbolS	aut.cpp	/^STRList Aut::initPISymbolS()$/;"	f	class:aut::Aut
+initPISymbolS	old-aut.cpp	/^STRList Aut::initPISymbolS()$/;"	f	class:aut::Aut
+initSpecialAlphabet	aut.cpp	/^VmtNode* Aut::initSpecialAlphabet(const AType& type)$/;"	f	class:aut::Aut
+initSpecialAlphabet	old-aut.cpp	/^VmtNode* Aut::initSpecialAlphabet(const AType& type)$/;"	f	class:aut::Aut
+initVMap	aut.cpp	/^void Aut::initVMap()$/;"	f	class:aut::Aut
+initVMap	old-aut.cpp	/^void Aut::initVMap()$/;"	f	class:aut::Aut
+inputBitNum	aut.cpp	/^size_t   Aut::inputBitNum = INPUT_ENCODE_BIT_NUM + 1;$/;"	m	class:aut::Aut	file:
+inputBitNum	autMgr.h	/^        static size_t   inputBitNum;$/;"	m	class:aut::Aut
+inputBitNum	old-aut.cpp	/^size_t   Aut::inputBitNum = INPUT_ENCODE_BIT_NUM + 1;$/;"	m	class:aut::Aut	file:
+integrate	aut.cpp	/^void Aut::integrate(Aut* a1, Aut* a2)$/;"	f	class:aut::Aut
+integrate	old-aut.cpp	/^void Aut::integrate(Aut* a1, Aut* a2)$/;"	f	class:aut::Aut
+integrateMerge	aut.cpp	/^void Aut::integrateMerge(const VmtType& type, Aut* a1, Aut* a2)$/;"	f	class:aut::Aut
+integrateMerge	old-aut.cpp	/^void Aut::integrateMerge(const VmtType& type, Aut* a1, Aut* a2)$/;"	f	class:aut::Aut
+intersect	aut.cpp	/^void Aut::intersect(Aut* a1, Aut* a2)$/;"	f	class:aut::Aut
+intersect	old-aut.cpp	/^void Aut::intersect(Aut* a1, Aut* a2)$/;"	f	class:aut::Aut
+isARITH	aut.cpp	/^bool Aut::isARITH(const VmtType& type)$/;"	f	class:aut::Aut
+isARITH	old-aut.cpp	/^bool Aut::isARITH(const VmtType& type)$/;"	f	class:aut::Aut
+isAccepting	tgraph.cpp	/^bool TGraph::isAccepting(const string& line)$/;"	f	class:aut::TGraph
+isCONST	aut.cpp	/^bool Aut::isCONST(const VmtType& type)$/;"	f	class:aut::Aut
+isCONST	old-aut.cpp	/^bool Aut::isCONST(const VmtType& type)$/;"	f	class:aut::Aut
+isConstLEAF	dt_extractor/dtnode.h	/^        bool           isConstLEAF() {return (_type == LEAF && !_furtherRefine);}$/;"	f	class:dt::DTNode
+isCurPI	aut.cpp	/^bool Aut::isCurPI(const VmtType& type)$/;"	f	class:aut::Aut
+isCurPI	old-aut.cpp	/^bool Aut::isCurPI(const VmtType& type)$/;"	f	class:aut::Aut
+isFurtherRefine	dt_extractor/dtnode.h	/^        const bool&    isFurtherRefine(){return _furtherRefine;}$/;"	f	class:dt::DTNode
+isIMD	aut.cpp	/^bool Aut::isIMD(const VmtType& type)$/;"	f	class:aut::Aut
+isIMD	old-aut.cpp	/^bool Aut::isIMD(const VmtType& type)$/;"	f	class:aut::Aut
+isINT	aut.cpp	/^bool Aut::isINT(const VmtType& type)$/;"	f	class:aut::Aut
+isINT	old-aut.cpp	/^bool Aut::isINT(const VmtType& type)$/;"	f	class:aut::Aut
+isLEAF	aut.cpp	/^bool Aut::isLEAF(const VmtType& type)$/;"	f	class:aut::Aut
+isLEAF	old-aut.cpp	/^bool Aut::isLEAF(const VmtType& type)$/;"	f	class:aut::Aut
+isMO	aut.cpp	/^bool Aut::isMO(const VmtType& type)$/;"	f	class:aut::Aut
+isMO	old-aut.cpp	/^bool Aut::isMO(const VmtType& type)$/;"	f	class:aut::Aut
+isNeg	dt_extractor/smtnode.h	/^        const bool&    isNeg() {return _neg;}$/;"	f	class:dt::SmtNode
+isNumber	utility.cpp	/^bool isNumber(const string& s)$/;"	f
+isOP	aut.cpp	/^bool Aut::isOP(const VmtType& type)$/;"	f	class:aut::Aut
+isOP	old-aut.cpp	/^bool Aut::isOP(const VmtType& type)$/;"	f	class:aut::Aut
+isPARAMBOOL	aut.cpp	/^bool Aut::isPARAMBOOL(const VmtType& type)$/;"	f	class:aut::Aut
+isPARAMBOOL	old-aut.cpp	/^bool Aut::isPARAMBOOL(const VmtType& type)$/;"	f	class:aut::Aut
+isPARAMINT	aut.cpp	/^bool Aut::isPARAMINT(const VmtType& type)$/;"	f	class:aut::Aut
+isPARAMINT	old-aut.cpp	/^bool Aut::isPARAMINT(const VmtType& type)$/;"	f	class:aut::Aut
+isPI	aut.cpp	/^bool Aut::isPI(const VmtType& type)$/;"	f	class:aut::Aut
+isPI	old-aut.cpp	/^bool Aut::isPI(const VmtType& type)$/;"	f	class:aut::Aut
+isPISymbol	aut.cpp	/^bool Aut::isPISymbol(const char& c)$/;"	f	class:aut::Aut
+isPISymbol	old-aut.cpp	/^bool Aut::isPISymbol(const char& c)$/;"	f	class:aut::Aut
+isPREDINT	aut.cpp	/^bool Aut::isPREDINT(const VmtType& type)$/;"	f	class:aut::Aut
+isPREDINT	old-aut.cpp	/^bool Aut::isPREDINT(const VmtType& type)$/;"	f	class:aut::Aut
+isPREDRETBOOL	aut.cpp	/^bool Aut::isPREDRETBOOL(const VmtType& type)$/;"	f	class:aut::Aut
+isPREDRETBOOL	old-aut.cpp	/^bool Aut::isPREDRETBOOL(const VmtType& type)$/;"	f	class:aut::Aut
+isPREDRETINT	aut.cpp	/^bool Aut::isPREDRETINT(const VmtType& type)$/;"	f	class:aut::Aut
+isPREDRETINT	old-aut.cpp	/^bool Aut::isPREDRETINT(const VmtType& type)$/;"	f	class:aut::Aut
+isRETBOOL	aut.cpp	/^bool Aut::isRETBOOL(const VmtType& type)$/;"	f	class:aut::Aut
+isRETBOOL	old-aut.cpp	/^bool Aut::isRETBOOL(const VmtType& type)$/;"	f	class:aut::Aut
+isReservedString	aut.cpp	/^bool Aut::isReservedString(const string& s)$/;"	f	class:aut::Aut
+isReservedString	old-aut.cpp	/^bool Aut::isReservedString(const string& s)$/;"	f	class:aut::Aut
+isSO	aut.cpp	/^bool Aut::isSO(const VmtType& type)$/;"	f	class:aut::Aut
+isSO	old-aut.cpp	/^bool Aut::isSO(const VmtType& type)$/;"	f	class:aut::Aut
+isSink	dt_extractor/dtnode.h	/^        const bool&    isSink(){return _isSink;}$/;"	f	class:dt::DTNode
+isSpecialString	aut.cpp	/^bool Aut::isSpecialString(const string& name)$/;"	f	class:aut::Aut
+isSpecialString	old-aut.cpp	/^bool Aut::isSpecialString(const string& name)$/;"	f	class:aut::Aut
+isempty	aut.cpp	/^void Aut::isempty(const string& fileName)$/;"	f	class:aut::Aut
+isempty	old-aut.cpp	/^void Aut::isempty(const string& fileName)$/;"	f	class:aut::Aut
+itos	utility.cpp	/^string itos(const size_t& n)$/;"	f
+label2Decimal	tgraph.cpp	/^size_t TGraph::label2Decimal(const string& s)$/;"	f	class:aut::TGraph
+leftAngle	aut.cpp	/^VmtNode* Aut::leftAngle   = Aut::initSpecialAlphabet(LEFT_ANGLE);$/;"	m	class:aut::Aut	file:
+leftAngle	autMgr.h	/^        static VmtNode* leftAngle;$/;"	m	class:aut::Aut
+leftAngle	old-aut.cpp	/^VmtNode* Aut::leftAngle   = Aut::initSpecialAlphabet(LEFT_ANGLE);$/;"	m	class:aut::Aut	file:
+main	main.cpp	/^int main(int argc, char* argv[]) {$/;"	f
+mark	aut.cpp	/^size_t Aut::mark()$/;"	f	class:aut::Aut
+mark	old-aut.cpp	/^size_t Aut::mark()$/;"	f	class:aut::Aut
+markPred	dt_extractor/dtnode.cpp	/^void DTNode::markPred(const Str2SmtNodeListMap& predMap)$/;"	f	class:dt::DTNode
+markPred	dt_extractor/smtnode.cpp	/^void SmtNode::markPred(const Str2SmtNodeListMap& predMap)$/;"	f	class:dt::SmtNode
+markPred	dt_extractor/smtnode.cpp	/^void SmtVarBoolNode::markPred(const Str2SmtNodeListMap& predMap)$/;"	f	class:dt::SmtVarBoolNode
+markPred	dt_extractor/smtnode.cpp	/^void SmtVarIntNode::markPred(const Str2SmtNodeListMap& predMap)$/;"	f	class:dt::SmtVarIntNode
+merge	dt_extractor/dtnode.cpp	/^void DTNode::merge()$/;"	f	class:dt::DTNode
+mergeNotEquivalence	dt_extractor/smtnode.cpp	/^void SmtNode::mergeNotEquivalence()$/;"	f	class:dt::SmtNode
+parse	aut.cpp	/^void Aut::parse(const char* fileName)$/;"	f	class:aut::Aut
+parse	old-aut.cpp	/^void Aut::parse(const char* fileName)$/;"	f	class:aut::Aut
+parse	tgraph.cpp	/^void TGraph::parse(const char* fileName)$/;"	f	class:aut::TGraph
+parseCubeList	autMgr.cpp	/^void AutMgr::parseCubeList(Aut* a, const string& name, const vector<string>& cubeList, const VmtNodeList& pList, int& dCnt)$/;"	f	class:aut::AutMgr
+parseDef	aut.cpp	/^void Aut::parseDef(const string& line, Str2VmtNodeMap& vmap)$/;"	f	class:aut::Aut
+parseDef	old-aut.cpp	/^void Aut::parseDef(const string& line, Str2VmtNodeMap& vmap)$/;"	f	class:aut::Aut
+parseLabels	tgraph.cpp	/^void TGraph::parseLabels(const string& line, vector<size_t>& labels)$/;"	f	class:aut::TGraph
+parsePred	aut.cpp	/^void Aut::parsePred(const string& line, size_t& pCnt, Str2VmtNodeMap& vmap)$/;"	f	class:aut::Aut
+parsePred	old-aut.cpp	/^void Aut::parsePred(const string& line, size_t& pCnt, Str2VmtNodeMap& vmap)$/;"	f	class:aut::Aut
+piList	aut.cpp	/^VarList  Aut::piList      = Aut::initPIList();$/;"	m	class:aut::Aut	file:
+piList	autMgr.h	/^        static VarList  piList; \/\/ 0-7 follows the order of VmtType$/;"	m	class:aut::Aut
+piList	old-aut.cpp	/^VarList  Aut::piList      = Aut::initPIList();$/;"	m	class:aut::Aut	file:
+piSymbolC	aut.cpp	/^CHRList  Aut::piSymbolC   = Aut::initPISymbolC();$/;"	m	class:aut::Aut	file:
+piSymbolC	autMgr.h	/^        static CHRList  piSymbolC;$/;"	m	class:aut::Aut
+piSymbolC	old-aut.cpp	/^CHRList  Aut::piSymbolC   = Aut::initPISymbolC();$/;"	m	class:aut::Aut	file:
+piSymbolS	aut.cpp	/^STRList  Aut::piSymbolS   = Aut::initPISymbolS();$/;"	m	class:aut::Aut	file:
+piSymbolS	autMgr.h	/^        static STRList  piSymbolS;$/;"	m	class:aut::Aut
+piSymbolS	old-aut.cpp	/^STRList  Aut::piSymbolS   = Aut::initPISymbolS();$/;"	m	class:aut::Aut	file:
+prefix	aut.cpp	/^void Aut::prefix(const string& lvarIdxStr)$/;"	f	class:aut::Aut
+prefix	old-aut.cpp	/^void Aut::prefix(const string& lvarIdxStr)$/;"	f	class:aut::Aut
+print	aut.cpp	/^void Aut::print() const $/;"	f	class:aut::Aut
+print	dt_extractor/dtnode.cpp	/^void DTNode::print(const size_t& indent,size_t level) const$/;"	f	class:dt::DTNode
+print	dt_extractor/smtnode.cpp	/^void SmtNode::print(const size_t& indent,size_t level) const$/;"	f	class:dt::SmtNode
+print	old-aut.cpp	/^void Aut::print() const $/;"	f	class:aut::Aut
+print	tgraph.cpp	/^void TGEdge::print() const $/;"	f	class:aut::TGEdge
+print	tgraph.cpp	/^void TGraph::print() const$/;"	f	class:aut::TGraph
+print	vmtnode.cpp	/^void VmtNode::print(const size_t& level) const$/;"	f	class:aut::VmtNode
+printAssertionList	dt_extractor/dtnode.cpp	/^void DTNode::printAssertionList() const$/;"	f	class:dt::DTNode
+printLengthVarList	dt_extractor/dtnode.cpp	/^void DTNode::printLengthVarList() const$/;"	f	class:dt::DTNode
+printPARAM	vmtnode.cpp	/^void VmtNode::printPARAM() const$/;"	f	class:aut::VmtNode
+printPARAMList	aut.cpp	/^void Aut::printPARAMList() const$/;"	f	class:aut::Aut
+printPARAMList	old-aut.cpp	/^void Aut::printPARAMList() const$/;"	f	class:aut::Aut
+printPIList	aut.cpp	/^void Aut::printPIList() const$/;"	f	class:aut::Aut
+printPIList	old-aut.cpp	/^void Aut::printPIList() const$/;"	f	class:aut::Aut
+printStaticDataMember	aut.cpp	/^void Aut::printStaticDataMember() $/;"	f	class:aut::Aut
+printStaticDataMember	old-aut.cpp	/^void Aut::printStaticDataMember() $/;"	f	class:aut::Aut
+readCmdFile	autMgr.cpp	/^void AutMgr::readCmdFile(const char* fileName)$/;"	f	class:aut::AutMgr
+readSmtFile	dt_extractor/dtMgr.cpp	/^void DTMgr::readSmtFile(const char* fileName, const char* path)$/;"	f	class:dt::DTMgr
+renameDef	aut.cpp	/^void Aut::renameDef()$/;"	f	class:aut::Aut
+renameDef	old-aut.cpp	/^void Aut::renameDef()$/;"	f	class:aut::Aut
+renameITO	aut.cpp	/^void Aut::renameITO(const string& name, VmtNode* n)$/;"	f	class:aut::Aut
+renameITO	old-aut.cpp	/^void Aut::renameITO(const string& name, VmtNode* n)$/;"	f	class:aut::Aut
+renameITO1Aut	aut.cpp	/^void Aut::renameITO1Aut()$/;"	f	class:aut::Aut
+renameITO1Aut	old-aut.cpp	/^void Aut::renameITO1Aut()$/;"	f	class:aut::Aut
+renameITOs2Aut	aut.cpp	/^void Aut::renameITOs2Aut(Aut* a1, Aut* a2)$/;"	f	class:aut::Aut
+renameITOs2Aut	old-aut.cpp	/^void Aut::renameITOs2Aut(Aut* a1, Aut* a2)$/;"	f	class:aut::Aut
+replace	aut.cpp	/^void Aut::replace(Aut* a1, Aut* a2, const size_t& alpha)$/;"	f	class:aut::Aut
+replace	old-aut.cpp	/^void Aut::replace(Aut* a1, Aut* a2, const size_t& alpha)$/;"	f	class:aut::Aut
+replace_A4	aut.cpp	/^void Aut::replace_A4(Aut* a1, Aut* a2)$/;"	f	class:aut::Aut
+replace_A4	old-aut.cpp	/^void Aut::replace_A4(Aut* a1, Aut* a2)$/;"	f	class:aut::Aut
+rightAngle	aut.cpp	/^VmtNode* Aut::rightAngle  = Aut::initSpecialAlphabet(RIGHT_ANGLE);$/;"	m	class:aut::Aut	file:
+rightAngle	autMgr.h	/^        static VmtNode* rightAngle;$/;"	m	class:aut::Aut
+rightAngle	old-aut.cpp	/^VmtNode* Aut::rightAngle  = Aut::initSpecialAlphabet(RIGHT_ANGLE);$/;"	m	class:aut::Aut	file:
+setBit	vmtnode.cpp	/^void VmtNode::setBit(const size_t& bit,bool& isUpdate)$/;"	f	class:aut::VmtNode
+setBitNum	vmtnode.cpp	/^void VmtNode::setBitNum()$/;"	f	class:aut::VmtNode
+setBitNumDN	vmtnode.cpp	/^void VmtNode::setBitNumDN(bool& isUpdate)$/;"	f	class:aut::VmtNode
+setBitNumUP	vmtnode.cpp	/^void VmtNode::setBitNumUP(bool& isUpdate)$/;"	f	class:aut::VmtNode
+setBranchIdx	dt_extractor/smtnode.h	/^        void   setBranchIdx(const size_t& idx) { _branch = idx;}$/;"	f	class:dt::SmtIteNode
+setFlag	dt_extractor/dtnode.h	/^        void           setFlag(const size_t& flag) {_flag=flag;}$/;"	f	class:dt::DTNode
+setFlag	dt_extractor/smtnode.h	/^        void setFlag(const size_t& flag) {_flag=flag;}$/;"	f	class:dt::SmtNode
+setI	aut.cpp	/^void Aut::setI(VmtNode* n)$/;"	f	class:aut::Aut
+setI	old-aut.cpp	/^void Aut::setI(VmtNode* n)$/;"	f	class:aut::Aut
+setLeader	dt_extractor/dtnode.cpp	/^void DTNode::setLeader(DTNode* n)$/;"	f	class:dt::DTNode
+setName	dt_extractor/dtnode.h	/^        void           setName(const string& name){_name = name;}$/;"	f	class:dt::DTNode
+setName	dt_extractor/smtnode.h	/^        void setName(const string& name) {_name = name;}$/;"	f	class:dt::SmtNode
+setNeg	dt_extractor/smtnode.h	/^        void setNeg(const bool& neg) { _neg = neg; }$/;"	f	class:dt::SmtNode
+setNotSink	dt_extractor/dtnode.h	/^        void           setNotSink() {_isSink = 0;}$/;"	f	class:dt::DTNode
+setO	aut.cpp	/^void Aut::setO(VmtNode* n)$/;"	f	class:aut::Aut
+setO	old-aut.cpp	/^void Aut::setO(VmtNode* n)$/;"	f	class:aut::Aut
+setRegex	dt_extractor/dtnode.h	/^        void           setRegex(const string& regex){_regex = regex;}$/;"	f	class:dt::DTNode
+setT	aut.cpp	/^void Aut::setT(VmtNode* n)$/;"	f	class:aut::Aut
+setT	old-aut.cpp	/^void Aut::setT(VmtNode* n)$/;"	f	class:aut::Aut
+setType	autMgr.h	/^        void           setType (const VmtType& type)           {_type = type;}$/;"	f	class:aut::VmtNode
+setType	dt_extractor/dtnode.h	/^        void           setType(const DType& type) {_type = type;}$/;"	f	class:dt::DTNode
+shiftStateVar	aut.cpp	/^void Aut::shiftStateVar(const size_t& delta)$/;"	f	class:aut::Aut
+shiftStateVar	old-aut.cpp	/^void Aut::shiftStateVar(const size_t& delta)$/;"	f	class:aut::Aut
+shiftStateVar	vmtnode.cpp	/^void VmtNode::shiftStateVar(const size_t& delta)$/;"	f	class:aut::VmtNode
+splitLine	utility.cpp	/^void splitLine(const char* s)$/;"	f
+spotNEG	aut.cpp	/^void Aut::spotNEG()$/;"	f	class:aut::Aut
+spotNEG	old-aut.cpp	/^void Aut::spotNEG()$/;"	f	class:aut::Aut
+spotNEG	vmtnode.cpp	/^void VmtNode::spotNEG()$/;"	f	class:aut::VmtNode
+stoi	utility.cpp	/^size_t stoi(const string& s)$/;"	f
+str2tokens	utility.cpp	/^void str2tokens(const string& s, const string& delimiters, vector<string>& tokenList)$/;"	f
+str2tokens	utility.cpp	/^void str2tokens(const string& s, vector<string>& tokenList)$/;"	f
+suffix	aut.cpp	/^void Aut::suffix(const string& lvarIdxStr)$/;"	f	class:aut::Aut
+suffix	old-aut.cpp	/^void Aut::suffix(const string& lvarIdxStr)$/;"	f	class:aut::Aut
+test	aut.cpp	/^void Aut::test() {$/;"	f	class:aut::Aut
+test	old-aut.cpp	/^void Aut::test() {$/;"	f	class:aut::Aut
+trkstr	aut.cpp	/^void Aut::trkstr(const string& lvarIdxStr)$/;"	f	class:aut::Aut
+vmtTokenize	aut.cpp	/^void Aut::vmtTokenize(const string& s,vector<string>& paramList, vector<string>& tokenList)$/;"	f	class:aut::Aut
+vmtTokenize	old-aut.cpp	/^void Aut::vmtTokenize(const string& s,vector<string>& paramList, vector<string>& tokenList)$/;"	f	class:aut::Aut
+write	aut.cpp	/^void Aut::write(const char* fileName) const$/;"	f	class:aut::Aut
+write	aut.cpp	/^void Aut::write(const string& fileName) const$/;"	f	class:aut::Aut
+write	old-aut.cpp	/^void Aut::write(const char* fileName) const$/;"	f	class:aut::Aut
+write	old-aut.cpp	/^void Aut::write(const string& fileName) const$/;"	f	class:aut::Aut
+write	tgraph.cpp	/^void TGEdge::write(const CubeMap& downCubeMap, const CubeMap& rangeCubeMap, const vector<string>& stateBitStringList, ofstream& file)$/;"	f	class:aut::TGEdge
+write	tgraph.cpp	/^void TGraph::write(const char* fileName)$/;"	f	class:aut::TGraph
+write	tgraph.cpp	/^void TGraph::write(const string& fileName)$/;"	f	class:aut::TGraph
+write	vmtnode.cpp	/^void VmtNode::write(const size_t& level,ofstream& outFile) const$/;"	f	class:aut::VmtNode
+writeCVC4File	dt_extractor/dtnode.cpp	/^void DTNode::writeCVC4File()$/;"	f	class:dt::DTNode
+writeCmdFile	dt_extractor/dtnode.cpp	/^void DTNode::writeCmdFile(ofstream& cmdFile,ofstream& autFile)$/;"	f	class:dt::DTNode
+writeDeclareFun	aut.cpp	/^void Aut::writeDeclareFun(const VmtType& type, ofstream& file) const$/;"	f	class:aut::Aut
+writeDeclareFun	old-aut.cpp	/^void Aut::writeDeclareFun(const VmtType& type, ofstream& file) const$/;"	f	class:aut::Aut
+writeDefineFun	aut.cpp	/^void Aut::writeDefineFun(VmtNode* n, ofstream& file, const bool& needParam) const$/;"	f	class:aut::Aut
+writeDefineFun	old-aut.cpp	/^void Aut::writeDefineFun(VmtNode* n, ofstream& file, const bool& needParam) const$/;"	f	class:aut::Aut
+writeEQ	aut.cpp	/^void Aut::writeEQ(const size_t& bitNum, ofstream& file)$/;"	f	class:aut::Aut
+writeEQ	old-aut.cpp	/^void Aut::writeEQ(const size_t& bitNum, ofstream& file)$/;"	f	class:aut::Aut
+writeFAList	aut.cpp	/^void Aut::writeFAList(bool& tUsed,bool& fUsed,const size_t& bitNum, const string& lhs, VmtNode* rhsNode, ofstream& file)$/;"	f	class:aut::Aut
+writeFAList	aut.cpp	/^void Aut::writeFAList(const size_t& bitNum, const string& lhs, VmtNode* rhsNode, ofstream& file)$/;"	f	class:aut::Aut
+writeFAList	aut.cpp	/^void Aut::writeFAList(const size_t& bitNum, const string& lhs, const string& rhs, ofstream& file)$/;"	f	class:aut::Aut
+writeFAList	old-aut.cpp	/^void Aut::writeFAList(bool& tUsed,bool& fUsed,const size_t& bitNum, const string& lhs, VmtNode* rhsNode, ofstream& file)$/;"	f	class:aut::Aut
+writeFAList	old-aut.cpp	/^void Aut::writeFAList(const size_t& bitNum, const string& lhs, VmtNode* rhsNode, ofstream& file)$/;"	f	class:aut::Aut
+writeFAList	old-aut.cpp	/^void Aut::writeFAList(const size_t& bitNum, const string& lhs, const string& rhs, ofstream& file)$/;"	f	class:aut::Aut
+writeFAListARITH	aut.cpp	/^void Aut::writeFAListARITH(bool& tUsed,bool& fUsed,const size_t& bitNum, const string& lhs, VmtNode* rhsNode, ofstream& file)$/;"	f	class:aut::Aut
+writeFAListARITH	old-aut.cpp	/^void Aut::writeFAListARITH(bool& tUsed,bool& fUsed,const size_t& bitNum, const string& lhs, VmtNode* rhsNode, ofstream& file)$/;"	f	class:aut::Aut
+writeINC1	aut.cpp	/^void Aut::writeINC1(const size_t& bitNum, ofstream& file)$/;"	f	class:aut::Aut
+writeINC1	old-aut.cpp	/^void Aut::writeINC1(const size_t& bitNum, ofstream& file)$/;"	f	class:aut::Aut
+writeLAutFile	dt_extractor/dtnode.cpp	/^void DTNode::writeLAutFile(ofstream& outFile) const$/;"	f	class:dt::DTNode
+writeLAutFile	dt_extractor/smtnode.cpp	/^void SmtEqNode::writeLAutFile(ofstream& outFile)$/;"	f	class:dt::SmtEqNode
+writeLAutFile	dt_extractor/smtnode.cpp	/^void SmtNode::writeLAutFile(ofstream& outFile)$/;"	f	class:dt::SmtNode
+writeLAutPredRoot	dt_extractor/smtnode.cpp	/^void SmtNode::writeLAutPredRoot(ofstream& outFile)$/;"	f	class:dt::SmtNode
+writeMODEL	vmtnode.cpp	/^void VmtNode::writeMODEL(ofstream& file, vector<set<size_t> >& sizeMap, const bool& isPred)$/;"	f	class:aut::VmtNode
+writeNextFun	aut.cpp	/^void Aut::writeNextFun(const VmtType& type, int& nxtCnt, ofstream& file) const$/;"	f	class:aut::Aut
+writeNextFun	old-aut.cpp	/^void Aut::writeNextFun(const VmtType& type, int& nxtCnt, ofstream& file) const$/;"	f	class:aut::Aut
+writeParamBody	vmtnode.cpp	/^void VmtNode::writeParamBody(const string& fname, ofstream& file) const$/;"	f	class:aut::VmtNode
+writeParamHead	vmtnode.cpp	/^void VmtNode::writeParamHead(ofstream& file) const$/;"	f	class:aut::VmtNode
+writeRangeMinterm	tgraph.cpp	/^void TGEdge::writeRangeMinterm(const size_t& m1, const size_t& m2, ofstream& file)$/;"	f	class:aut::TGEdge
+writeS3File	dt_extractor/dtnode.cpp	/^void DTNode::writeS3File(ofstream& outFile) const$/;"	f	class:dt::DTNode
+writeS3File	dt_extractor/smtnode.cpp	/^void SmtEqNode::writeS3File(ofstream& outFile)$/;"	f	class:dt::SmtEqNode
+writeS3File	dt_extractor/smtnode.cpp	/^void SmtNode::writeS3File(ofstream& outFile)$/;"	f	class:dt::SmtNode
+writeS3PredRoot	dt_extractor/smtnode.cpp	/^void SmtNode::writeS3PredRoot(ofstream& outFile)$/;"	f	class:dt::SmtNode
+writeSFA	aut.cpp	/^void Aut::writeSFA(const size_t& bitNum, ofstream& file)$/;"	f	class:aut::Aut
+writeSFA	old-aut.cpp	/^void Aut::writeSFA(const size_t& bitNum, ofstream& file)$/;"	f	class:aut::Aut
+writeSUBCKT	vmtnode.cpp	/^void VmtNode::writeSUBCKT(ofstream& file, vector<set<size_t> >& sizeMap ,bool& tUsed, bool& fUsed, const bool& isPred)$/;"	f	class:aut::VmtNode
+writeSmtFile	dt_extractor/dtnode.cpp	/^void DTNode::writeSmtFile(ofstream& outFile) const$/;"	f	class:dt::DTNode
+writeSmtFile	dt_extractor/smtnode.cpp	/^void SmtEqNode::writeSmtFile(ofstream& outFile)$/;"	f	class:dt::SmtEqNode
+writeSmtFile	dt_extractor/smtnode.cpp	/^void SmtNode::writeSmtFile(ofstream& outFile)$/;"	f	class:dt::SmtNode
+writeSmtPredRoot	dt_extractor/smtnode.cpp	/^void SmtNode::writeSmtPredRoot(ofstream& outFile)$/;"	f	class:dt::SmtNode
+writeUHA	aut.cpp	/^void Aut::writeUHA(ofstream& file)$/;"	f	class:aut::Aut
+writeUHA	old-aut.cpp	/^void Aut::writeUHA(ofstream& file)$/;"	f	class:aut::Aut
+writeUSFA	aut.cpp	/^void Aut::writeUSFA(ofstream& file)$/;"	f	class:aut::Aut
+writeUSFA	old-aut.cpp	/^void Aut::writeUSFA(ofstream& file)$/;"	f	class:aut::Aut

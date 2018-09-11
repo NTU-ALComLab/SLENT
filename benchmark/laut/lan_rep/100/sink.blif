@@ -1,0 +1,4492 @@
+.model sink
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        y40 y41 y42 y43 y44 y45 y46 y47 \
+        s0.next s1.next s2.next s3.next s4.next s5.next s6.next s7.next s8.next s9.next s10.next s11.next s12.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+        n1.next_0 n1.next_1 n1.next_2 n1.next_3 n1.next_4 n1.next_5 n1.next_6 n1.next_7 n1.next_8 \
+        K0_0 K0_1 K0_2 K0_3 K0_4 K0_5 K0_6 K0_7 K0_8 K0_9 K0_10 K0_11 \
+        K1_0 K1_1 K1_2 K1_3 K1_4 K1_5 K1_6 K1_7 K1_8 K1_9 K1_10 K1_11 \
+       
+.outputs Oisempty
+.subckt d156 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        y40=y40 y41=y41 y42=y42 y43=y43 y44=y44 y45=y45 y46=y46 y47=y47 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s4=s4 s5=s5 s6=s6 s7=s7 s8=s8 s9=s9 s10=s10 s11=s11 s12=s12 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        n1_0=n1_0 n1_1=n1_1 n1_2=n1_2 n1_3=n1_3 n1_4=n1_4 n1_5=n1_5 n1_6=n1_6 n1_7=n1_7 n1_8=n1_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next s4.next=s4.next s5.next=s5.next s6.next=s6.next s7.next=s7.next s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next s12.next=s12.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        n1.next_0=n1.next_0 n1.next_1=n1.next_1 n1.next_2=n1.next_2 n1.next_3=n1.next_3 n1.next_4=n1.next_4 n1.next_5=n1.next_5 n1.next_6=n1.next_6 n1.next_7=n1.next_7 n1.next_8=n1.next_8 \
+        d156_0=Tori
+
+# overflow condidion for LEN , LEN_N
+
+.names const1
+1
+.subckt 9bEQ \
+        a8=n0_8 a7=n0_7 a6=n0_6 a5=n0_5 a4=n0_4 a3=n0_3 a2=n0_2 a1=n0_1 a0=n0_0 \
+        b8=const1 b7=const1 b6=const1 b5=const1 b4=const1 b3=const1 b2=const1 b1=const1 b0=const1 \
+        out=e0_0
+.subckt 9bEQ \
+        a8=n1_8 a7=n1_7 a6=n1_6 a5=n1_5 a4=n1_4 a3=n1_3 a2=n1_2 a1=n1_1 a0=n1_0 \
+        b8=const1 b7=const1 b6=const1 b5=const1 b4=const1 b3=const1 b2=const1 b1=const1 b0=const1 \
+        out=e1_0
+.subckt 9bEQ a8=n0.next_8 a7=n0.next_7 a6=n0.next_6 a5=n0.next_5 a4=n0.next_4 a3=n0.next_3 a2=n0.next_2 a1=n0.next_1 a0=n0.next_0 \
+        b8=const1 b7=const1 b6=const1 b5=const1 b4=const1 b3=const1 b2=const1 b1=const1 b0=const1 \
+        out=e0_1
+.subckt 9bEQ a8=n1.next_8 a7=n1.next_7 a6=n1.next_6 a5=n1.next_5 a4=n1.next_4 a3=n1.next_3 a2=n1.next_2 a1=n1.next_1 a0=n1.next_0 \
+        b8=const1 b7=const1 b6=const1 b5=const1 b4=const1 b3=const1 b2=const1 b1=const1 b0=const1 \
+        out=e1_1
+.names e0_0 e0_1 e0
+00 1
+01 1
+11 1
+.names e1_0 e1_1 e1
+00 1
+01 1
+11 1
+.names e0 e1 Tori T
+111 1
+.subckt d161 \
+        s0=s0 s1=s1 s2=s2 s7=s7 s8=s8 s9=s9 s10=s10 s11=s11 s12=s12 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        n1_0=n1_0 n1_1=n1_1 n1_2=n1_2 n1_3=n1_3 n1_4=n1_4 n1_5=n1_5 n1_6=n1_6 n1_7=n1_7 n1_8=n1_8 \
+        K0_0=K0_0 K0_1=K0_1 K0_2=K0_2 K0_3=K0_3 K0_4=K0_4 K0_5=K0_5 K0_6=K0_6 K0_7=K0_7 K0_8=K0_8 K0_9=K0_9 K0_10=K0_10 K0_11=K0_11 \
+        K1_0=K1_0 K1_1=K1_1 K1_2=K1_2 K1_3=K1_3 K1_4=K1_4 K1_5=K1_5 K1_6=K1_6 K1_7=K1_7 K1_8=K1_8 K1_9=K1_9 K1_10=K1_10 K1_11=K1_11 \
+        d161_0=O
+.latch s0.next s0 0
+.latch s1.next s1 0
+.latch s2.next s2 0
+.latch s3.next s3 0
+.latch s4.next s4 0
+.latch s5.next s5 0
+.latch s6.next s6 0
+.latch s7.next s7 0
+.latch s8.next s8 0
+.latch s9.next s9 0
+.latch s10.next s10 0
+.latch s11.next s11 0
+.latch s12.next s12 0
+.latch n0.next_0 n0_0 0
+.latch n0.next_1 n0_1 0
+.latch n0.next_2 n0_2 0
+.latch n0.next_3 n0_3 0
+.latch n0.next_4 n0_4 0
+.latch n0.next_5 n0_5 0
+.latch n0.next_6 n0_6 0
+.latch n0.next_7 n0_7 0
+.latch n0.next_8 n0_8 0
+.latch n1.next_0 n1_0 0
+.latch n1.next_1 n1_1 0
+.latch n1.next_2 n1_2 0
+.latch n1.next_3 n1_3 0
+.latch n1.next_4 n1_4 0
+.latch n1.next_5 n1_5 0
+.latch n1.next_6 n1_6 0
+.latch n1.next_7 n1_7 0
+.latch n1.next_8 n1_8 0
+.latch K Z 1
+.names T Z K
+11 1
+.names O Z Oisempty
+11 1
+.end
+
+# imdList
+.model d1
+.inputs
+.outputs d1_0
+.names const0 d1_0
+1 1
+.names const0
+.end
+
+.model d2
+.inputs s0 \
+       
+.outputs d2_0
+.names t759_0 d2_0
+1 1
+.names s0 t759_0
+0 1
+.end
+
+.model d3
+.inputs s0 s1 s2 s3 \
+       
+.outputs d3_0
+.names t766_0 d3_0
+1 1
+.names t767_0 s1 t768_0 s3 t766_0
+1111 1
+.names s0 t767_0
+0 1
+.names s2 t768_0
+0 1
+.end
+
+.model d4
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 s3 \
+        s0.next s1.next s2.next s3.next \
+       
+.outputs d4_0
+.names t33_0 d4_0
+1 1
+.names t34_0 x1 t35_0 x3 t36_0 x5 t37_0 x7 t38_0 s1 s2 t39_0 t40_0 t41_0 t42_0 s3.next t33_0
+1111111111111111 1
+.names x0 t34_0
+0 1
+.names x2 t35_0
+0 1
+.names x4 t36_0
+0 1
+.names x6 t37_0
+0 1
+.names s0 t38_0
+0 1
+.names s3 t39_0
+0 1
+.names s0.next t40_0
+0 1
+.names s1.next t41_0
+0 1
+.names s2.next t42_0
+0 1
+.end
+
+.model d5
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 s3 \
+        s0.next s1.next s2.next s3.next \
+       
+.outputs d5_0
+.names t43_0 d5_0
+1 1
+.names t44_0 t45_0 x2 x3 x4 t46_0 x6 t47_0 t48_0 s1 t49_0 t50_0 s0.next t51_0 t52_0 t53_0 t43_0
+1111111111111111 1
+.names x0 t44_0
+0 1
+.names x1 t45_0
+0 1
+.names x5 t46_0
+0 1
+.names x7 t47_0
+0 1
+.names s0 t48_0
+0 1
+.names s2 t49_0
+0 1
+.names s3 t50_0
+0 1
+.names s1.next t51_0
+0 1
+.names s2.next t52_0
+0 1
+.names s3.next t53_0
+0 1
+.end
+
+.model d6
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 s3 \
+        s0.next s1.next s2.next s3.next \
+       
+.outputs d6_0
+.names t54_0 d6_0
+1 1
+.names t55_0 t56_0 x2 x3 x4 x5 x6 t57_0 t58_0 s1 s2 s3 t59_0 s1.next s2.next t60_0 t54_0
+1111111111111111 1
+.names x0 t55_0
+0 1
+.names x1 t56_0
+0 1
+.names x7 t57_0
+0 1
+.names s0 t58_0
+0 1
+.names s0.next t59_0
+0 1
+.names s3.next t60_0
+0 1
+.end
+
+.model d7
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 s3 \
+        s0.next s1.next s2.next s3.next \
+       
+.outputs d7_0
+.names t61_0 d7_0
+1 1
+.names t62_0 t63_0 x2 t64_0 t65_0 t66_0 t67_0 t68_0 s0 t69_0 t70_0 t71_0 t72_0 t73_0 s2.next s3.next t61_0
+1111111111111111 1
+.names x0 t62_0
+0 1
+.names x1 t63_0
+0 1
+.names x3 t64_0
+0 1
+.names x4 t65_0
+0 1
+.names x5 t66_0
+0 1
+.names x6 t67_0
+0 1
+.names x7 t68_0
+0 1
+.names s1 t69_0
+0 1
+.names s2 t70_0
+0 1
+.names s3 t71_0
+0 1
+.names s0.next t72_0
+0 1
+.names s1.next t73_0
+0 1
+.end
+
+.model d8
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 s3 \
+        s0.next s1.next s2.next s3.next \
+       
+.outputs d8_0
+.names t74_0 d8_0
+1 1
+.names t75_0 x1 t76_0 t77_0 x4 x5 t78_0 t79_0 t80_0 t81_0 s2 t82_0 t83_0 s1.next t84_0 t85_0 t74_0
+1111111111111111 1
+.names x0 t75_0
+0 1
+.names x2 t76_0
+0 1
+.names x3 t77_0
+0 1
+.names x6 t78_0
+0 1
+.names x7 t79_0
+0 1
+.names s0 t80_0
+0 1
+.names s1 t81_0
+0 1
+.names s3 t82_0
+0 1
+.names s0.next t83_0
+0 1
+.names s2.next t84_0
+0 1
+.names s3.next t85_0
+0 1
+.end
+
+.model d9
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 s3 \
+        s0.next s1.next s2.next s3.next \
+       
+.outputs d9_0
+.names t86_0 d9_0
+1 1
+.names t87_0 x1 t88_0 x3 t89_0 t90_0 x6 t91_0 t92_0 t93_0 t94_0 s3 t95_0 t96_0 s2.next t97_0 t86_0
+1111111111111111 1
+.names x0 t87_0
+0 1
+.names x2 t88_0
+0 1
+.names x4 t89_0
+0 1
+.names x5 t90_0
+0 1
+.names x7 t91_0
+0 1
+.names s0 t92_0
+0 1
+.names s1 t93_0
+0 1
+.names s2 t94_0
+0 1
+.names s0.next t95_0
+0 1
+.names s1.next t96_0
+0 1
+.names s3.next t97_0
+0 1
+.end
+
+.model d10
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 s3 \
+        s0.next s1.next s2.next s3.next \
+       
+.outputs d10_0
+.names t98_0 d10_0
+1 1
+.names t99_0 t100_0 x2 x3 x4 x5 t101_0 t102_0 t103_0 s1 t104_0 s3 s0.next t105_0 t106_0 s3.next t98_0
+1111111111111111 1
+.names x0 t99_0
+0 1
+.names x1 t100_0
+0 1
+.names x6 t101_0
+0 1
+.names x7 t102_0
+0 1
+.names s0 t103_0
+0 1
+.names s2 t104_0
+0 1
+.names s1.next t105_0
+0 1
+.names s2.next t106_0
+0 1
+.end
+
+.model d11
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 s3 \
+        s0.next s1.next s2.next s3.next \
+       
+.outputs d11_0
+.names t107_0 d11_0
+1 1
+.names t108_0 x1 x2 t109_0 t110_0 x5 t111_0 t112_0 t113_0 t114_0 t115_0 t116_0 t117_0 s1.next s2.next s3.next t107_0
+1111111111111111 1
+.names x0 t108_0
+0 1
+.names x3 t109_0
+0 1
+.names x4 t110_0
+0 1
+.names x6 t111_0
+0 1
+.names x7 t112_0
+0 1
+.names s0 t113_0
+0 1
+.names s1 t114_0
+0 1
+.names s2 t115_0
+0 1
+.names s3 t116_0
+0 1
+.names s0.next t117_0
+0 1
+.end
+
+.model d12
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 s3 \
+        s0.next s1.next s2.next s3.next \
+       
+.outputs d12_0
+.names t118_0 d12_0
+1 1
+.names t119_0 x1 x2 x3 t120_0 x5 t121_0 t122_0 s0 t123_0 t124_0 s3 t125_0 t126_0 t127_0 t128_0 t118_0
+1111111111111111 1
+.names x0 t119_0
+0 1
+.names x4 t120_0
+0 1
+.names x6 t121_0
+0 1
+.names x7 t122_0
+0 1
+.names s1 t123_0
+0 1
+.names s2 t124_0
+0 1
+.names s0.next t125_0
+0 1
+.names s1.next t126_0
+0 1
+.names s2.next t127_0
+0 1
+.names s3.next t128_0
+0 1
+.end
+
+.model d13
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 s3 \
+        s0.next s1.next s2.next s3.next \
+       
+.outputs d13_0
+.names t32_0 d13_0
+1 1
+.names d4_0 d5_0 d6_0 d7_0 d8_0 d9_0 d10_0 d11_0 d12_0 t32_0
+1-------- 1
+-1------- 1
+--1------ 1
+---1----- 1
+----1---- 1
+-----1--- 1
+------1-- 1
+-------1- 1
+--------1 1
+.subckt d4 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 s3=s3 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next \
+        d4_0=d4_0
+.subckt d5 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 s3=s3 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next \
+        d5_0=d5_0
+.subckt d6 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 s3=s3 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next \
+        d6_0=d6_0
+.subckt d7 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 s3=s3 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next \
+        d7_0=d7_0
+.subckt d8 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 s3=s3 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next \
+        d8_0=d8_0
+.subckt d9 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 s3=s3 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next \
+        d9_0=d9_0
+.subckt d10 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 s3=s3 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next \
+        d10_0=d10_0
+.subckt d11 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 s3=s3 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next \
+        d11_0=d11_0
+.subckt d12 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 s3=s3 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next \
+        d12_0=d12_0
+.end
+
+.model d14
+.inputs s0 s1 s2 s3 \
+       
+.outputs d14_0
+.names t356_0 d14_0
+1 1
+.names t357_0 t358_0 s2 s3 t356_0
+1111 1
+.names s0 t357_0
+0 1
+.names s1 t358_0
+0 1
+.end
+
+.model d15
+.inputs s0 \
+       
+.outputs d15_0
+.names t365_0 d15_0
+1 1
+.names s0 t365_0
+0 1
+.end
+
+.model d16
+.inputs x0 \
+        s0 \
+        s0.next \
+       
+.outputs d16_0
+.names t157_0 d16_0
+1 1
+.names t158_0 t159_0 t160_0 t157_0
+111 1
+.names x0 t158_0
+0 1
+.names s0 t159_0
+0 1
+.names s0.next t160_0
+0 1
+.end
+
+.model d17
+.inputs s0 \
+       
+.outputs d17_0
+.names t422_0 d17_0
+1 1
+.names s0 t422_0
+0 1
+.end
+
+.model d18
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d18_0
+.names t162_0 d18_0
+1 1
+.names t163_0 t172_0 t162_0
+11 1
+.names epsilon_0 t163_0
+0 1
+.subckt epsilon \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        epsilon_0=epsilon_0
+.subckt 9bINC1 \
+        a8=n0_8 a7=n0_7 a6=n0_6 a5=n0_5 a4=n0_4 a3=n0_3 a2=n0_2 a1=n0_1 a0=n0_0 \
+        b8=n0.next_8 b7=n0.next_7 b6=n0.next_6 b5=n0.next_5 b4=n0.next_4 b3=n0.next_3 b2=n0.next_2 b1=n0.next_1 b0=n0.next_0 \
+        out=t172_0
+.end
+
+.model d19
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d19_0
+.names t174_0 d19_0
+1 1
+.names epsilon_0 t175_0 t174_0
+11 1
+.subckt epsilon \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        epsilon_0=epsilon_0
+.subckt 9bEQ \
+        a8=n0.next_8 a7=n0.next_7 a6=n0.next_6 a5=n0.next_5 a4=n0.next_4 a3=n0.next_3 a2=n0.next_2 a1=n0.next_1 a0=n0.next_0 \
+        b8=n0_8 b7=n0_7 b6=n0_6 b5=n0_5 b4=n0_4 b3=n0_3 b2=n0_2 b1=n0_1 b0=n0_0 \
+        out=t175_0
+.end
+
+.model d20
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d20_0
+.names t156_0 d20_0
+1 1
+.names d16_0 t161_0 t156_0
+11 1
+.subckt d16 \
+        x0=x0 \
+        s0=s0 \
+        s0.next=s0.next \
+        d16_0=d16_0
+.names d18_0 d19_0 t161_0
+1- 1
+-1 1
+.subckt d18 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d18_0=d18_0
+.subckt d19 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d19_0=d19_0
+.end
+
+.model d21
+.inputs s0 s1 \
+       
+.outputs d21_0
+.names t363_0 d21_0
+1 1
+.names t364_0 d15_0 t363_0
+11 1
+.names s1 t364_0
+0 1
+.subckt d15 \
+        s0=s0 \
+        d15_0=d15_0
+.end
+
+.model d22
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d22_0
+.names t138_0 d22_0
+1 1
+.names t139_0 t140_0 t148_0 d20_0 t138_0
+1111 1
+.names s1.next s1 t139_0
+00 1
+11 1
+.names leftAngle_0 t140_0
+0 1
+.subckt leftAngle \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        leftAngle_0=leftAngle_0
+.names rightAngle_0 t148_0
+0 1
+.subckt rightAngle \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        rightAngle_0=rightAngle_0
+.subckt d20 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d20_0=d20_0
+.end
+
+.model d23
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s1 \
+        s1.next \
+       
+.outputs d23_0
+.names t179_0 d23_0
+1 1
+.names t180_0 t182_0 t179_0
+1- 1
+-1 1
+.names t181_0 s1.next leftAngle_0 t180_0
+111 1
+.names s1 t181_0
+0 1
+.subckt leftAngle \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        leftAngle_0=leftAngle_0
+.names s1 t183_0 rightAngle_0 t182_0
+111 1
+.names s1.next t183_0
+0 1
+.subckt rightAngle \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        rightAngle_0=rightAngle_0
+.end
+
+.model d24
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d24_0
+.names t176_0 d24_0
+1 1
+.names t177_0 t178_0 d23_0 t176_0
+111 1
+.names s0.next s0 t177_0
+00 1
+11 1
+.subckt 9bEQ \
+        a8=n0.next_8 a7=n0.next_7 a6=n0.next_6 a5=n0.next_5 a4=n0.next_4 a3=n0.next_3 a2=n0.next_2 a1=n0.next_1 a0=n0.next_0 \
+        b8=n0_8 b7=n0_7 b6=n0_6 b5=n0_5 b4=n0_4 b3=n0_3 b2=n0_2 b1=n0_1 b0=n0_0 \
+        out=t178_0
+.subckt d23 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s1=s1 \
+        s1.next=s1.next \
+        d23_0=d23_0
+.end
+
+.model d25
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d25_0
+.names t137_0 d25_0
+1 1
+.names d22_0 d24_0 t137_0
+1- 1
+-1 1
+.subckt d22 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d22_0=d22_0
+.subckt d24 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d24_0=d24_0
+.end
+
+.model d26
+.inputs s0 s1 \
+       
+.outputs d26_0
+.names t420_0 d26_0
+1 1
+.names t421_0 d17_0 t420_0
+11 1
+.names s1 t421_0
+0 1
+.subckt d17 \
+        s0=s0 \
+        d17_0=d17_0
+.end
+
+.model d27
+.inputs s2 \
+       
+.outputs d27_0
+.names t307_0 d27_0
+1 1
+.names s2 t307_0
+0 1
+.end
+
+.model d28
+.inputs x0 x2 x4 \
+        s2 \
+        s2.next \
+       
+.outputs d28_0
+.names t252_0 d28_0
+1 1
+.names t253_0 t254_0 x4 t255_0 s2.next t252_0
+11111 1
+.names x0 t253_0
+0 1
+.names x2 t254_0
+0 1
+.names s2 t255_0
+0 1
+.end
+
+.model d29
+.inputs x0 x2 x4 x6 \
+        s2 \
+        s2.next \
+       
+.outputs d29_0
+.names t256_0 d29_0
+1 1
+.names t257_0 x2 t258_0 x6 t259_0 s2.next t256_0
+111111 1
+.names x0 t257_0
+0 1
+.names x4 t258_0
+0 1
+.names s2 t259_0
+0 1
+.end
+
+.model d30
+.inputs x0 x4 x5 x7 \
+        s2 \
+        s2.next \
+       
+.outputs d30_0
+.names t260_0 d30_0
+1 1
+.names t261_0 x4 t262_0 x7 t263_0 s2.next t260_0
+111111 1
+.names x0 t261_0
+0 1
+.names x5 t262_0
+0 1
+.names s2 t263_0
+0 1
+.end
+
+.model d31
+.inputs x0 x2 x5 \
+        s2 \
+        s2.next \
+       
+.outputs d31_0
+.names t264_0 d31_0
+1 1
+.names t265_0 t266_0 x5 t267_0 s2.next t264_0
+11111 1
+.names x0 t265_0
+0 1
+.names x2 t266_0
+0 1
+.names s2 t267_0
+0 1
+.end
+
+.model d32
+.inputs x0 x2 x4 x7 \
+        s2 \
+        s2.next \
+       
+.outputs d32_0
+.names t268_0 d32_0
+1 1
+.names t269_0 x2 t270_0 x7 t271_0 s2.next t268_0
+111111 1
+.names x0 t269_0
+0 1
+.names x4 t270_0
+0 1
+.names s2 t271_0
+0 1
+.end
+
+.model d33
+.inputs x0 x2 x3 x6 x7 \
+        s2 \
+        s2.next \
+       
+.outputs d33_0
+.names t272_0 d33_0
+1 1
+.names t273_0 t274_0 t275_0 x6 t276_0 t277_0 s2.next t272_0
+1111111 1
+.names x0 t273_0
+0 1
+.names x2 t274_0
+0 1
+.names x3 t275_0
+0 1
+.names x7 t276_0
+0 1
+.names s2 t277_0
+0 1
+.end
+
+.model d34
+.inputs x0 x5 x6 x7 \
+        s2 \
+        s2.next \
+       
+.outputs d34_0
+.names t278_0 d34_0
+1 1
+.names t279_0 x5 t280_0 t281_0 t282_0 s2.next t278_0
+111111 1
+.names x0 t279_0
+0 1
+.names x6 t280_0
+0 1
+.names x7 t281_0
+0 1
+.names s2 t282_0
+0 1
+.end
+
+.model d35
+.inputs x0 x3 x4 x5 \
+        s2 \
+        s2.next \
+       
+.outputs d35_0
+.names t283_0 d35_0
+1 1
+.names t284_0 t285_0 x4 t286_0 t287_0 s2.next t283_0
+111111 1
+.names x0 t284_0
+0 1
+.names x3 t285_0
+0 1
+.names x5 t286_0
+0 1
+.names s2 t287_0
+0 1
+.end
+
+.model d36
+.inputs x0 x3 x6 \
+        s2 \
+        s2.next \
+       
+.outputs d36_0
+.names t288_0 d36_0
+1 1
+.names t289_0 x3 t290_0 t291_0 s2.next t288_0
+11111 1
+.names x0 t289_0
+0 1
+.names x6 t290_0
+0 1
+.names s2 t291_0
+0 1
+.end
+
+.model d37
+.inputs x0 x3 x5 \
+        s2 \
+        s2.next \
+       
+.outputs d37_0
+.names t292_0 d37_0
+1 1
+.names t293_0 x3 x5 t294_0 s2.next t292_0
+11111 1
+.names x0 t293_0
+0 1
+.names s2 t294_0
+0 1
+.end
+
+.model d38
+.inputs x0 x1 x2 \
+        s2 \
+        s2.next \
+       
+.outputs d38_0
+.names t295_0 d38_0
+1 1
+.names t296_0 x1 x2 t297_0 s2.next t295_0
+11111 1
+.names x0 t296_0
+0 1
+.names s2 t297_0
+0 1
+.end
+
+.model d39
+.inputs x0 x1 x2 \
+        s2 \
+        s2.next \
+       
+.outputs d39_0
+.names t298_0 d39_0
+1 1
+.names t299_0 t300_0 t301_0 t302_0 s2.next t298_0
+11111 1
+.names x0 t299_0
+0 1
+.names x1 t300_0
+0 1
+.names x2 t301_0
+0 1
+.names s2 t302_0
+0 1
+.end
+
+.model d40
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s2 \
+        s2.next \
+       
+.outputs d40_0
+.names t251_0 d40_0
+1 1
+.names d28_0 d29_0 d30_0 d31_0 d32_0 d33_0 d34_0 d35_0 d36_0 d37_0 d38_0 d39_0 t251_0
+1----------- 1
+-1---------- 1
+--1--------- 1
+---1-------- 1
+----1------- 1
+-----1------ 1
+------1----- 1
+-------1---- 1
+--------1--- 1
+---------1-- 1
+----------1- 1
+-----------1 1
+.subckt d28 \
+        x0=x0 x2=x2 x4=x4 \
+        s2=s2 \
+        s2.next=s2.next \
+        d28_0=d28_0
+.subckt d29 \
+        x0=x0 x2=x2 x4=x4 x6=x6 \
+        s2=s2 \
+        s2.next=s2.next \
+        d29_0=d29_0
+.subckt d30 \
+        x0=x0 x4=x4 x5=x5 x7=x7 \
+        s2=s2 \
+        s2.next=s2.next \
+        d30_0=d30_0
+.subckt d31 \
+        x0=x0 x2=x2 x5=x5 \
+        s2=s2 \
+        s2.next=s2.next \
+        d31_0=d31_0
+.subckt d32 \
+        x0=x0 x2=x2 x4=x4 x7=x7 \
+        s2=s2 \
+        s2.next=s2.next \
+        d32_0=d32_0
+.subckt d33 \
+        x0=x0 x2=x2 x3=x3 x6=x6 x7=x7 \
+        s2=s2 \
+        s2.next=s2.next \
+        d33_0=d33_0
+.subckt d34 \
+        x0=x0 x5=x5 x6=x6 x7=x7 \
+        s2=s2 \
+        s2.next=s2.next \
+        d34_0=d34_0
+.subckt d35 \
+        x0=x0 x3=x3 x4=x4 x5=x5 \
+        s2=s2 \
+        s2.next=s2.next \
+        d35_0=d35_0
+.subckt d36 \
+        x0=x0 x3=x3 x6=x6 \
+        s2=s2 \
+        s2.next=s2.next \
+        d36_0=d36_0
+.subckt d37 \
+        x0=x0 x3=x3 x5=x5 \
+        s2=s2 \
+        s2.next=s2.next \
+        d37_0=d37_0
+.subckt d38 \
+        x0=x0 x1=x1 x2=x2 \
+        s2=s2 \
+        s2.next=s2.next \
+        d38_0=d38_0
+.subckt d39 \
+        x0=x0 x1=x1 x2=x2 \
+        s2=s2 \
+        s2.next=s2.next \
+        d39_0=d39_0
+.end
+
+.model d41
+.inputs s2 \
+       
+.outputs d41_0
+.names s2 d41_0
+1 1
+.end
+
+.model d42
+.inputs s2 \
+       
+.outputs d42_0
+.names t311_0 d42_0
+1 1
+.names s2 t311_0
+0 1
+.end
+
+.model d43
+.inputs x0 x1 x2 x4 x5 x6 x7 \
+        s2 \
+        s2.next \
+       
+.outputs d43_0
+.names t196_0 d43_0
+1 1
+.names t197_0 x1 t198_0 t199_0 t200_0 x6 x7 t201_0 t202_0 t196_0
+111111111 1
+.names x0 t197_0
+0 1
+.names x2 t198_0
+0 1
+.names x4 t199_0
+0 1
+.names x5 t200_0
+0 1
+.names s2 t201_0
+0 1
+.names s2.next t202_0
+0 1
+.end
+
+.model d44
+.inputs x0 x1 x2 x3 x4 x5 x7 \
+        s2 \
+        s2.next \
+       
+.outputs d44_0
+.names t203_0 d44_0
+1 1
+.names t204_0 t205_0 x2 t206_0 x4 x5 x7 t207_0 t208_0 t203_0
+111111111 1
+.names x0 t204_0
+0 1
+.names x1 t205_0
+0 1
+.names x3 t206_0
+0 1
+.names s2 t207_0
+0 1
+.names s2.next t208_0
+0 1
+.end
+
+.model d45
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s2 \
+        s2.next \
+       
+.outputs d45_0
+.names t209_0 d45_0
+1 1
+.names t210_0 t211_0 x2 x3 x4 t212_0 x6 t213_0 t214_0 t215_0 t209_0
+1111111111 1
+.names x0 t210_0
+0 1
+.names x1 t211_0
+0 1
+.names x5 t212_0
+0 1
+.names x7 t213_0
+0 1
+.names s2 t214_0
+0 1
+.names s2.next t215_0
+0 1
+.end
+
+.model d46
+.inputs x0 x1 x2 x3 x4 x5 x6 \
+        s2 \
+        s2.next \
+       
+.outputs d46_0
+.names t216_0 d46_0
+1 1
+.names t217_0 t218_0 x2 t219_0 x4 x5 x6 t220_0 t221_0 t216_0
+111111111 1
+.names x0 t217_0
+0 1
+.names x1 t218_0
+0 1
+.names x3 t219_0
+0 1
+.names s2 t220_0
+0 1
+.names s2.next t221_0
+0 1
+.end
+
+.model d47
+.inputs x0 x1 x2 x3 x4 x5 x6 \
+        s2 \
+        s2.next \
+       
+.outputs d47_0
+.names t222_0 d47_0
+1 1
+.names t223_0 x1 t224_0 x3 t225_0 t226_0 x6 t227_0 t228_0 t222_0
+111111111 1
+.names x0 t223_0
+0 1
+.names x2 t224_0
+0 1
+.names x4 t225_0
+0 1
+.names x5 t226_0
+0 1
+.names s2 t227_0
+0 1
+.names s2.next t228_0
+0 1
+.end
+
+.model d48
+.inputs x0 x1 x2 x3 x4 x5 x6 \
+        s2 \
+        s2.next \
+       
+.outputs d48_0
+.names t229_0 d48_0
+1 1
+.names t230_0 x1 t231_0 t232_0 t233_0 t234_0 t235_0 t236_0 t237_0 t229_0
+111111111 1
+.names x0 t230_0
+0 1
+.names x2 t231_0
+0 1
+.names x3 t232_0
+0 1
+.names x4 t233_0
+0 1
+.names x5 t234_0
+0 1
+.names x6 t235_0
+0 1
+.names s2 t236_0
+0 1
+.names s2.next t237_0
+0 1
+.end
+
+.model d49
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s2 \
+        s2.next \
+       
+.outputs d49_0
+.names t238_0 d49_0
+1 1
+.names t239_0 t240_0 x2 t241_0 t242_0 t243_0 t244_0 t245_0 t246_0 t247_0 t238_0
+1111111111 1
+.names x0 t239_0
+0 1
+.names x1 t240_0
+0 1
+.names x3 t241_0
+0 1
+.names x4 t242_0
+0 1
+.names x5 t243_0
+0 1
+.names x6 t244_0
+0 1
+.names x7 t245_0
+0 1
+.names s2 t246_0
+0 1
+.names s2.next t247_0
+0 1
+.end
+
+.model d50
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s2 \
+        s2.next \
+       
+.outputs d50_0
+.names t195_0 d50_0
+1 1
+.names d43_0 d44_0 d45_0 d46_0 d47_0 d48_0 d49_0 t195_0
+1------ 1
+-1----- 1
+--1---- 1
+---1--- 1
+----1-- 1
+-----1- 1
+------1 1
+.subckt d43 \
+        x0=x0 x1=x1 x2=x2 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s2=s2 \
+        s2.next=s2.next \
+        d43_0=d43_0
+.subckt d44 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x7=x7 \
+        s2=s2 \
+        s2.next=s2.next \
+        d44_0=d44_0
+.subckt d45 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s2=s2 \
+        s2.next=s2.next \
+        d45_0=d45_0
+.subckt d46 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 \
+        s2=s2 \
+        s2.next=s2.next \
+        d46_0=d46_0
+.subckt d47 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 \
+        s2=s2 \
+        s2.next=s2.next \
+        d47_0=d47_0
+.subckt d48 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 \
+        s2=s2 \
+        s2.next=s2.next \
+        d48_0=d48_0
+.subckt d49 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s2=s2 \
+        s2.next=s2.next \
+        d49_0=d49_0
+.end
+
+.model d51
+.inputs s2 \
+       
+.outputs d51_0
+.names t305_0 d51_0
+1 1
+.names s2 t305_0
+0 1
+.end
+
+.model d52
+.inputs s2 s3 \
+       
+.outputs d52_0
+.names t366_0 d52_0
+1 1
+.names t367_0 d42_0 t366_0
+11 1
+.names s3 t367_0
+0 1
+.subckt d42 \
+        s2=s2 \
+        d42_0=d42_0
+.end
+
+.model d53
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s2 s3 \
+        s2.next s3.next \
+       
+.outputs d53_0
+.names t190_0 d53_0
+1 1
+.names t191_0 t192_0 t193_0 t194_0 d50_0 t190_0
+11111 1
+.names s3 t191_0
+0 1
+.names s3.next t192_0
+0 1
+.names leftAngle_0 t193_0
+0 1
+.subckt leftAngle \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        leftAngle_0=leftAngle_0
+.names rightAngle_0 t194_0
+0 1
+.subckt rightAngle \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        rightAngle_0=rightAngle_0
+.subckt d50 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s2=s2 \
+        s2.next=s2.next \
+        d50_0=d50_0
+.end
+
+.model d54
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s2 s3 \
+        s2.next s3.next \
+       
+.outputs d54_0
+.names t248_0 d54_0
+1 1
+.names s3 s3.next t249_0 t250_0 d40_0 t248_0
+11111 1
+.names leftAngle_0 t249_0
+0 1
+.subckt leftAngle \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        leftAngle_0=leftAngle_0
+.names rightAngle_0 t250_0
+0 1
+.subckt rightAngle \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        rightAngle_0=rightAngle_0
+.subckt d40 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s2=s2 \
+        s2.next=s2.next \
+        d40_0=d40_0
+.end
+
+.model d55
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s2 s3 \
+        s2.next s3.next \
+       
+.outputs d55_0
+.names t303_0 d55_0
+1 1
+.names t304_0 s3.next leftAngle_0 d51_0 t306_0 t303_0
+11111 1
+.names s3 t304_0
+0 1
+.subckt leftAngle \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        leftAngle_0=leftAngle_0
+.subckt d51 \
+        s2=s2 \
+        d51_0=d51_0
+# PARAM
+.subckt d27 \
+        s2=s2.next \
+        d27_0=t306_0
+.end
+
+.model d56
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s2 s3 \
+        s2.next s3.next \
+       
+.outputs d56_0
+.names t308_0 d56_0
+1 1
+.names s3 t309_0 rightAngle_0 d41_0 t310_0 t308_0
+11111 1
+.names s3.next t309_0
+0 1
+.subckt rightAngle \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        rightAngle_0=rightAngle_0
+.subckt d41 \
+        s2=s2 \
+        d41_0=d41_0
+# PARAM
+.subckt d42 \
+        s2=s2.next \
+        d42_0=t310_0
+.end
+
+.model d57
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s2 s3 \
+        s2.next s3.next \
+       
+.outputs d57_0
+.names t189_0 d57_0
+1 1
+.names d53_0 d54_0 d55_0 d56_0 t189_0
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.subckt d53 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s2=s2 s3=s3 \
+        s2.next=s2.next s3.next=s3.next \
+        d53_0=d53_0
+.subckt d54 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s2=s2 s3=s3 \
+        s2.next=s2.next s3.next=s3.next \
+        d54_0=d54_0
+.subckt d55 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s2=s2 s3=s3 \
+        s2.next=s2.next s3.next=s3.next \
+        d55_0=d55_0
+.subckt d56 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s2=s2 s3=s3 \
+        s2.next=s2.next s3.next=s3.next \
+        d56_0=d56_0
+.end
+
+.model d58
+.inputs s2 s3 \
+       
+.outputs d58_0
+.names t423_0 d58_0
+1 1
+.names t424_0 d51_0 t423_0
+11 1
+.names s3 t424_0
+0 1
+.subckt d51 \
+        s2=s2 \
+        d51_0=d51_0
+.end
+
+.model d59
+.inputs s0 s1 s2 s3 \
+       
+.outputs d59_0
+.names t362_0 d59_0
+1 1
+.names d21_0 d52_0 t362_0
+11 1
+.subckt d21 \
+        s0=s0 s1=s1 \
+        d21_0=d21_0
+.subckt d52 \
+        s2=s2 s3=s3 \
+        d52_0=d52_0
+.end
+
+.model d60
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d60_0
+.names t136_0 d60_0
+1 1
+.names d25_0 t184_0 t136_0
+1- 1
+-1 1
+.subckt d25 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d25_0=d25_0
+.names epsilon_0 t185_0 t186_0 t187_0 t184_0
+1111 1
+.subckt epsilon \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        epsilon_0=epsilon_0
+.names s0.next s0 t185_0
+00 1
+11 1
+.names s1.next s1 t186_0
+00 1
+11 1
+.subckt 9bEQ \
+        a8=n0.next_8 a7=n0.next_7 a6=n0.next_6 a5=n0.next_5 a4=n0.next_4 a3=n0.next_3 a2=n0.next_2 a1=n0.next_1 a0=n0.next_0 \
+        b8=n0_8 b7=n0_7 b6=n0_6 b5=n0_5 b4=n0_4 b3=n0_3 b2=n0_2 b1=n0_1 b0=n0_0 \
+        out=t187_0
+.end
+
+.model d61
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s2 s3 \
+        s2.next s3.next \
+       
+.outputs d61_0
+.names t188_0 d61_0
+1 1
+.names d57_0 t312_0 t188_0
+1- 1
+-1 1
+.subckt d57 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s2=s2 s3=s3 \
+        s2.next=s2.next s3.next=s3.next \
+        d57_0=d57_0
+.names epsilon_0 t313_0 t314_0 t312_0
+111 1
+.subckt epsilon \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        epsilon_0=epsilon_0
+.names s2.next s2 t313_0
+00 1
+11 1
+.names s3.next s3 t314_0
+00 1
+11 1
+.end
+
+.model d62
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 s3 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next s2.next s3.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d62_0
+.names t135_0 d62_0
+1 1
+.names d60_0 d61_0 t135_0
+11 1
+.subckt d60 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d60_0=d60_0
+.subckt d61 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s2=s2 s3=s3 \
+        s2.next=s2.next s3.next=s3.next \
+        d61_0=d61_0
+.end
+
+.model d63
+.inputs s0 s1 s2 s3 \
+       
+.outputs d63_0
+.names t419_0 d63_0
+1 1
+.names d26_0 d58_0 t419_0
+11 1
+.subckt d26 \
+        s0=s0 s1=s1 \
+        d26_0=d26_0
+.subckt d58 \
+        s2=s2 s3=s3 \
+        d58_0=d58_0
+.end
+
+.model d64
+.inputs s4 \
+       
+.outputs d64_0
+.names t317_0 d64_0
+1 1
+.names s4 t317_0
+0 1
+.end
+
+.model d65
+.inputs
+.outputs d65_0
+.names const0 d65_0
+1 1
+.names const0
+.end
+
+.model d66
+.inputs s4 \
+       
+.outputs d66_0
+.names t342_0 d66_0
+1 1
+.names s4 t342_0
+0 1
+.end
+
+.model d67
+.inputs s0 s1 s2 s3 s4 s5 \
+       
+.outputs d67_0
+.names t360_0 d67_0
+1 1
+.names t361_0 d59_0 d64_0 t360_0
+111 1
+.names s5 t361_0
+0 1
+.subckt d59 \
+        s0=s0 s1=s1 s2=s2 s3=s3 \
+        d59_0=d59_0
+.subckt d64 \
+        s4=s4 \
+        d64_0=d64_0
+.end
+
+.model d68
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 s3 s4 s5 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next s2.next s3.next s4.next s5.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d68_0
+.names t132_0 d68_0
+1 1
+.names t133_0 t134_0 d62_0 t315_0 t316_0 d64_0 t318_0 t132_0
+1111111 1
+.names s1 t133_0
+0 1
+.names s1.next t134_0
+0 1
+.subckt d62 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 s3=s3 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d62_0=d62_0
+.names s5 t315_0
+0 1
+.names s5.next t316_0
+0 1
+.subckt d64 \
+        s4=s4 \
+        d64_0=d64_0
+# PARAM
+.subckt d64 \
+        s4=s4.next \
+        d64_0=t318_0
+.end
+
+.model d69
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 s3 s4 s5 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next s2.next s3.next s4.next s5.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d69_0
+.names t319_0 d69_0
+1 1
+.names t320_0 t321_0 epsilon_0 t322_0 t323_0 t324_0 t325_0 t326_0 t327_0 s5.next d64_0 t328_0 t319_0
+111111111111 1
+.names s1 t320_0
+0 1
+.names s1.next t321_0
+0 1
+.subckt epsilon \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        epsilon_0=epsilon_0
+.names s0.next s0 t322_0
+00 1
+11 1
+.names s1.next s1 t323_0
+00 1
+11 1
+.names s2.next s2 t324_0
+00 1
+11 1
+.names s3.next s3 t325_0
+00 1
+11 1
+.subckt 9bEQ \
+        a8=n0.next_8 a7=n0.next_7 a6=n0.next_6 a5=n0.next_5 a4=n0.next_4 a3=n0.next_3 a2=n0.next_2 a1=n0.next_1 a0=n0.next_0 \
+        b8=n0_8 b7=n0_7 b6=n0_6 b5=n0_5 b4=n0_4 b3=n0_3 b2=n0_2 b1=n0_1 b0=n0_0 \
+        out=t326_0
+.names s5 t327_0
+0 1
+.subckt d64 \
+        s4=s4 \
+        d64_0=d64_0
+# PARAM
+.subckt d64 \
+        s4=s4.next \
+        d64_0=t328_0
+.end
+
+.model d70
+.inputs s0 s1 s2 s3 s5 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next s2.next s3.next s5.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d70_0
+.names t329_0 d70_0
+1 1
+.names t330_0 t331_0 t332_0 t333_0 t334_0 t335_0 t336_0 s5 s5.next d65_0 t329_0
+1111111111 1
+.names s1 t330_0
+0 1
+.names s1.next t331_0
+0 1
+.names s0.next s0 t332_0
+00 1
+11 1
+.names s1.next s1 t333_0
+00 1
+11 1
+.names s2.next s2 t334_0
+00 1
+11 1
+.names s3.next s3 t335_0
+00 1
+11 1
+.subckt 9bEQ \
+        a8=n0.next_8 a7=n0.next_7 a6=n0.next_6 a5=n0.next_5 a4=n0.next_4 a3=n0.next_3 a2=n0.next_2 a1=n0.next_1 a0=n0.next_0 \
+        b8=n0_8 b7=n0_7 b6=n0_6 b5=n0_5 b4=n0_4 b3=n0_3 b2=n0_2 b1=n0_1 b0=n0_0 \
+        out=t336_0
+.subckt d65 \
+        d65_0=d65_0
+.end
+
+.model d71
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 s3 s4 s5 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next s2.next s3.next s4.next s5.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d71_0
+.names t337_0 d71_0
+1 1
+.names t338_0 s1.next epsilon_0 t339_0 s5 t340_0 t341_0 d66_0 t337_0
+11111111 1
+.names s1 t338_0
+0 1
+.subckt epsilon \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        epsilon_0=epsilon_0
+# PARAM
+.subckt d62 \
+        x0=const1 x1=const0 x2=const0 x3=const0 x4=const0 x5=const0 x6=const0 x7=const1 \
+        s0=s0 s1=s1 s2=s2 s3=s3 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d62_0=t339_0
+.names s5.next t340_0
+0 1
+# PARAM
+.subckt d64 \
+        s4=s4.next \
+        d64_0=t341_0
+.subckt d66 \
+        s4=s4 \
+        d66_0=d66_0
+.names const1
+1
+.names const0
+.end
+
+.model d72
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        y40 y41 y42 y43 y44 y45 y46 y47 \
+        s0 s1 s2 s3 s4 s5 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next s2.next s3.next s4.next s5.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d72_0
+.names t343_0 d72_0
+1 1
+.names s1 s1.next epsilon_0 t344_0 t345_0 t346_0 d64_0 t347_0 t343_0
+11111111 1
+.subckt epsilon \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        epsilon_0=epsilon_0
+# PARAM
+.subckt d62 \
+        x0=y40 x1=y41 x2=y42 x3=y43 x4=y44 x5=y45 x6=y46 x7=y47 \
+        \
+        s0=s0 s1=s1 s2=s2 s3=s3 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d62_0=t344_0
+.names s5 t345_0
+0 1
+.names s5.next t346_0
+0 1
+.subckt d64 \
+        s4=s4 \
+        d64_0=d64_0
+# PARAM
+.subckt d64 \
+        s4=s4.next \
+        d64_0=t347_0
+.end
+
+.model d73
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 s3 s4 s5 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next s2.next s3.next s4.next s5.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d73_0
+.names t348_0 d73_0
+1 1
+.names s1 t349_0 epsilon_0 t350_0 t351_0 t352_0 d64_0 t353_0 t348_0
+11111111 1
+.names s1.next t349_0
+0 1
+.subckt epsilon \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        epsilon_0=epsilon_0
+# PARAM
+.subckt d62 \
+        x0=const1 x1=const0 x2=const0 x3=const0 x4=const0 x5=const0 x6=const1 x7=const0 \
+        s0=s0 s1=s1 s2=s2 s3=s3 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d62_0=t350_0
+.names s5 t351_0
+0 1
+.names s5.next t352_0
+0 1
+.subckt d64 \
+        s4=s4 \
+        d64_0=d64_0
+# PARAM
+.subckt d64 \
+        s4=s4.next \
+        d64_0=t353_0
+.names const1
+1
+.names const0
+.end
+
+.model d74
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        y40 y41 y42 y43 y44 y45 y46 y47 \
+        s0 s1 s2 s3 s4 s5 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next s2.next s3.next s4.next s5.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d74_0
+.names t131_0 d74_0
+1 1
+.names d68_0 d69_0 d70_0 d71_0 d72_0 d73_0 t131_0
+1----- 1
+-1---- 1
+--1--- 1
+---1-- 1
+----1- 1
+-----1 1
+.subckt d68 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s4=s4 s5=s5 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next s4.next=s4.next s5.next=s5.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d68_0=d68_0
+.subckt d69 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s4=s4 s5=s5 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next s4.next=s4.next s5.next=s5.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d69_0=d69_0
+.subckt d70 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s5=s5 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next s5.next=s5.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d70_0=d70_0
+.subckt d71 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s4=s4 s5=s5 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next s4.next=s4.next s5.next=s5.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d71_0=d71_0
+.subckt d72 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        y40=y40 y41=y41 y42=y42 y43=y43 y44=y44 y45=y45 y46=y46 y47=y47 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s4=s4 s5=s5 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next s4.next=s4.next s5.next=s5.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d72_0=d72_0
+.subckt d73 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s4=s4 s5=s5 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next s4.next=s4.next s5.next=s5.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d73_0=d73_0
+.end
+
+.model d75
+.inputs s0 s1 s2 s3 s4 s5 \
+       
+.outputs d75_0
+.names t417_0 d75_0
+1 1
+.names t418_0 d63_0 d64_0 t417_0
+111 1
+.names s5 t418_0
+0 1
+.subckt d63 \
+        s0=s0 s1=s1 s2=s2 s3=s3 \
+        d63_0=d63_0
+.subckt d64 \
+        s4=s4 \
+        d64_0=d64_0
+.end
+
+.model d76
+.inputs s0 s1 s2 s3 s6 \
+       
+.outputs d76_0
+.names t764_0 d76_0
+1 1
+.names t765_0 d3_0 t764_0
+11 1
+.names s6 t765_0
+0 1
+.subckt d3 \
+        s0=s0 s1=s1 s2=s2 s3=s3 \
+        d3_0=d3_0
+.end
+
+.model d77
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 s3 s6 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next s2.next s3.next s6.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d77_0
+.names t29_0 d77_0
+1 1
+.names t30_0 t31_0 d13_0 t129_0 t29_0
+1111 1
+.names s6 t30_0
+0 1
+.names s6.next t31_0
+0 1
+.subckt d13 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 s3=s3 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next \
+        d13_0=d13_0
+.subckt 9bEQ \
+        a8=n0.next_8 a7=n0.next_7 a6=n0.next_6 a5=n0.next_5 a4=n0.next_4 a3=n0.next_3 a2=n0.next_2 a1=n0.next_1 a0=n0.next_0 \
+        b8=n0_8 b7=n0_7 b6=n0_6 b5=n0_5 b4=n0_4 b3=n0_3 b2=n0_2 b1=n0_1 b0=n0_0 \
+        out=t129_0
+.end
+
+.model d78
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        y40 y41 y42 y43 y44 y45 y46 y47 \
+        s0 s1 s2 s3 s4 s5 s6 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next s2.next s3.next s4.next s5.next s6.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d78_0
+.names t130_0 d78_0
+1 1
+.names s6 s6.next d74_0 t130_0
+111 1
+.subckt d74 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        y40=y40 y41=y41 y42=y42 y43=y43 y44=y44 y45=y45 y46=y46 y47=y47 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s4=s4 s5=s5 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next s4.next=s4.next s5.next=s5.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d74_0=d74_0
+.end
+
+.model d79
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 s3 s6 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next s2.next s3.next s4.next s5.next s6.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d79_0
+.names t354_0 d79_0
+1 1
+.names epsilon_0 t355_0 s6.next d14_0 t359_0 t368_0 t354_0
+111111 1
+.subckt epsilon \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        epsilon_0=epsilon_0
+.names s6 t355_0
+0 1
+.subckt d14 \
+        s0=s0 s1=s1 s2=s2 s3=s3 \
+        d14_0=d14_0
+# PARAM
+.subckt d67 \
+        s0=s0.next s1=s1.next s2=s2.next s3=s3.next s4=s4.next s5=s5.next \
+        d67_0=t359_0
+.subckt 9bEQ \
+        a8=n0.next_8 a7=n0.next_7 a6=n0.next_6 a5=n0.next_5 a4=n0.next_4 a3=n0.next_3 a2=n0.next_2 a1=n0.next_1 a0=n0.next_0 \
+        b8=n0_8 b7=n0_7 b6=n0_6 b5=n0_5 b4=n0_4 b3=n0_3 b2=n0_2 b1=n0_1 b0=n0_0 \
+        out=t368_0
+.end
+
+.model d80
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        y40 y41 y42 y43 y44 y45 y46 y47 \
+        s0 s1 s2 s3 s4 s5 s6 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next s2.next s3.next s4.next s5.next s6.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d80_0
+.names t28_0 d80_0
+1 1
+.names d77_0 d78_0 d79_0 t28_0
+1-- 1
+-1- 1
+--1 1
+.subckt d77 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s6=s6 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next s6.next=s6.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d77_0=d77_0
+.subckt d78 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        y40=y40 y41=y41 y42=y42 y43=y43 y44=y44 y45=y45 y46=y46 y47=y47 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s4=s4 s5=s5 s6=s6 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next s4.next=s4.next s5.next=s5.next s6.next=s6.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d78_0=d78_0
+.subckt d79 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s6=s6 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next s4.next=s4.next s5.next=s5.next s6.next=s6.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d79_0=d79_0
+.end
+
+.model d81
+.inputs s0 s1 s2 s3 s4 s5 s6 \
+       
+.outputs d81_0
+.names t416_0 d81_0
+1 1
+.names s6 d75_0 t416_0
+11 1
+.subckt d75 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s4=s4 s5=s5 \
+        d75_0=d75_0
+.end
+
+.model d82
+.inputs s0 s1 s2 \
+       
+.outputs d82_0
+.names t426_0 d82_0
+1 1
+.names t427_0 s1 t428_0 t426_0
+111 1
+.names s0 t427_0
+0 1
+.names s2 t428_0
+0 1
+.end
+
+.model d83
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 \
+        s0.next s1.next s2.next \
+       
+.outputs d83_0
+.names t371_0 d83_0
+1 1
+.names t372_0 t373_0 x2 t374_0 x4 x5 x6 x7 s0 t375_0 s2 t376_0 t377_0 t378_0 t371_0
+11111111111111 1
+.names x0 t372_0
+0 1
+.names x1 t373_0
+0 1
+.names x3 t374_0
+0 1
+.names s1 t375_0
+0 1
+.names s0.next t376_0
+0 1
+.names s1.next t377_0
+0 1
+.names s2.next t378_0
+0 1
+.end
+
+.model d84
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 \
+        s0.next s1.next s2.next \
+       
+.outputs d84_0
+.names t379_0 d84_0
+1 1
+.names t380_0 x1 x2 t381_0 t382_0 x5 t383_0 t384_0 s0 t385_0 t386_0 t387_0 s1.next s2.next t379_0
+11111111111111 1
+.names x0 t380_0
+0 1
+.names x3 t381_0
+0 1
+.names x4 t382_0
+0 1
+.names x6 t383_0
+0 1
+.names x7 t384_0
+0 1
+.names s1 t385_0
+0 1
+.names s2 t386_0
+0 1
+.names s0.next t387_0
+0 1
+.end
+
+.model d85
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 \
+        s0.next s1.next s2.next \
+       
+.outputs d85_0
+.names t388_0 d85_0
+1 1
+.names t389_0 x1 x2 x3 t390_0 x5 t391_0 t392_0 t393_0 t394_0 t395_0 s0.next t396_0 t397_0 t388_0
+11111111111111 1
+.names x0 t389_0
+0 1
+.names x4 t390_0
+0 1
+.names x6 t391_0
+0 1
+.names x7 t392_0
+0 1
+.names s0 t393_0
+0 1
+.names s1 t394_0
+0 1
+.names s2 t395_0
+0 1
+.names s1.next t396_0
+0 1
+.names s2.next t397_0
+0 1
+.end
+
+.model d86
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 \
+        s0.next s1.next s2.next \
+       
+.outputs d86_0
+.names t398_0 d86_0
+1 1
+.names t399_0 t400_0 x2 x3 x4 x5 x6 t401_0 t402_0 s1 s2 t403_0 t404_0 s2.next t398_0
+11111111111111 1
+.names x0 t399_0
+0 1
+.names x1 t400_0
+0 1
+.names x7 t401_0
+0 1
+.names s0 t402_0
+0 1
+.names s0.next t403_0
+0 1
+.names s1.next t404_0
+0 1
+.end
+
+.model d87
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 \
+        s0.next s1.next s2.next \
+       
+.outputs d87_0
+.names t405_0 d87_0
+1 1
+.names t406_0 t407_0 x2 x3 x4 x5 t408_0 t409_0 t410_0 s1 t411_0 s0.next t412_0 s2.next t405_0
+11111111111111 1
+.names x0 t406_0
+0 1
+.names x1 t407_0
+0 1
+.names x6 t408_0
+0 1
+.names x7 t409_0
+0 1
+.names s0 t410_0
+0 1
+.names s2 t411_0
+0 1
+.names s1.next t412_0
+0 1
+.end
+
+.model d88
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 \
+        s0.next s1.next s2.next \
+       
+.outputs d88_0
+.names t370_0 d88_0
+1 1
+.names d83_0 d84_0 d85_0 d86_0 d87_0 t370_0
+1---- 1
+-1--- 1
+--1-- 1
+---1- 1
+----1 1
+.subckt d83 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next \
+        d83_0=d83_0
+.subckt d84 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next \
+        d84_0=d84_0
+.subckt d85 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next \
+        d85_0=d85_0
+.subckt d86 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next \
+        d86_0=d86_0
+.subckt d87 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next \
+        d87_0=d87_0
+.end
+
+.model d89
+.inputs s0 s1 s2 \
+       
+.outputs d89_0
+.names t4_0 d89_0
+1 1
+.names t5_0 t6_0 s2 t4_0
+111 1
+.names s0 t5_0
+0 1
+.names s1 t6_0
+0 1
+.end
+
+.model d90
+.inputs s0 s1 s2 s3 s6 s7 \
+       
+.outputs d90_0
+.names t762_0 d90_0
+1 1
+.names t763_0 d76_0 t762_0
+11 1
+.names s7 t763_0
+0 1
+.subckt d76 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s6=s6 \
+        d76_0=d76_0
+.end
+
+.model d91
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        y40 y41 y42 y43 y44 y45 y46 y47 \
+        s0 s1 s2 s3 s4 s5 s6 s7 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next s2.next s3.next s4.next s5.next s6.next s7.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d91_0
+.names t25_0 d91_0
+1 1
+.names t26_0 t27_0 d80_0 t25_0
+111 1
+.names s7 t26_0
+0 1
+.names s7.next t27_0
+0 1
+.subckt d80 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        y40=y40 y41=y41 y42=y42 y43=y43 y44=y44 y45=y45 y46=y46 y47=y47 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s4=s4 s5=s5 s6=s6 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next s4.next=s4.next s5.next=s5.next s6.next=s6.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d80_0=d80_0
+.end
+
+.model d92
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 s7 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next s2.next s7.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d92_0
+.names t369_0 d92_0
+1 1
+.names s7 s7.next d88_0 t413_0 t369_0
+1111 1
+.subckt d88 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next \
+        d88_0=d88_0
+.subckt 9bEQ \
+        a8=n0.next_8 a7=n0.next_7 a6=n0.next_6 a5=n0.next_5 a4=n0.next_4 a3=n0.next_3 a2=n0.next_2 a1=n0.next_1 a0=n0.next_0 \
+        b8=n0_8 b7=n0_7 b6=n0_6 b5=n0_5 b4=n0_4 b3=n0_3 b2=n0_2 b1=n0_1 b0=n0_0 \
+        out=t413_0
+.end
+
+.model d93
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s1 s2 s3 s4 s5 s6 s7 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next s2.next s7.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d93_0
+.names t414_0 d93_0
+1 1
+.names epsilon_0 t415_0 s7.next d81_0 t425_0 t429_0 t414_0
+111111 1
+.subckt epsilon \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        epsilon_0=epsilon_0
+.names s7 t415_0
+0 1
+.subckt d81 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s4=s4 s5=s5 s6=s6 \
+        d81_0=d81_0
+# PARAM
+.subckt d82 \
+        s0=s0.next s1=s1.next s2=s2.next \
+        d82_0=t425_0
+.subckt 9bEQ \
+        a8=n0.next_8 a7=n0.next_7 a6=n0.next_6 a5=n0.next_5 a4=n0.next_4 a3=n0.next_3 a2=n0.next_2 a1=n0.next_1 a0=n0.next_0 \
+        b8=n0_8 b7=n0_7 b6=n0_6 b5=n0_5 b4=n0_4 b3=n0_3 b2=n0_2 b1=n0_1 b0=n0_0 \
+        out=t429_0
+.end
+
+.model d94
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        y40 y41 y42 y43 y44 y45 y46 y47 \
+        s0 s1 s2 s3 s4 s5 s6 s7 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next s2.next s3.next s4.next s5.next s6.next s7.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d94_0
+.names t24_0 d94_0
+1 1
+.names d91_0 d92_0 d93_0 t24_0
+1-- 1
+-1- 1
+--1 1
+.subckt d91 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        y40=y40 y41=y41 y42=y42 y43=y43 y44=y44 y45=y45 y46=y46 y47=y47 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s4=s4 s5=s5 s6=s6 s7=s7 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next s4.next=s4.next s5.next=s5.next s6.next=s6.next s7.next=s7.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d91_0=d91_0
+.subckt d92 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 s7=s7 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s7.next=s7.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d92_0=d92_0
+.subckt d93 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s4=s4 s5=s5 s6=s6 s7=s7 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s7.next=s7.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d93_0=d93_0
+.end
+
+.model d95
+.inputs s0 s1 s2 s7 \
+       
+.outputs d95_0
+.names t3_0 d95_0
+1 1
+.names s7 d89_0 t3_0
+11 1
+.subckt d89 \
+        s0=s0 s1=s1 s2=s2 \
+        d89_0=d89_0
+.end
+
+.model d96
+.inputs s8 s9 s10 s11 \
+       
+.outputs d96_0
+.names t769_0 d96_0
+1 1
+.names s8 t770_0 s10 s11 t769_0
+1111 1
+.names s9 t770_0
+0 1
+.end
+
+.model d97
+.inputs x0 x4 x6 \
+        s9 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d97_0
+.names t442_0 d97_0
+1 1
+.names t443_0 x4 x6 t444_0 t445_0 s8.next t446_0 s10.next s11.next t442_0
+111111111 1
+.names x0 t443_0
+0 1
+.names s9 t444_0
+0 1
+.names s11 t445_0
+0 1
+.names s9.next t446_0
+0 1
+.end
+
+.model d98
+.inputs x0 x3 x6 \
+        s8 s10 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d98_0
+.names t447_0 d98_0
+1 1
+.names t448_0 t449_0 x6 t450_0 t451_0 t452_0 s8.next t453_0 s10.next s11.next t447_0
+1111111111 1
+.names x0 t448_0
+0 1
+.names x3 t449_0
+0 1
+.names s8 t450_0
+0 1
+.names s10 t451_0
+0 1
+.names s11 t452_0
+0 1
+.names s9.next t453_0
+0 1
+.end
+
+.model d99
+.inputs x0 x3 x7 \
+        s8 s10 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d99_0
+.names t454_0 d99_0
+1 1
+.names t455_0 x3 t456_0 t457_0 t458_0 t459_0 s8.next t460_0 s10.next s11.next t454_0
+1111111111 1
+.names x0 t455_0
+0 1
+.names x7 t456_0
+0 1
+.names s8 t457_0
+0 1
+.names s10 t458_0
+0 1
+.names s11 t459_0
+0 1
+.names s9.next t460_0
+0 1
+.end
+
+.model d100
+.inputs x0 x3 x7 \
+        s8 s10 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d100_0
+.names t461_0 d100_0
+1 1
+.names t462_0 x3 x7 t463_0 s10 s8.next t464_0 s10.next s11.next t461_0
+111111111 1
+.names x0 t462_0
+0 1
+.names s8 t463_0
+0 1
+.names s9.next t464_0
+0 1
+.end
+
+.model d101
+.inputs x0 x3 x4 \
+        s8 s10 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d101_0
+.names t465_0 d101_0
+1 1
+.names t466_0 t467_0 t468_0 t469_0 s10 s11 s8.next t470_0 s10.next s11.next t465_0
+1111111111 1
+.names x0 t466_0
+0 1
+.names x3 t467_0
+0 1
+.names x4 t468_0
+0 1
+.names s8 t469_0
+0 1
+.names s9.next t470_0
+0 1
+.end
+
+.model d102
+.inputs x0 x7 \
+        s8 s10 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d102_0
+.names t471_0 d102_0
+1 1
+.names t472_0 x7 t473_0 s10 s11 s8.next t474_0 s10.next s11.next t471_0
+111111111 1
+.names x0 t472_0
+0 1
+.names s8 t473_0
+0 1
+.names s9.next t474_0
+0 1
+.end
+
+.model d103
+.inputs x0 x1 \
+        s8 s9 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d103_0
+.names t475_0 d103_0
+1 1
+.names t476_0 t477_0 s8 t478_0 s8.next t479_0 s10.next s11.next t475_0
+11111111 1
+.names x0 t476_0
+0 1
+.names x1 t477_0
+0 1
+.names s9 t478_0
+0 1
+.names s9.next t479_0
+0 1
+.end
+
+.model d104
+.inputs x0 x4 x5 x7 \
+        s9 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d104_0
+.names t480_0 d104_0
+1 1
+.names t481_0 x4 x5 x7 t482_0 s8.next t483_0 s10.next s11.next t480_0
+111111111 1
+.names x0 t481_0
+0 1
+.names s9 t482_0
+0 1
+.names s9.next t483_0
+0 1
+.end
+
+.model d105
+.inputs x0 x5 x7 \
+        s8 s9 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d105_0
+.names t484_0 d105_0
+1 1
+.names t485_0 t486_0 t487_0 t488_0 s9 t489_0 s8.next t490_0 s10.next s11.next t484_0
+1111111111 1
+.names x0 t485_0
+0 1
+.names x5 t486_0
+0 1
+.names x7 t487_0
+0 1
+.names s8 t488_0
+0 1
+.names s11 t489_0
+0 1
+.names s9.next t490_0
+0 1
+.end
+
+.model d106
+.inputs x0 x7 \
+        s8 s9 s10 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d106_0
+.names t491_0 d106_0
+1 1
+.names t492_0 x7 s8 t493_0 t494_0 s8.next t495_0 s10.next s11.next t491_0
+111111111 1
+.names x0 t492_0
+0 1
+.names s9 t493_0
+0 1
+.names s10 t494_0
+0 1
+.names s9.next t495_0
+0 1
+.end
+
+.model d107
+.inputs x0 x5 x6 \
+        s9 s10 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d107_0
+.names t496_0 d107_0
+1 1
+.names t497_0 t498_0 x6 t499_0 t500_0 s8.next t501_0 s10.next s11.next t496_0
+111111111 1
+.names x0 t497_0
+0 1
+.names x5 t498_0
+0 1
+.names s9 t499_0
+0 1
+.names s10 t500_0
+0 1
+.names s9.next t501_0
+0 1
+.end
+
+.model d108
+.inputs x0 x4 x7 \
+        s8 s9 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d108_0
+.names t502_0 d108_0
+1 1
+.names t503_0 x4 x7 t504_0 s9 t505_0 s8.next t506_0 s10.next s11.next t502_0
+1111111111 1
+.names x0 t503_0
+0 1
+.names s8 t504_0
+0 1
+.names s11 t505_0
+0 1
+.names s9.next t506_0
+0 1
+.end
+
+.model d109
+.inputs x0 x4 x5 x6 x7 \
+        s9 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d109_0
+.names t507_0 d109_0
+1 1
+.names t508_0 x4 t509_0 t510_0 t511_0 t512_0 s8.next t513_0 s10.next s11.next t507_0
+1111111111 1
+.names x0 t508_0
+0 1
+.names x5 t509_0
+0 1
+.names x6 t510_0
+0 1
+.names x7 t511_0
+0 1
+.names s9 t512_0
+0 1
+.names s9.next t513_0
+0 1
+.end
+
+.model d110
+.inputs x0 x3 x6 \
+        s9 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d110_0
+.names t514_0 d110_0
+1 1
+.names t515_0 x3 t516_0 t517_0 t518_0 s8.next t519_0 s10.next s11.next t514_0
+111111111 1
+.names x0 t515_0
+0 1
+.names x6 t516_0
+0 1
+.names s9 t517_0
+0 1
+.names s11 t518_0
+0 1
+.names s9.next t519_0
+0 1
+.end
+
+.model d111
+.inputs x0 x3 x4 \
+        s8 s9 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d111_0
+.names t520_0 d111_0
+1 1
+.names t521_0 t522_0 t523_0 s8 t524_0 s8.next t525_0 s10.next s11.next t520_0
+111111111 1
+.names x0 t521_0
+0 1
+.names x3 t522_0
+0 1
+.names x4 t523_0
+0 1
+.names s9 t524_0
+0 1
+.names s9.next t525_0
+0 1
+.end
+
+.model d112
+.inputs x0 x6 \
+        s8 s9 s10 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d112_0
+.names t526_0 d112_0
+1 1
+.names t527_0 x6 t528_0 s9 s10 s11 s8.next t529_0 s10.next s11.next t526_0
+1111111111 1
+.names x0 t527_0
+0 1
+.names s8 t528_0
+0 1
+.names s9.next t529_0
+0 1
+.end
+
+.model d113
+.inputs x0 x1 x6 \
+        s8 s10 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d113_0
+.names t530_0 d113_0
+1 1
+.names t531_0 t532_0 t533_0 t534_0 s10 s8.next t535_0 s10.next s11.next t530_0
+111111111 1
+.names x0 t531_0
+0 1
+.names x1 t532_0
+0 1
+.names x6 t533_0
+0 1
+.names s8 t534_0
+0 1
+.names s9.next t535_0
+0 1
+.end
+
+.model d114
+.inputs x0 x4 x7 \
+        s8 s9 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d114_0
+.names t536_0 d114_0
+1 1
+.names t537_0 t538_0 t539_0 t540_0 t541_0 s11 s8.next t542_0 s10.next s11.next t536_0
+1111111111 1
+.names x0 t537_0
+0 1
+.names x4 t538_0
+0 1
+.names x7 t539_0
+0 1
+.names s8 t540_0
+0 1
+.names s9 t541_0
+0 1
+.names s9.next t542_0
+0 1
+.end
+
+.model d115
+.inputs x0 x5 x6 \
+        s8 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d115_0
+.names t543_0 d115_0
+1 1
+.names t544_0 x5 x6 t545_0 t546_0 s8.next t547_0 s10.next s11.next t543_0
+111111111 1
+.names x0 t544_0
+0 1
+.names s8 t545_0
+0 1
+.names s11 t546_0
+0 1
+.names s9.next t547_0
+0 1
+.end
+
+.model d116
+.inputs x0 x1 x3 x4 \
+        s8 s10 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d116_0
+.names t548_0 d116_0
+1 1
+.names t549_0 x1 x3 x4 t550_0 s10 s8.next t551_0 s10.next s11.next t548_0
+1111111111 1
+.names x0 t549_0
+0 1
+.names s8 t550_0
+0 1
+.names s9.next t551_0
+0 1
+.end
+
+.model d117
+.inputs x0 x4 x6 \
+        s8 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d117_0
+.names t552_0 d117_0
+1 1
+.names t553_0 t554_0 t555_0 t556_0 t557_0 s8.next t558_0 s10.next s11.next t552_0
+111111111 1
+.names x0 t553_0
+0 1
+.names x4 t554_0
+0 1
+.names x6 t555_0
+0 1
+.names s8 t556_0
+0 1
+.names s11 t557_0
+0 1
+.names s9.next t558_0
+0 1
+.end
+
+.model d118
+.inputs x0 x5 x6 \
+        s8 s10 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d118_0
+.names t559_0 d118_0
+1 1
+.names t560_0 t561_0 t562_0 t563_0 s10 s8.next t564_0 s10.next s11.next t559_0
+111111111 1
+.names x0 t560_0
+0 1
+.names x5 t561_0
+0 1
+.names x6 t562_0
+0 1
+.names s8 t563_0
+0 1
+.names s9.next t564_0
+0 1
+.end
+
+.model d119
+.inputs x0 x5 x7 \
+        s9 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d119_0
+.names t565_0 d119_0
+1 1
+.names t566_0 t567_0 x7 t568_0 s11 s8.next t569_0 s10.next s11.next t565_0
+111111111 1
+.names x0 t566_0
+0 1
+.names x5 t567_0
+0 1
+.names s9 t568_0
+0 1
+.names s9.next t569_0
+0 1
+.end
+
+.model d120
+.inputs x0 x3 x5 \
+        s9 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d120_0
+.names t570_0 d120_0
+1 1
+.names t571_0 x3 x5 t572_0 s11 s8.next t573_0 s10.next s11.next t570_0
+111111111 1
+.names x0 t571_0
+0 1
+.names s9 t572_0
+0 1
+.names s9.next t573_0
+0 1
+.end
+
+.model d121
+.inputs x0 x3 \
+        s8 s9 s10 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d121_0
+.names t574_0 d121_0
+1 1
+.names t575_0 x3 s8 t576_0 s10 s8.next t577_0 s10.next s11.next t574_0
+111111111 1
+.names x0 t575_0
+0 1
+.names s9 t576_0
+0 1
+.names s9.next t577_0
+0 1
+.end
+
+.model d122
+.inputs x0 x1 \
+        s9 s10 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d122_0
+.names t578_0 d122_0
+1 1
+.names t579_0 t580_0 t581_0 t582_0 s8.next t583_0 s10.next s11.next t578_0
+11111111 1
+.names x0 t579_0
+0 1
+.names x1 t580_0
+0 1
+.names s9 t581_0
+0 1
+.names s10 t582_0
+0 1
+.names s9.next t583_0
+0 1
+.end
+
+.model d123
+.inputs x0 x3 x6 \
+        s9 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d123_0
+.names t584_0 d123_0
+1 1
+.names t585_0 t586_0 x6 t587_0 s8.next t588_0 s10.next s11.next t584_0
+11111111 1
+.names x0 t585_0
+0 1
+.names x3 t586_0
+0 1
+.names s9 t587_0
+0 1
+.names s9.next t588_0
+0 1
+.end
+
+.model d124
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s8 s9 s10 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d124_0
+.names t589_0 d124_0
+1 1
+.names t590_0 x1 x2 t591_0 t592_0 x5 t593_0 x7 t594_0 t595_0 t596_0 s11 t597_0 s9.next t598_0 t599_0 t589_0
+1111111111111111 1
+.names x0 t590_0
+0 1
+.names x3 t591_0
+0 1
+.names x4 t592_0
+0 1
+.names x6 t593_0
+0 1
+.names s8 t594_0
+0 1
+.names s9 t595_0
+0 1
+.names s10 t596_0
+0 1
+.names s8.next t597_0
+0 1
+.names s10.next t598_0
+0 1
+.names s11.next t599_0
+0 1
+.end
+
+.model d125
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s8 s9 s10 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d125_0
+.names t600_0 d125_0
+1 1
+.names t601_0 t602_0 x2 x3 x4 t603_0 x6 t604_0 t605_0 t606_0 s10 s11 t607_0 s9.next t608_0 s11.next t600_0
+1111111111111111 1
+.names x0 t601_0
+0 1
+.names x1 t602_0
+0 1
+.names x5 t603_0
+0 1
+.names x7 t604_0
+0 1
+.names s8 t605_0
+0 1
+.names s9 t606_0
+0 1
+.names s8.next t607_0
+0 1
+.names s10.next t608_0
+0 1
+.end
+
+.model d126
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s8 s9 s10 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d126_0
+.names t609_0 d126_0
+1 1
+.names t610_0 x1 x2 x3 t611_0 t612_0 x6 x7 t613_0 s9 t614_0 t615_0 t616_0 s9.next s10.next t617_0 t609_0
+1111111111111111 1
+.names x0 t610_0
+0 1
+.names x4 t611_0
+0 1
+.names x5 t612_0
+0 1
+.names s8 t613_0
+0 1
+.names s10 t614_0
+0 1
+.names s11 t615_0
+0 1
+.names s8.next t616_0
+0 1
+.names s11.next t617_0
+0 1
+.end
+
+.model d127
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s8 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d127_0
+.names t618_0 d127_0
+1 1
+.names t619_0 x1 x2 t620_0 x4 x5 t621_0 t622_0 t623_0 t624_0 t625_0 t626_0 t627_0 t628_0 t618_0
+11111111111111 1
+.names x0 t619_0
+0 1
+.names x3 t620_0
+0 1
+.names x6 t621_0
+0 1
+.names x7 t622_0
+0 1
+.names s8 t623_0
+0 1
+.names s11 t624_0
+0 1
+.names s8.next t625_0
+0 1
+.names s9.next t626_0
+0 1
+.names s10.next t627_0
+0 1
+.names s11.next t628_0
+0 1
+.end
+
+.model d128
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s8 s10 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d128_0
+.names t629_0 d128_0
+1 1
+.names t630_0 x1 x2 t631_0 x4 x5 t632_0 t633_0 t634_0 s10 t635_0 t636_0 t637_0 t638_0 t629_0
+11111111111111 1
+.names x0 t630_0
+0 1
+.names x3 t631_0
+0 1
+.names x6 t632_0
+0 1
+.names x7 t633_0
+0 1
+.names s8 t634_0
+0 1
+.names s8.next t635_0
+0 1
+.names s9.next t636_0
+0 1
+.names s10.next t637_0
+0 1
+.names s11.next t638_0
+0 1
+.end
+
+.model d129
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s9 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d129_0
+.names t639_0 d129_0
+1 1
+.names t640_0 x1 x2 t641_0 x4 x5 t642_0 t643_0 t644_0 t645_0 t646_0 t647_0 t648_0 t639_0
+1111111111111 1
+.names x0 t640_0
+0 1
+.names x3 t641_0
+0 1
+.names x6 t642_0
+0 1
+.names x7 t643_0
+0 1
+.names s9 t644_0
+0 1
+.names s8.next t645_0
+0 1
+.names s9.next t646_0
+0 1
+.names s10.next t647_0
+0 1
+.names s11.next t648_0
+0 1
+.end
+
+.model d130
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s8 s9 s10 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d130_0
+.names t649_0 d130_0
+1 1
+.names t650_0 x1 x2 x3 t651_0 t652_0 t653_0 t654_0 s8 t655_0 t656_0 s11 t657_0 s9.next s10.next s11.next t649_0
+1111111111111111 1
+.names x0 t650_0
+0 1
+.names x4 t651_0
+0 1
+.names x5 t652_0
+0 1
+.names x6 t653_0
+0 1
+.names x7 t654_0
+0 1
+.names s9 t655_0
+0 1
+.names s10 t656_0
+0 1
+.names s8.next t657_0
+0 1
+.end
+
+.model d131
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s8 s9 s10 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d131_0
+.names t658_0 d131_0
+1 1
+.names t659_0 x1 x2 t660_0 t661_0 t662_0 x6 x7 t663_0 s9 s10 t664_0 t665_0 t666_0 s10.next t667_0 t658_0
+1111111111111111 1
+.names x0 t659_0
+0 1
+.names x3 t660_0
+0 1
+.names x4 t661_0
+0 1
+.names x5 t662_0
+0 1
+.names s8 t663_0
+0 1
+.names s11 t664_0
+0 1
+.names s8.next t665_0
+0 1
+.names s9.next t666_0
+0 1
+.names s11.next t667_0
+0 1
+.end
+
+.model d132
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s8 s9 s10 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d132_0
+.names t668_0 d132_0
+1 1
+.names t669_0 x1 x2 x3 t670_0 x5 x6 t671_0 s8 t672_0 t673_0 t674_0 t675_0 t676_0 t677_0 s11.next t668_0
+1111111111111111 1
+.names x0 t669_0
+0 1
+.names x4 t670_0
+0 1
+.names x7 t671_0
+0 1
+.names s9 t672_0
+0 1
+.names s10 t673_0
+0 1
+.names s11 t674_0
+0 1
+.names s8.next t675_0
+0 1
+.names s9.next t676_0
+0 1
+.names s10.next t677_0
+0 1
+.end
+
+.model d133
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s8 s9 s10 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d133_0
+.names t678_0 d133_0
+1 1
+.names t679_0 x1 x2 t680_0 x4 t681_0 t682_0 x7 t683_0 t684_0 t685_0 t686_0 s8.next t687_0 t688_0 t689_0 t678_0
+1111111111111111 1
+.names x0 t679_0
+0 1
+.names x3 t680_0
+0 1
+.names x5 t681_0
+0 1
+.names x6 t682_0
+0 1
+.names s8 t683_0
+0 1
+.names s9 t684_0
+0 1
+.names s10 t685_0
+0 1
+.names s11 t686_0
+0 1
+.names s9.next t687_0
+0 1
+.names s10.next t688_0
+0 1
+.names s11.next t689_0
+0 1
+.end
+
+.model d134
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s8 s9 s10 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d134_0
+.names t690_0 d134_0
+1 1
+.names t691_0 x1 x2 x3 t692_0 x5 t693_0 t694_0 t695_0 s9 s10 s11 t696_0 t697_0 s10.next s11.next t690_0
+1111111111111111 1
+.names x0 t691_0
+0 1
+.names x4 t692_0
+0 1
+.names x6 t693_0
+0 1
+.names x7 t694_0
+0 1
+.names s8 t695_0
+0 1
+.names s8.next t696_0
+0 1
+.names s9.next t697_0
+0 1
+.end
+
+.model d135
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s8 s9 s10 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d135_0
+.names t698_0 d135_0
+1 1
+.names t699_0 x1 x2 t700_0 x4 t701_0 t702_0 x7 s8 t703_0 s10 t704_0 s8.next t705_0 t706_0 s11.next t698_0
+1111111111111111 1
+.names x0 t699_0
+0 1
+.names x3 t700_0
+0 1
+.names x5 t701_0
+0 1
+.names x6 t702_0
+0 1
+.names s9 t703_0
+0 1
+.names s11 t704_0
+0 1
+.names s9.next t705_0
+0 1
+.names s10.next t706_0
+0 1
+.end
+
+.model d136
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s8 s9 s10 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d136_0
+.names t707_0 d136_0
+1 1
+.names t708_0 x1 x2 x3 t709_0 t710_0 x6 t711_0 t712_0 t713_0 s10 t714_0 s8.next t715_0 s10.next t716_0 t707_0
+1111111111111111 1
+.names x0 t708_0
+0 1
+.names x4 t709_0
+0 1
+.names x5 t710_0
+0 1
+.names x7 t711_0
+0 1
+.names s8 t712_0
+0 1
+.names s9 t713_0
+0 1
+.names s11 t714_0
+0 1
+.names s9.next t715_0
+0 1
+.names s11.next t716_0
+0 1
+.end
+
+.model d137
+.inputs x0 x2 \
+        s8 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d137_0
+.names t717_0 d137_0
+1 1
+.names t718_0 t719_0 t720_0 t721_0 s8.next t722_0 s10.next s11.next t717_0
+11111111 1
+.names x0 t718_0
+0 1
+.names x2 t719_0
+0 1
+.names s8 t720_0
+0 1
+.names s11 t721_0
+0 1
+.names s9.next t722_0
+0 1
+.end
+
+.model d138
+.inputs x0 x2 \
+        s8 s10 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d138_0
+.names t723_0 d138_0
+1 1
+.names t724_0 t725_0 t726_0 s10 s8.next t727_0 s10.next s11.next t723_0
+11111111 1
+.names x0 t724_0
+0 1
+.names x2 t725_0
+0 1
+.names s8 t726_0
+0 1
+.names s9.next t727_0
+0 1
+.end
+
+.model d139
+.inputs x0 x2 \
+        s9 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d139_0
+.names t728_0 d139_0
+1 1
+.names t729_0 t730_0 t731_0 s8.next t732_0 s10.next s11.next t728_0
+1111111 1
+.names x0 t729_0
+0 1
+.names x2 t730_0
+0 1
+.names s9 t731_0
+0 1
+.names s9.next t732_0
+0 1
+.end
+
+.model d140
+.inputs x0 \
+        s8 s9 s10 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d140_0
+.names t733_0 d140_0
+1 1
+.names t734_0 t735_0 s9 t736_0 s11 t737_0 s9.next t738_0 s11.next t733_0
+111111111 1
+.names x0 t734_0
+0 1
+.names s8 t735_0
+0 1
+.names s10 t736_0
+0 1
+.names s8.next t737_0
+0 1
+.names s10.next t738_0
+0 1
+.end
+
+.model d141
+.inputs x0 x1 \
+        s8 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d141_0
+.names t739_0 d141_0
+1 1
+.names t740_0 t741_0 t742_0 t743_0 s8.next t744_0 s10.next s11.next t739_0
+11111111 1
+.names x0 t740_0
+0 1
+.names x1 t741_0
+0 1
+.names s8 t742_0
+0 1
+.names s11 t743_0
+0 1
+.names s9.next t744_0
+0 1
+.end
+
+.model d142
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s8 s9 s10 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d142_0
+.names t441_0 d142_0
+1 1
+.names d97_0 d98_0 d99_0 d100_0 d101_0 d102_0 d103_0 d104_0 d105_0 d106_0 d107_0 d108_0 d109_0 d110_0 d111_0 d112_0 d113_0 d114_0 d115_0 d116_0 d117_0 d118_0 d119_0 d120_0 d121_0 d122_0 d123_0 d124_0 d125_0 d126_0 d127_0 d128_0 d129_0 d130_0 d131_0 d132_0 d133_0 d134_0 d135_0 d136_0 d137_0 d138_0 d139_0 d140_0 d141_0 t441_0
+1-------------------------------------------- 1
+-1------------------------------------------- 1
+--1------------------------------------------ 1
+---1----------------------------------------- 1
+----1---------------------------------------- 1
+-----1--------------------------------------- 1
+------1-------------------------------------- 1
+-------1------------------------------------- 1
+--------1------------------------------------ 1
+---------1----------------------------------- 1
+----------1---------------------------------- 1
+-----------1--------------------------------- 1
+------------1-------------------------------- 1
+-------------1------------------------------- 1
+--------------1------------------------------ 1
+---------------1----------------------------- 1
+----------------1---------------------------- 1
+-----------------1--------------------------- 1
+------------------1-------------------------- 1
+-------------------1------------------------- 1
+--------------------1------------------------ 1
+---------------------1----------------------- 1
+----------------------1---------------------- 1
+-----------------------1--------------------- 1
+------------------------1-------------------- 1
+-------------------------1------------------- 1
+--------------------------1------------------ 1
+---------------------------1----------------- 1
+----------------------------1---------------- 1
+-----------------------------1--------------- 1
+------------------------------1-------------- 1
+-------------------------------1------------- 1
+--------------------------------1------------ 1
+---------------------------------1----------- 1
+----------------------------------1---------- 1
+-----------------------------------1--------- 1
+------------------------------------1-------- 1
+-------------------------------------1------- 1
+--------------------------------------1------ 1
+---------------------------------------1----- 1
+----------------------------------------1---- 1
+-----------------------------------------1--- 1
+------------------------------------------1-- 1
+-------------------------------------------1- 1
+--------------------------------------------1 1
+.subckt d97 \
+        x0=x0 x4=x4 x6=x6 \
+        s9=s9 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d97_0=d97_0
+.subckt d98 \
+        x0=x0 x3=x3 x6=x6 \
+        s8=s8 s10=s10 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d98_0=d98_0
+.subckt d99 \
+        x0=x0 x3=x3 x7=x7 \
+        s8=s8 s10=s10 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d99_0=d99_0
+.subckt d100 \
+        x0=x0 x3=x3 x7=x7 \
+        s8=s8 s10=s10 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d100_0=d100_0
+.subckt d101 \
+        x0=x0 x3=x3 x4=x4 \
+        s8=s8 s10=s10 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d101_0=d101_0
+.subckt d102 \
+        x0=x0 x7=x7 \
+        s8=s8 s10=s10 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d102_0=d102_0
+.subckt d103 \
+        x0=x0 x1=x1 \
+        s8=s8 s9=s9 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d103_0=d103_0
+.subckt d104 \
+        x0=x0 x4=x4 x5=x5 x7=x7 \
+        s9=s9 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d104_0=d104_0
+.subckt d105 \
+        x0=x0 x5=x5 x7=x7 \
+        s8=s8 s9=s9 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d105_0=d105_0
+.subckt d106 \
+        x0=x0 x7=x7 \
+        s8=s8 s9=s9 s10=s10 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d106_0=d106_0
+.subckt d107 \
+        x0=x0 x5=x5 x6=x6 \
+        s9=s9 s10=s10 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d107_0=d107_0
+.subckt d108 \
+        x0=x0 x4=x4 x7=x7 \
+        s8=s8 s9=s9 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d108_0=d108_0
+.subckt d109 \
+        x0=x0 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s9=s9 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d109_0=d109_0
+.subckt d110 \
+        x0=x0 x3=x3 x6=x6 \
+        s9=s9 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d110_0=d110_0
+.subckt d111 \
+        x0=x0 x3=x3 x4=x4 \
+        s8=s8 s9=s9 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d111_0=d111_0
+.subckt d112 \
+        x0=x0 x6=x6 \
+        s8=s8 s9=s9 s10=s10 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d112_0=d112_0
+.subckt d113 \
+        x0=x0 x1=x1 x6=x6 \
+        s8=s8 s10=s10 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d113_0=d113_0
+.subckt d114 \
+        x0=x0 x4=x4 x7=x7 \
+        s8=s8 s9=s9 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d114_0=d114_0
+.subckt d115 \
+        x0=x0 x5=x5 x6=x6 \
+        s8=s8 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d115_0=d115_0
+.subckt d116 \
+        x0=x0 x1=x1 x3=x3 x4=x4 \
+        s8=s8 s10=s10 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d116_0=d116_0
+.subckt d117 \
+        x0=x0 x4=x4 x6=x6 \
+        s8=s8 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d117_0=d117_0
+.subckt d118 \
+        x0=x0 x5=x5 x6=x6 \
+        s8=s8 s10=s10 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d118_0=d118_0
+.subckt d119 \
+        x0=x0 x5=x5 x7=x7 \
+        s9=s9 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d119_0=d119_0
+.subckt d120 \
+        x0=x0 x3=x3 x5=x5 \
+        s9=s9 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d120_0=d120_0
+.subckt d121 \
+        x0=x0 x3=x3 \
+        s8=s8 s9=s9 s10=s10 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d121_0=d121_0
+.subckt d122 \
+        x0=x0 x1=x1 \
+        s9=s9 s10=s10 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d122_0=d122_0
+.subckt d123 \
+        x0=x0 x3=x3 x6=x6 \
+        s9=s9 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d123_0=d123_0
+.subckt d124 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s8=s8 s9=s9 s10=s10 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d124_0=d124_0
+.subckt d125 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s8=s8 s9=s9 s10=s10 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d125_0=d125_0
+.subckt d126 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s8=s8 s9=s9 s10=s10 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d126_0=d126_0
+.subckt d127 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s8=s8 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d127_0=d127_0
+.subckt d128 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s8=s8 s10=s10 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d128_0=d128_0
+.subckt d129 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s9=s9 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d129_0=d129_0
+.subckt d130 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s8=s8 s9=s9 s10=s10 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d130_0=d130_0
+.subckt d131 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s8=s8 s9=s9 s10=s10 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d131_0=d131_0
+.subckt d132 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s8=s8 s9=s9 s10=s10 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d132_0=d132_0
+.subckt d133 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s8=s8 s9=s9 s10=s10 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d133_0=d133_0
+.subckt d134 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s8=s8 s9=s9 s10=s10 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d134_0=d134_0
+.subckt d135 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s8=s8 s9=s9 s10=s10 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d135_0=d135_0
+.subckt d136 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s8=s8 s9=s9 s10=s10 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d136_0=d136_0
+.subckt d137 \
+        x0=x0 x2=x2 \
+        s8=s8 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d137_0=d137_0
+.subckt d138 \
+        x0=x0 x2=x2 \
+        s8=s8 s10=s10 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d138_0=d138_0
+.subckt d139 \
+        x0=x0 x2=x2 \
+        s9=s9 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d139_0=d139_0
+.subckt d140 \
+        x0=x0 \
+        s8=s8 s9=s9 s10=s10 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d140_0=d140_0
+.subckt d141 \
+        x0=x0 x1=x1 \
+        s8=s8 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d141_0=d141_0
+.end
+
+.model d143
+.inputs s8 s9 s10 s11 \
+       
+.outputs d143_0
+.names t7_0 d143_0
+1 1
+.names t8_0 s9 t9_0 s11 t7_0
+1111 1
+.names s8 t8_0
+0 1
+.names s10 t9_0
+0 1
+.end
+
+.model d144
+.inputs s0 s1 s2 s3 s6 s7 s8 s9 s10 s11 \
+       
+.outputs d144_0
+.names t761_0 d144_0
+1 1
+.names d90_0 d96_0 t761_0
+11 1
+.subckt d90 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s6=s6 s7=s7 \
+        d90_0=d90_0
+.subckt d96 \
+        s8=s8 s9=s9 s10=s10 s11=s11 \
+        d96_0=d96_0
+.end
+
+.model d145
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        y40 y41 y42 y43 y44 y45 y46 y47 \
+        s0 s1 s2 s3 s4 s5 s6 s7 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next s2.next s3.next s4.next s5.next s6.next s7.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d145_0
+.names t23_0 d145_0
+1 1
+.names d94_0 t430_0 t23_0
+1- 1
+-1 1
+.subckt d94 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        y40=y40 y41=y41 y42=y42 y43=y43 y44=y44 y45=y45 y46=y46 y47=y47 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s4=s4 s5=s5 s6=s6 s7=s7 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next s4.next=s4.next s5.next=s5.next s6.next=s6.next s7.next=s7.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d94_0=d94_0
+.names epsilon_0 t431_0 t432_0 t433_0 t434_0 t435_0 t436_0 t437_0 t438_0 t439_0 t430_0
+1111111111 1
+.subckt epsilon \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        epsilon_0=epsilon_0
+.names s0.next s0 t431_0
+00 1
+11 1
+.names s1.next s1 t432_0
+00 1
+11 1
+.names s2.next s2 t433_0
+00 1
+11 1
+.names s3.next s3 t434_0
+00 1
+11 1
+.names s4.next s4 t435_0
+00 1
+11 1
+.names s5.next s5 t436_0
+00 1
+11 1
+.names s6.next s6 t437_0
+00 1
+11 1
+.names s7.next s7 t438_0
+00 1
+11 1
+.subckt 9bEQ \
+        a8=n0.next_8 a7=n0.next_7 a6=n0.next_6 a5=n0.next_5 a4=n0.next_4 a3=n0.next_3 a2=n0.next_2 a1=n0.next_1 a0=n0.next_0 \
+        b8=n0_8 b7=n0_7 b6=n0_6 b5=n0_5 b4=n0_4 b3=n0_3 b2=n0_2 b1=n0_1 b0=n0_0 \
+        out=t439_0
+.end
+
+.model d146
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s8 s9 s10 s11 \
+        s8.next s9.next s10.next s11.next \
+       
+.outputs d146_0
+.names t440_0 d146_0
+1 1
+.names d142_0 t745_0 t440_0
+1- 1
+-1 1
+.subckt d142 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s8=s8 s9=s9 s10=s10 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d142_0=d142_0
+.names epsilon_0 t746_0 t747_0 t748_0 t749_0 t745_0
+11111 1
+.subckt epsilon \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        epsilon_0=epsilon_0
+.names s8.next s8 t746_0
+00 1
+11 1
+.names s9.next s9 t747_0
+00 1
+11 1
+.names s10.next s10 t748_0
+00 1
+11 1
+.names s11.next s11 t749_0
+00 1
+11 1
+.end
+
+.model d147
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        y40 y41 y42 y43 y44 y45 y46 y47 \
+        s0 s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        s0.next s1.next s2.next s3.next s4.next s5.next s6.next s7.next s8.next s9.next s10.next s11.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+       
+.outputs d147_0
+.names t22_0 d147_0
+1 1
+.names d145_0 d146_0 t22_0
+11 1
+.subckt d145 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        y40=y40 y41=y41 y42=y42 y43=y43 y44=y44 y45=y45 y46=y46 y47=y47 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s4=s4 s5=s5 s6=s6 s7=s7 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next s4.next=s4.next s5.next=s5.next s6.next=s6.next s7.next=s7.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d145_0=d145_0
+.subckt d146 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s8=s8 s9=s9 s10=s10 s11=s11 \
+        s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        d146_0=d146_0
+.end
+
+.model d148
+.inputs s0 s1 s2 s7 s8 s9 s10 s11 \
+       
+.outputs d148_0
+.names t2_0 d148_0
+1 1
+.names d95_0 d143_0 t2_0
+11 1
+.subckt d95 \
+        s0=s0 s1=s1 s2=s2 s7=s7 \
+        d95_0=d95_0
+.subckt d143 \
+        s8=s8 s9=s9 s10=s10 s11=s11 \
+        d143_0=d143_0
+.end
+
+.model d149
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        n1_0 n1_1 n1_2 n1_3 n1_4 n1_5 n1_6 n1_7 n1_8 \
+        n1.next_0 n1.next_1 n1.next_2 n1.next_3 n1.next_4 n1.next_5 n1.next_6 n1.next_7 n1.next_8 \
+       
+.outputs d149_0
+.names t751_0 d149_0
+1 1
+.names t752_0 t753_0 t751_0
+11 1
+.names epsilon_0 t752_0
+0 1
+.subckt epsilon \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        epsilon_0=epsilon_0
+.subckt 9bINC1 \
+        a8=n1_8 a7=n1_7 a6=n1_6 a5=n1_5 a4=n1_4 a3=n1_3 a2=n1_2 a1=n1_1 a0=n1_0 \
+        b8=n1.next_8 b7=n1.next_7 b6=n1.next_6 b5=n1.next_5 b4=n1.next_4 b3=n1.next_3 b2=n1.next_2 b1=n1.next_1 b0=n1.next_0 \
+        out=t753_0
+.end
+
+.model d150
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        n1_0 n1_1 n1_2 n1_3 n1_4 n1_5 n1_6 n1_7 n1_8 \
+        n1.next_0 n1.next_1 n1.next_2 n1.next_3 n1.next_4 n1.next_5 n1.next_6 n1.next_7 n1.next_8 \
+       
+.outputs d150_0
+.names t755_0 d150_0
+1 1
+.names epsilon_0 t756_0 t755_0
+11 1
+.subckt epsilon \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        epsilon_0=epsilon_0
+.subckt 9bEQ \
+        a8=n1.next_8 a7=n1.next_7 a6=n1.next_6 a5=n1.next_5 a4=n1.next_4 a3=n1.next_3 a2=n1.next_2 a1=n1.next_1 a0=n1.next_0 \
+        b8=n1_8 b7=n1_7 b6=n1_6 b5=n1_5 b4=n1_4 b3=n1_3 b2=n1_2 b1=n1_1 b0=n1_0 \
+        out=t756_0
+.end
+
+.model d151
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        y40 y41 y42 y43 y44 y45 y46 y47 \
+        s0 s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        n1_0 n1_1 n1_2 n1_3 n1_4 n1_5 n1_6 n1_7 n1_8 \
+        s0.next s1.next s2.next s3.next s4.next s5.next s6.next s7.next s8.next s9.next s10.next s11.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+        n1.next_0 n1.next_1 n1.next_2 n1.next_3 n1.next_4 n1.next_5 n1.next_6 n1.next_7 n1.next_8 \
+       
+.outputs d151_0
+.names t21_0 d151_0
+1 1
+.names d147_0 t750_0 t21_0
+11 1
+.subckt d147 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        y40=y40 y41=y41 y42=y42 y43=y43 y44=y44 y45=y45 y46=y46 y47=y47 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s4=s4 s5=s5 s6=s6 s7=s7 s8=s8 s9=s9 s10=s10 s11=s11 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next s4.next=s4.next s5.next=s5.next s6.next=s6.next s7.next=s7.next s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        d147_0=d147_0
+.names d149_0 d150_0 t750_0
+1- 1
+-1 1
+.subckt d149 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        n1_0=n1_0 n1_1=n1_1 n1_2=n1_2 n1_3=n1_3 n1_4=n1_4 n1_5=n1_5 n1_6=n1_6 n1_7=n1_7 n1_8=n1_8 \
+        n1.next_0=n1.next_0 n1.next_1=n1.next_1 n1.next_2=n1.next_2 n1.next_3=n1.next_3 n1.next_4=n1.next_4 n1.next_5=n1.next_5 n1.next_6=n1.next_6 n1.next_7=n1.next_7 n1.next_8=n1.next_8 \
+        d149_0=d149_0
+.subckt d150 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        n1_0=n1_0 n1_1=n1_1 n1_2=n1_2 n1_3=n1_3 n1_4=n1_4 n1_5=n1_5 n1_6=n1_6 n1_7=n1_7 n1_8=n1_8 \
+        n1.next_0=n1.next_0 n1.next_1=n1.next_1 n1.next_2=n1.next_2 n1.next_3=n1.next_3 n1.next_4=n1.next_4 n1.next_5=n1.next_5 n1.next_6=n1.next_6 n1.next_7=n1.next_7 n1.next_8=n1.next_8 \
+        d150_0=d150_0
+.end
+
+.model d153
+.inputs s12 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        n1_0 n1_1 n1_2 n1_3 n1_4 n1_5 n1_6 n1_7 n1_8 \
+        s12.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+        n1.next_0 n1.next_1 n1.next_2 n1.next_3 n1.next_4 n1.next_5 n1.next_6 n1.next_7 n1.next_8 \
+       
+.outputs d153_0
+.names t15_0 d153_0
+1 1
+.names t16_0 t17_0 d1_0 t18_0 t19_0 t15_0
+11111 1
+.names s12 t16_0
+0 1
+.names s12.next t17_0
+0 1
+.subckt d1 \
+        d1_0=d1_0
+.subckt 9bEQ \
+        a8=n0.next_8 a7=n0.next_7 a6=n0.next_6 a5=n0.next_5 a4=n0.next_4 a3=n0.next_3 a2=n0.next_2 a1=n0.next_1 a0=n0.next_0 \
+        b8=n0_8 b7=n0_7 b6=n0_6 b5=n0_5 b4=n0_4 b3=n0_3 b2=n0_2 b1=n0_1 b0=n0_0 \
+        out=t18_0
+.subckt 9bEQ \
+        a8=n1.next_8 a7=n1.next_7 a6=n1.next_6 a5=n1.next_5 a4=n1.next_4 a3=n1.next_3 a2=n1.next_2 a1=n1.next_1 a0=n1.next_0 \
+        b8=n1_8 b7=n1_7 b6=n1_6 b5=n1_5 b4=n1_4 b3=n1_3 b2=n1_2 b1=n1_1 b0=n1_0 \
+        out=t19_0
+.end
+
+.model d154
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        y40 y41 y42 y43 y44 y45 y46 y47 \
+        s0 s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        n1_0 n1_1 n1_2 n1_3 n1_4 n1_5 n1_6 n1_7 n1_8 \
+        s0.next s1.next s2.next s3.next s4.next s5.next s6.next s7.next s8.next s9.next s10.next s11.next s12.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+        n1.next_0 n1.next_1 n1.next_2 n1.next_3 n1.next_4 n1.next_5 n1.next_6 n1.next_7 n1.next_8 \
+       
+.outputs d154_0
+.names t20_0 d154_0
+1 1
+.names s12 s12.next d151_0 t20_0
+111 1
+.subckt d151 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        y40=y40 y41=y41 y42=y42 y43=y43 y44=y44 y45=y45 y46=y46 y47=y47 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s4=s4 s5=s5 s6=s6 s7=s7 s8=s8 s9=s9 s10=s10 s11=s11 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        n1_0=n1_0 n1_1=n1_1 n1_2=n1_2 n1_3=n1_3 n1_4=n1_4 n1_5=n1_5 n1_6=n1_6 n1_7=n1_7 n1_8=n1_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next s4.next=s4.next s5.next=s5.next s6.next=s6.next s7.next=s7.next s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        n1.next_0=n1.next_0 n1.next_1=n1.next_1 n1.next_2=n1.next_2 n1.next_3=n1.next_3 n1.next_4=n1.next_4 n1.next_5=n1.next_5 n1.next_6=n1.next_6 n1.next_7=n1.next_7 n1.next_8=n1.next_8 \
+        d151_0=d151_0
+.end
+
+.model d155
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        s0 s12 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        n1_0 n1_1 n1_2 n1_3 n1_4 n1_5 n1_6 n1_7 n1_8 \
+        s0.next s1.next s2.next s3.next s6.next s7.next s8.next s9.next s10.next s11.next s12.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+        n1.next_0 n1.next_1 n1.next_2 n1.next_3 n1.next_4 n1.next_5 n1.next_6 n1.next_7 n1.next_8 \
+       
+.outputs d155_0
+.names t757_0 d155_0
+1 1
+.names epsilon_0 t758_0 s12.next d2_0 t760_0 t771_0 t772_0 t757_0
+1111111 1
+.subckt epsilon \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        epsilon_0=epsilon_0
+.names s12 t758_0
+0 1
+.subckt d2 \
+        s0=s0 \
+        d2_0=d2_0
+# PARAM
+.subckt d144 \
+        s0=s0.next s1=s1.next s2=s2.next s3=s3.next s6=s6.next s7=s7.next s8=s8.next s9=s9.next s10=s10.next s11=s11.next \
+        d144_0=t760_0
+.subckt 9bEQ \
+        a8=n0.next_8 a7=n0.next_7 a6=n0.next_6 a5=n0.next_5 a4=n0.next_4 a3=n0.next_3 a2=n0.next_2 a1=n0.next_1 a0=n0.next_0 \
+        b8=n0_8 b7=n0_7 b6=n0_6 b5=n0_5 b4=n0_4 b3=n0_3 b2=n0_2 b1=n0_1 b0=n0_0 \
+        out=t771_0
+.subckt 9bEQ \
+        a8=n1.next_8 a7=n1.next_7 a6=n1.next_6 a5=n1.next_5 a4=n1.next_4 a3=n1.next_3 a2=n1.next_2 a1=n1.next_1 a0=n1.next_0 \
+        b8=n1_8 b7=n1_7 b6=n1_6 b5=n1_5 b4=n1_4 b3=n1_3 b2=n1_2 b1=n1_1 b0=n1_0 \
+        out=t772_0
+.end
+
+.model d156
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+        y40 y41 y42 y43 y44 y45 y46 y47 \
+        s0 s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        n1_0 n1_1 n1_2 n1_3 n1_4 n1_5 n1_6 n1_7 n1_8 \
+        s0.next s1.next s2.next s3.next s4.next s5.next s6.next s7.next s8.next s9.next s10.next s11.next s12.next \
+        n0.next_0 n0.next_1 n0.next_2 n0.next_3 n0.next_4 n0.next_5 n0.next_6 n0.next_7 n0.next_8 \
+        n1.next_0 n1.next_1 n1.next_2 n1.next_3 n1.next_4 n1.next_5 n1.next_6 n1.next_7 n1.next_8 \
+       
+.outputs d156_0
+.names t14_0 d156_0
+1 1
+.names d153_0 d154_0 d155_0 t14_0
+1-- 1
+-1- 1
+--1 1
+.subckt d153 \
+        s12=s12 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        n1_0=n1_0 n1_1=n1_1 n1_2=n1_2 n1_3=n1_3 n1_4=n1_4 n1_5=n1_5 n1_6=n1_6 n1_7=n1_7 n1_8=n1_8 \
+        s12.next=s12.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        n1.next_0=n1.next_0 n1.next_1=n1.next_1 n1.next_2=n1.next_2 n1.next_3=n1.next_3 n1.next_4=n1.next_4 n1.next_5=n1.next_5 n1.next_6=n1.next_6 n1.next_7=n1.next_7 n1.next_8=n1.next_8 \
+        d153_0=d153_0
+.subckt d154 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        y40=y40 y41=y41 y42=y42 y43=y43 y44=y44 y45=y45 y46=y46 y47=y47 \
+        s0=s0 s1=s1 s2=s2 s3=s3 s4=s4 s5=s5 s6=s6 s7=s7 s8=s8 s9=s9 s10=s10 s11=s11 s12=s12 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        n1_0=n1_0 n1_1=n1_1 n1_2=n1_2 n1_3=n1_3 n1_4=n1_4 n1_5=n1_5 n1_6=n1_6 n1_7=n1_7 n1_8=n1_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next s4.next=s4.next s5.next=s5.next s6.next=s6.next s7.next=s7.next s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next s12.next=s12.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        n1.next_0=n1.next_0 n1.next_1=n1.next_1 n1.next_2=n1.next_2 n1.next_3=n1.next_3 n1.next_4=n1.next_4 n1.next_5=n1.next_5 n1.next_6=n1.next_6 n1.next_7=n1.next_7 n1.next_8=n1.next_8 \
+        d154_0=d154_0
+.subckt d155 \
+        x0=x0 x1=x1 x2=x2 x3=x3 x4=x4 x5=x5 x6=x6 x7=x7 \
+        s0=s0 s12=s12 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        n1_0=n1_0 n1_1=n1_1 n1_2=n1_2 n1_3=n1_3 n1_4=n1_4 n1_5=n1_5 n1_6=n1_6 n1_7=n1_7 n1_8=n1_8 \
+        s0.next=s0.next s1.next=s1.next s2.next=s2.next s3.next=s3.next s6.next=s6.next s7.next=s7.next s8.next=s8.next s9.next=s9.next s10.next=s10.next s11.next=s11.next s12.next=s12.next \
+        n0.next_0=n0.next_0 n0.next_1=n0.next_1 n0.next_2=n0.next_2 n0.next_3=n0.next_3 n0.next_4=n0.next_4 n0.next_5=n0.next_5 n0.next_6=n0.next_6 n0.next_7=n0.next_7 n0.next_8=n0.next_8 \
+        n1.next_0=n1.next_0 n1.next_1=n1.next_1 n1.next_2=n1.next_2 n1.next_3=n1.next_3 n1.next_4=n1.next_4 n1.next_5=n1.next_5 n1.next_6=n1.next_6 n1.next_7=n1.next_7 n1.next_8=n1.next_8 \
+        d155_0=d155_0
+.end
+
+.model d157
+.inputs s0 s1 s2 s7 s8 s9 s10 s11 s12 \
+       
+.outputs d157_0
+.names t1_0 d157_0
+1 1
+.names s12 d148_0 t1_0
+11 1
+.subckt d148 \
+        s0=s0 s1=s1 s2=s2 s7=s7 s8=s8 s9=s9 s10=s10 s11=s11 \
+        d148_0=d148_0
+.end
+
+.model epsilon
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+       
+.outputs epsilon_0
+.names t164_0 epsilon_0
+1 1
+.names x0 t165_0 t166_0 t167_0 t168_0 t169_0 t170_0 t171_0 t164_0
+11111111 1
+.names x1 t165_0
+0 1
+.names x2 t166_0
+0 1
+.names x3 t167_0
+0 1
+.names x4 t168_0
+0 1
+.names x5 t169_0
+0 1
+.names x6 t170_0
+0 1
+.names x7 t171_0
+0 1
+.end
+
+.model leftAngle
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+       
+.outputs leftAngle_0
+.names t141_0 leftAngle_0
+1 1
+.names x0 t142_0 t143_0 t144_0 t145_0 t146_0 t147_0 x7 t141_0
+11111111 1
+.names x1 t142_0
+0 1
+.names x2 t143_0
+0 1
+.names x3 t144_0
+0 1
+.names x4 t145_0
+0 1
+.names x5 t146_0
+0 1
+.names x6 t147_0
+0 1
+.end
+
+.model rightAngle
+.inputs x0 x1 x2 x3 x4 x5 x6 x7 \
+       
+.outputs rightAngle_0
+.names t149_0 rightAngle_0
+1 1
+.names x0 t150_0 t151_0 t152_0 t153_0 t154_0 x6 t155_0 t149_0
+11111111 1
+.names x1 t150_0
+0 1
+.names x2 t151_0
+0 1
+.names x3 t152_0
+0 1
+.names x4 t153_0
+0 1
+.names x5 t154_0
+0 1
+.names x7 t155_0
+0 1
+.end
+
+# predList
+.model d158
+.inputs n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        K0_0 K0_1 K0_2 K0_3 K0_4 K0_5 K0_6 K0_7 K0_8 K0_9 K0_10 K0_11 \
+       
+.outputs d158_0
+.names t10_0 d158_0
+1 1
+.subckt 12bEQ \
+        a11=K0_11 a10=K0_10 a9=K0_9 a8=K0_8 a7=K0_7 a6=K0_6 a5=K0_5 a4=K0_4 a3=K0_3 a2=K0_2 a1=K0_1 a0=K0_0 \
+        b11=const0 b10=const0 b9=const0 b8=n0_8 b7=n0_7 b6=n0_6 b5=n0_5 b4=n0_4 b3=n0_3 b2=n0_2 b1=n0_1 b0=n0_0 \
+        out=t10_0
+.names const0
+.end
+
+.model d159
+.inputs n1_0 n1_1 n1_2 n1_3 n1_4 n1_5 n1_6 n1_7 n1_8 \
+        K1_0 K1_1 K1_2 K1_3 K1_4 K1_5 K1_6 K1_7 K1_8 K1_9 K1_10 K1_11 \
+       
+.outputs d159_0
+.names t11_0 d159_0
+1 1
+.subckt 12bEQ \
+        a11=K1_11 a10=K1_10 a9=K1_9 a8=K1_8 a7=K1_7 a6=K1_6 a5=K1_5 a4=K1_4 a3=K1_3 a2=K1_2 a1=K1_1 a0=K1_0 \
+        b11=const0 b10=const0 b9=const0 b8=n1_8 b7=n1_7 b6=n1_6 b5=n1_5 b4=n1_4 b3=n1_3 b2=n1_2 b1=n1_1 b0=n1_0 \
+        out=t11_0
+.names const0
+.end
+
+.model d160
+.inputs K0_0 K0_1 K0_2 K0_3 K0_4 K0_5 K0_6 K0_7 K0_8 K0_9 K0_10 K0_11 \
+        K1_0 K1_1 K1_2 K1_3 K1_4 K1_5 K1_6 K1_7 K1_8 K1_9 K1_10 K1_11 \
+       
+.outputs d160_0
+.names t12_0 d160_0
+1 1
+.subckt 12bSFA \
+        a11=const0 a10=const0 a9=const0 a8=const0 a7=const0 a6=const0 a5=const0 a4=const0 a3=const1 a2=const0 a1=const1 a0=const0 \
+        b11=t13_11 b10=t13_10 b9=t13_9 b8=t13_8 b7=t13_7 b6=t13_6 b5=t13_5 b4=t13_4 b3=t13_3 b2=t13_2 b1=t13_1 b0=t13_0 \
+        sign=const1 s11=t12_0
+.subckt 12bSFA \
+        a11=K0_11 a10=K0_10 a9=K0_9 a8=K0_8 a7=K0_7 a6=K0_6 a5=K0_5 a4=K0_4 a3=K0_3 a2=K0_2 a1=K0_1 a0=K0_0 \
+        b11=K1_11 b10=K1_10 b9=K1_9 b8=K1_8 b7=K1_7 b6=K1_6 b5=K1_5 b4=K1_4 b3=K1_3 b2=K1_2 b1=K1_1 b0=K1_0 \
+        sign=const0 s11=t13_11 s10=t13_10 s9=t13_9 s8=t13_8 s7=t13_7 s6=t13_6 s5=t13_5 s4=t13_4 s3=t13_3 s2=t13_2 s1=t13_1 s0=t13_0 \
+       
+.names const1
+1
+.names const0
+.end
+
+.model d161
+.inputs s0 s1 s2 s7 s8 s9 s10 s11 s12 \
+        n0_0 n0_1 n0_2 n0_3 n0_4 n0_5 n0_6 n0_7 n0_8 \
+        n1_0 n1_1 n1_2 n1_3 n1_4 n1_5 n1_6 n1_7 n1_8 \
+        K0_0 K0_1 K0_2 K0_3 K0_4 K0_5 K0_6 K0_7 K0_8 K0_9 K0_10 K0_11 \
+        K1_0 K1_1 K1_2 K1_3 K1_4 K1_5 K1_6 K1_7 K1_8 K1_9 K1_10 K1_11 \
+       
+.outputs d161_0
+.names t0_0 d161_0
+1 1
+.names d157_0 d158_0 d159_0 d160_0 t0_0
+1111 1
+.subckt d157 \
+        s0=s0 s1=s1 s2=s2 s7=s7 s8=s8 s9=s9 s10=s10 s11=s11 s12=s12 \
+        d157_0=d157_0
+.subckt d158 \
+        n0_0=n0_0 n0_1=n0_1 n0_2=n0_2 n0_3=n0_3 n0_4=n0_4 n0_5=n0_5 n0_6=n0_6 n0_7=n0_7 n0_8=n0_8 \
+        K0_0=K0_0 K0_1=K0_1 K0_2=K0_2 K0_3=K0_3 K0_4=K0_4 K0_5=K0_5 K0_6=K0_6 K0_7=K0_7 K0_8=K0_8 K0_9=K0_9 K0_10=K0_10 K0_11=K0_11 \
+        d158_0=d158_0
+.subckt d159 \
+        n1_0=n1_0 n1_1=n1_1 n1_2=n1_2 n1_3=n1_3 n1_4=n1_4 n1_5=n1_5 n1_6=n1_6 n1_7=n1_7 n1_8=n1_8 \
+        K1_0=K1_0 K1_1=K1_1 K1_2=K1_2 K1_3=K1_3 K1_4=K1_4 K1_5=K1_5 K1_6=K1_6 K1_7=K1_7 K1_8=K1_8 K1_9=K1_9 K1_10=K1_10 K1_11=K1_11 \
+        d159_0=d159_0
+.subckt d160 \
+        K0_0=K0_0 K0_1=K0_1 K0_2=K0_2 K0_3=K0_3 K0_4=K0_4 K0_5=K0_5 K0_6=K0_6 K0_7=K0_7 K0_8=K0_8 K0_9=K0_9 K0_10=K0_10 K0_11=K0_11 \
+        K1_0=K1_0 K1_1=K1_1 K1_2=K1_2 K1_3=K1_3 K1_4=K1_4 K1_5=K1_5 K1_6=K1_6 K1_7=K1_7 K1_8=K1_8 K1_9=K1_9 K1_10=K1_10 K1_11=K1_11 \
+        d160_0=d160_0
+.end
+
+# modules
+.model SFA
+.inputs a b cin sign
+.outputs s cout
+.names b sign bs
+01 1
+10 1
+.names bs cin k
+01 1
+10 1
+.names a k s
+01 1
+10 1
+.names a bs cin cout
+11- 1
+1-1 1
+-11 1
+.end
+.model HA
+.inputs a b
+.outputs s cout
+.names a b s
+01 1
+10 1
+.names a b cout
+11 1
+.end
+.model 12bSFA
+.inputs a11 a10 a9 a8 a7 a6 a5 a4 a3 a2 a1 a0 b11 b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 b0 sign
+.outputs s11 s10 s9 s8 s7 s6 s5 s4 s3 s2 s1 s0 cout
+.subckt SFA a=a0 b=b0 cin=sign sign=sign s=s0 cout=c1
+.subckt SFA a=a1 b=b1 cin=c1 sign=sign s=s1 cout=c2
+.subckt SFA a=a2 b=b2 cin=c2 sign=sign s=s2 cout=c3
+.subckt SFA a=a3 b=b3 cin=c3 sign=sign s=s3 cout=c4
+.subckt SFA a=a4 b=b4 cin=c4 sign=sign s=s4 cout=c5
+.subckt SFA a=a5 b=b5 cin=c5 sign=sign s=s5 cout=c6
+.subckt SFA a=a6 b=b6 cin=c6 sign=sign s=s6 cout=c7
+.subckt SFA a=a7 b=b7 cin=c7 sign=sign s=s7 cout=c8
+.subckt SFA a=a8 b=b8 cin=c8 sign=sign s=s8 cout=c9
+.subckt SFA a=a9 b=b9 cin=c9 sign=sign s=s9 cout=c10
+.subckt SFA a=a10 b=b10 cin=c10 sign=sign s=s10 cout=c11
+.subckt SFA a=a11 b=b11 cin=c11 sign=sign s=s11 cout=cout
+.end
+.model 9bEQ
+.inputs a8 a7 a6 a5 a4 a3 a2 a1 a0 b8 b7 b6 b5 b4 b3 b2 b1 b0
+.outputs out
+.names a0 b0 e0
+00 1
+11 1
+.names a1 b1 e1
+00 1
+11 1
+.names a2 b2 e2
+00 1
+11 1
+.names a3 b3 e3
+00 1
+11 1
+.names a4 b4 e4
+00 1
+11 1
+.names a5 b5 e5
+00 1
+11 1
+.names a6 b6 e6
+00 1
+11 1
+.names a7 b7 e7
+00 1
+11 1
+.names a8 b8 e8
+00 1
+11 1
+.names e8 e7 e6 e5 e4 e3 e2 e1 e0 out
+111111111 1
+.end
+.model 12bEQ
+.inputs a11 a10 a9 a8 a7 a6 a5 a4 a3 a2 a1 a0 b11 b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 b0
+.outputs out
+.names a0 b0 e0
+00 1
+11 1
+.names a1 b1 e1
+00 1
+11 1
+.names a2 b2 e2
+00 1
+11 1
+.names a3 b3 e3
+00 1
+11 1
+.names a4 b4 e4
+00 1
+11 1
+.names a5 b5 e5
+00 1
+11 1
+.names a6 b6 e6
+00 1
+11 1
+.names a7 b7 e7
+00 1
+11 1
+.names a8 b8 e8
+00 1
+11 1
+.names a9 b9 e9
+00 1
+11 1
+.names a10 b10 e10
+00 1
+11 1
+.names a11 b11 e11
+00 1
+11 1
+.names e11 e10 e9 e8 e7 e6 e5 e4 e3 e2 e1 e0 out
+111111111111 1
+.end
+.model 9bINC1
+.inputs a8 a7 a6 a5 a4 a3 a2 a1 a0 b8 b7 b6 b5 b4 b3 b2 b1 b0
+.outputs out
+.subckt 9bEQ a8=s8 a7=s7 a6=s6 a5=s5 a4=s4 a3=s3 a2=s2 a1=s1 a0=s0 b8=b8 b7=b7 b6=b6 b5=b5 b4=b4 b3=b3 b2=b2 b1=b1 b0=b0 out=out
+.subckt HA a=a0 b=const1 s=s0 cout=c1
+.subckt HA a=a1 b=c1 s=s1 cout=c2
+.subckt HA a=a2 b=c2 s=s2 cout=c3
+.subckt HA a=a3 b=c3 s=s3 cout=c4
+.subckt HA a=a4 b=c4 s=s4 cout=c5
+.subckt HA a=a5 b=c5 s=s5 cout=c6
+.subckt HA a=a6 b=c6 s=s6 cout=c7
+.subckt HA a=a7 b=c7 s=s7 cout=c8
+.subckt HA a=a8 b=c8 s=s8 cout=c9
+.names const1
+1
+.end

@@ -1,0 +1,21 @@
+T0_73 ".*"
+T1_73 ~\("\="\)
+;
+T_32 Bool
+T_SELECT_6 Bool
+PCTEMP_LHS_20 Int
+;
+T_32
+(= T_32 (= PCTEMP_LHS_20 (- 1)))
+(= PCTEMP_LHS_20 (- 1))
+(= T_SELECT_6 (not (= PCTEMP_LHS_20 (- 1))))
+(trklen 0 0)
+(not T_SELECT_6)
+;
+trklen T0_73 0
+write T0_73_l
+concate T0_73_l T1_73
+write T_30
+addpred
+write sink
+isempty sink

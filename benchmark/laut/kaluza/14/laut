@@ -1,0 +1,33 @@
+T0_24 ".*"
+;
+T_7 Bool
+T_8 Bool
+T_a Bool
+T_b Bool
+T_d Bool
+T_e Bool
+T_3 Int
+T_4 Int
+T_6 Int
+T_9 Int
+T_c Int
+;
+(trklen T_3 0)
+T_8
+(= T_8 (not T_7))
+(= T_7 (< 70 T_6))
+(trklen T_6 0)
+T_b
+(= T_b (not T_a))
+(= T_a (< 70 T_9))
+(trklen T_9 0)
+T_e
+(= T_e (not T_d))
+(= T_d (< 70 T_c))
+(trklen T_c 0)
+;
+trklen T0_24 0
+write T0_24_l
+addpred
+write sink
+isempty sink

@@ -1,0 +1,8 @@
+benchmark=r_pisa,solver=s3p,TO=20.000000
+path,sat,time
+benchmark/laut/r_pisa/pisa-008-1/sink.s3,0,0.282776
+benchmark/laut/r_pisa/pisa-008-2/sink.s3,0,0.279213
+benchmark/laut/r_pisa/pisa-009-1/sink.s3,t,0.0
+benchmark/laut/r_pisa/pisa-009-2/sink.s3,t,0.0
+benchmark/laut/r_pisa/pisa-010-1/sink.s3,1,0.227671
+benchmark/laut/r_pisa/pisa-011-1/sink.s3,1,0.281588
