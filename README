@@ -145,3 +145,6 @@ format  : [commands] (a intermediate command should be followed with a "write" c
           <addpred>
           <write sink>
           <isempty sink>
+############################### Reference ##################################
+Hung-En Wang, Shih-Yu Chen, Fang Yu, Jie-Hong R. Jiang:
+A symbolic model checking approach to the analysis of string and length constraints. ASE 2018: 623-633
